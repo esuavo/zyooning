@@ -1,0 +1,606 @@
+:root {
+    --body-color: #e9ebec; // 기본 배경 (라이트)
+    --bg-yellow: #f7d039;
+    --text-color1: #3d3d3d;
+    --text-color2: #575757;
+    --bg-button: #ffffff;
+    --bg-tab-button: #d7d7d7;
+    --text-tab-color: #19191b;
+}
+
+$font-size-common: 2.2rem;
+$theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button {
+    width: 100%;
+    height: 8rem;
+    border-radius: 10px;
+    background-color: var(--bg-button);
+    font-size: $font-size-common;
+}
+
+body {
+    background-color: var(--body-color);
+    font-weight: 500;
+
+    .button,
+    .tabs,
+    .profile__avatar {
+        transition: $theme-transition;
+    }
+
+    &.dark-mode {
+        --body-color: #0c151d; // 어두운 배경
+        --bg-yellow: #ffe071;
+        --text-color1: #f1f2f4;
+        --text-color2: #a3abb2;
+        --bg-button: #171f26;
+        --bg-tab-button: #0c151d;
+
+        .facts {
+            &__num {
+                color: var(--text-color2);
+            }
+        }
+
+        .profile-actions {
+            .button {
+                color: var(--text-color2);
+
+                &--primary {
+                    color: #3d3d3d;
+                }
+            }
+        }
+
+        .tabs {
+            &__button {
+                color: var(--text-color2);
+            }
+        }
+
+        .theme-toggle {
+            background-image: url(../images/btn_change_theme_dark.png);
+        }
+        .skills {
+            &__icon {
+                &--figma {
+                    background-image: url(../images/icon_figma_light.png);
+                }
+                &--vscode {
+                    background-image: url(../images/icon_vscode_light.png);
+                }
+            }
+        }
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 3.6rem;
+    left: 50%;
+    width: 8rem;
+    height: 8rem;
+    transform: translateX(-50%);
+    background: url(../images/btn_change_theme.png) no-repeat 0 0 / 100%;
+    animation: fadeOutAndBack 0.4s ease-in-out forwards;
+    will-change: transform, opacity;
+    z-index: 1;
+    &--fixed {
+        position: fixed;
+        right: max(2rem, calc((100vw - 76rem) / 2 - 10rem));
+        left: auto;
+        transform: translateX(0);
+        animation: fadeInAndShow 0.4s ease-out forwards;
+    }
+}
+
+/* 1. 나타나는 애니메이션 (위에서 아래로) */
+@keyframes fadeInAndShow {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. 사라지는 애니메이션 (아래에서 위로 스르륵) */
+@keyframes fadeOutAndBack {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.wrap {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container {
+    padding-top: 17.8rem;
+}
+
+.profile {
+    $profile: &;
+    @include flex-center;
+    transition: transform 0.3s ease-out, box-shadow 0.2s;
+    background-color: transparent;
+
+    &__inner {
+        max-width: 63rem;
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    &__avatar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 21.5rem;
+        height: 21.5rem;
+        background-color: var(--bg-yellow);
+        border: 10px solid var(--body-color);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px var(--bg-yellow),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+
+    }
+
+    &__avatar-image {
+        height: 180px;
+        transform-origin: bottom;
+        transition: transform 0.4s ease-out;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: transform;
+        filter: blur(0);
+    }
+
+    &__name {
+        color: var(--text-color1);
+        font-size: 4.6rem;
+        font-weight: 500;
+
+    }
+
+    &__job {
+        color: var(--text-color2);
+        font-size: $font-size-common;
+
+    }
+}
+
+.facts {
+    margin-top: 4.8rem;
+
+    &__list {
+        display: flex;
+        width: 63.4rem;
+        text-align: center;
+        padding: 2rem 0;
+        margin: 0 auto;
+    }
+
+    &__item {
+        width: calc(100% / 3);
+    }
+
+    &__num,
+    &__label {
+        display: block;
+        font-weight: 500;
+    }
+
+    &__num {
+        font-size: 2.4rem;
+        color: var(--text-color1);
+
+    }
+
+    &__label {
+        font-size: $font-size-common;
+        color: var(--text-color2);
+
+    }
+}
+
+.profile-actions {
+    @include flex-center;
+    margin: 4.8rem auto 0;
+    gap: 4rem;
+    width: 62rem;
+
+    .button {
+        @include flex-center;
+        @include button;
+        color: var(--text-color1);
+
+        &--primary {
+            background-color: var(--bg-yellow);
+
+            .button__text {
+                display: block;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    width: 2.7rem;
+                    height: 2.4rem;
+                    background: url(../images/btn_download.png) no-repeat 100% 50% / 27px 2.4rem;
+                    vertical-align: middle;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    background-color: var(--bg-button);
+    border-radius: 20px;
+    gap: 2.4rem;
+    padding: 1.5rem 2.4rem;
+    margin-top: 8.6rem;
+
+    &__button {
+        width: 100%;
+        height: 8rem;
+        background-color: var(--bg-button);
+        border-radius: 10px;
+        font-size: $font-size-common;
+        color: var(--text-tab-color);
+        text-align: center;
+
+        &--active {
+            background-color: var(--bg-tab-button);
+        }
+    }
+
+    &__contents {
+        display: none;
+        margin-top: 7.6rem;
+        opacity: 0;
+        transform: translateY(10px); // 살짝 아래에 배치
+        transition: opacity 0.4s ease, transform 0.4s ease;
+
+        &--active {
+            display: block;
+            animation: tabFadeIn 0.5s ease forwards;
+        }
+    }
+}
+
+@keyframes tabFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.2rem;
+        row-gap: 4.8rem;
+    }
+}
+
+.project-card {
+    flex: 0 0 calc(50% - 1.6rem);
+    transition: transform 0.3s ease;
+
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        background-color: #e9ebec;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 226px;
+        object-fit: contain;
+    }
+}
+
+.skills {
+    &__title {
+        font-size: 2.2rem;
+        color: var(--text-color1);
+        margin: 4.8rem 0 3.2rem;
+        font-weight: 500;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+        margin: 0 auto;
+    }
+
+    &__item {
+        @include flex-center;
+        flex: 0 0 calc((100% - (2.4rem * 3)) / 4);
+        flex-direction: column;
+        background-color: var(--bg-button);
+        border-radius: 15px;
+        padding: 2.5rem 1rem;
+    }
+
+    &__icon {
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &--html5 {
+            background-image: url(../images/icon_html5.png);
+        }
+        &--css3 {
+            background-image: url(../images/icon_css.png);
+        }
+        &--scss {
+            background-image: url(../images/icon_sass.png);
+        }
+        &--js {
+            background-image: url(../images/icon_js.png);
+        }
+        &--vscode {
+            background-image: url(../images/icon_vscode_dark.png);
+        }
+        &--git {
+            background-image: url(../images/icon_git.png);
+        }
+        &--figma {
+            background-image: url(../images/icon_figma_dark.png);
+        }
+        &--slack {
+            background-image: url(../images/icon_slack.png);
+        }
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        color: var(--text-color2);
+        font-weight: 500;
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        color: var(--text-color2);
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+.footer {
+    @include flex-center;
+    padding: 8rem 0;
+
+    &__copy {
+        color: var(--text-color2);
+        font-size: $font-size-common;
+    }
+}
+
+@media (hover: hover) {
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+
+    .profile__avatar:hover .profile__avatar-image {
+        transform: scale(1.1) translateZ(0);
+    }
+}
+
+/* Mobile 기본 */
+@media (max-width: 767px) {
+    $font-size-common: 1.4rem;
+
+    @mixin button {
+        height: 4.4rem;
+        font-size: $font-size-common;
+    }
+
+
+    .theme-toggle {
+        right: 2rem;
+        top: 2rem;
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    .wrap {
+        max-width: 100%;
+        padding: 0 2.25rem;
+    }
+
+    .container {
+        padding-top: 9.8rem;
+    }
+
+    .profile {
+        &__inner {
+            max-width: 100%;
+            flex-direction: column;
+        }
+
+        &__avatar {
+            width: 12.4rem;
+            height: 12.4rem;
+            border-width: 5px;
+        }
+
+        &__avatar-image {
+            height: 10.7rem;
+        }
+
+        &__name {
+            font-size: 3.2rem;
+        }
+
+        &__job {
+            font-size: $font-size-common;
+            text-align: center;
+        }
+    }
+
+    .facts {
+        margin-top: 3rem;
+
+        &__list {
+            width: 100%;
+        }
+
+        &__num {
+            font-size: 1.6rem;
+        }
+
+        &__label {
+            font-size: $font-size-common;
+        }
+    }
+
+    .profile-actions {
+        gap: 1.4rem;
+        width: 100%;
+
+        .button {
+            @include flex-center;
+            @include button;
+
+            &--primary {
+                .button__text {
+                    &:after {
+                        width: 1.6rem;
+                        height: 1.4rem;
+                        background-size: 100% 100%;
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs {
+        border-radius: 10px;
+        gap: .9rem;
+        padding: .7rem;
+        margin-top: 5.8rem;
+
+        &__button {
+            height: 5rem;
+            font-size: $font-size-common;
+        }
+
+        &__contents {
+            margin-top: 4rem;
+        }
+    }
+
+    .projects {
+        &__list {
+            gap: 0;
+            row-gap: 3rem;
+        }
+    }
+
+    .project-card {
+        flex-basis: 100%;
+
+        &__thumb {
+            border-radius: 15px;
+        }
+
+        &__img {
+            height: 210px;
+        }
+    }
+
+    .skills {
+        &__title {
+            font-size: 1.4rem;
+            margin: 3.2rem 0 2rem;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__list {
+            gap: 1.2rem;
+        }
+
+        &__item {
+            flex: 0 0 calc((100% - 1.2rem) / 2);
+        }
+
+        &__icon {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &__name {
+            font-size: 1.4rem;
+        }
+    }
+
+
+    .footer {
+        padding: 4rem 0;
+
+        &__copy {
+            font-size: $font-size-common;
+        }
+    }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.4s;
+}

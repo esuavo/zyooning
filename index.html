@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARKJIYOON Portfolio</title>
+    <meta name="description" content="박지윤의 포트폴리오 사이트입니다.">
+    <meta property="og:title" content="PARKJIYOON Portfolio">
+    <meta property="og:image" content="./images/og-image.png">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <!-- theme-toggle start -->
+    <button class="theme-toggle" aria-label="Change theme" title="다크테마로 변경하기">
+        다크테마로 변경하기
+    </button>
+    <!--// theme-toggle end -->
+    <div class="wrap">
+        <main class="container">
+            <!-- profile start -->
+            <section class="profile">
+                <div class="profile__inner">
+                    <div class="profile__avatar">
+                        <img src="../images/img_profile.png" class="profile__avatar-image">
+                    </div>
+                    <div class="profile__info">
+                        <h1 class="profile__name">PARK JI YOON</h1>
+                        <p class="profile__job">Web Publisher</p>
+                    </div>
+                </div>
+            </section>
+            <!--// profile end -->
+
+            <!-- facts start -->
+            <section class="facts">
+                <ul class="facts__list">
+                    <li class="facts__item">
+                        <strong class="facts__num">7</strong>
+                        <span class="facts__label">Years of work<br>experience</span>
+                    </li>
+                    <li class="facts__item">
+                        <strong class="facts__num">50+</strong>
+                        <span class="facts__label">Completed<br>projects</span>
+                    </li>
+                    <li class="facts__item">
+                        <strong class="facts__num">20+</strong>
+                        <span class="facts__label">Happy<br>clients</span>
+                    </li>
+                </ul>
+            </section>
+            <!--// facts end -->
+
+            <!-- profile-actions start -->
+            <div class="profile-actions">
+                <a href="#" class="button button--primary">
+                    <span class="button__text">Download CV</span>
+                </a>
+                <a href="#" class="button button--outline">
+                    <span class="button__text">Contact me</span>
+                </a>
+            </div>
+            <!--// profile-actions end -->
+
+            <!-- tabs start -->
+            <div class="tabs">
+                <button class="tabs__button tabs__button--active">Portfolio</button>
+                <button class="tabs__button">Skills</button>
+            </div>
+            <!--// tabs end -->
+
+            <div class="tabs__contents tabs__contents--active">
+                <!-- projects start -->
+                <section class="projects">
+                    <ul class="projects__list">
+                        <li class="project-card">
+                            <a href="#" class="project-card__link">
+                                <div class="project-card__thumb">
+                                    <img src="../images/img_project1.png" class="project-card__img">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="project-card">
+                            <a href="#" class="project-card__link">
+                                <div class="project-card__thumb">
+                                    <img src="../images/img_project1.png" class="project-card__img">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!--// projects end -->
+            </div>
+            <div class="tabs__contents">
+                <div class="skills">
+                    <h3 class="skills__title">Frontend</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--html5" aria-hidden="true"></i>
+                            <strong class="skills__name">HTML5</strong>
+                            <p class="skills__desc">웹 표준을 준수하는 시맨틱 마크업</p>
+                        </li>
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--css3" aria-hidden="true"></i>
+                            <strong class="skills__name">CSS3</strong>
+                            <p class="skills__desc">다양한 레이아웃 구현 및 애니메이션</p>
+                        </li>
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--scss" aria-hidden="true"></i>
+                            <strong class="skills__name">SCSS</strong>
+                            <p class="skills__desc">변수와 믹스인을 활용한 효율적인 스타일링</p>
+                        </li>
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--js" aria-hidden="true"></i>
+                            <strong class="skills__name">JavaScript</strong>
+                            <p class="skills__desc">dom 조작 및 동적인 사용자 환경 구현</p>
+                        </li>
+                    </ul>
+
+                    <h3 class="skills__title">Tools</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--vscode" aria-hidden="true"></i>
+                            <strong class="skills__name">vscode</strong>
+                            <p class="skills__desc">다양한 익스텐션을 활용한 효율적인 개발 환경 구축</p>
+                        </li>
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--git" aria-hidden="true"></i>
+                            <strong class="skills__name">Git</strong>
+                            <p class="skills__desc">버전 관리 및 협업을 위한 브랜치 활용</p>
+                        </li>                        
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--slack" aria-hidden="true"></i>
+                            <strong class="skills__name">Slack</strong>
+                            <p class="skills__desc">팀원과의 원활한 소통 및 업무 협업</p>
+                        </li>
+                        <li class="skills__item">
+                            <i class="skills__icon skills__icon--figma" aria-hidden="true"></i>
+                            <strong class="skills__name">Figma</strong>
+                            <p class="skills__desc">디자인 시스템 이해 및 UI 컴포넌트 추출</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- footer start -->
+        <footer class="footer">
+            <p class="footer__copy">Template by Victor Alvarado | © PARKJIYOON. 2026 Web Publishing</p>
+        </footer>
+        <!--// footer end -->
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
