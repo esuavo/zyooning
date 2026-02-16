@@ -1,0 +1,209 @@
+/* ==================================================
+1. VARIABLES (변수)
+================================================== */
+$font-size-common-desktop: 2.2rem;
+$font-size-common-mobile: 1.4rem;
+
+:root {
+    --body-color: #e9ebec;
+    --bg-yellow: #f7d039;
+    --text-color1: #3d3d3d;
+    --text-color2: #575757;
+    --bg-button: #ffffff;
+    --bg-tab-button: #d7d7d7;
+    --text-tab-color: #19191b;
+    --transition-speed: 0.4s;
+    --safe-top: env(safe-area-inset-top);
+    --safe-bottom: env(safe-area-inset-bottom);
+}
+
+.dark-mode {
+    --body-color: #0c151d;
+    --bg-yellow: #ffe071;
+    --text-color1: #f1f2f4;
+    --text-color2: #a3abb2;
+    --bg-button: #171f26;
+    --bg-tab-button: #0c151d;
+}
+/* ==================================================
+2. MIXINS (믹스인)
+================================================== */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsive-font {
+    font-size: $font-size-common-desktop;
+
+    @media (max-width: 767px) {
+        font-size: $font-size-common-mobile;
+    }
+}
+
+@mixin button {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--bg-button);
+    font-size: $font-size-common-desktop;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ==================================================
+3. RESET & BASE STYLES (리셋 및 기본 태그 설정)
+================================================== */
+/* Poppins - Regular */
+@font-face { 
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-007F; /* 영어, 숫자 등 */
+}
+
+/* Poppins - Medium */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-007F; /* 영어, 숫자 등 */
+}
+
+
+/* Poppins - Bold */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-007F; /* 영어, 숫자 등 */
+}   
+
+/* Noto Sans KR - Regular */
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+        url('../fonts/NotoSansKR-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+AC00-D7A3; /* 한글 영역 */
+}
+
+/* Noto Sans KR - Bold */
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
+        url('../fonts/NotoSansKR-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+AC00-D7A3; /* 한글 영역 */
+}
+
+/* Box sizing 통일 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 기본 margin 최소화 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+}
+
+/* body 기본 세팅 */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Poppins', 'Noto Sans KR', system-ui, sans-serif;
+    color: #111;
+}
+
+/* 리스트 스타일 제거 */
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+/* 이미지 & picture 처리 */
+img {
+    vertical-align: top;
+}
+img,
+picture {
+    max-width: 100%;
+    display: block;    
+}
+
+/* 폼 요소 폰트 상속 */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    all: unset;           
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    color: transparent;   
+    font-size: 0;         
+    line-height: 0;       
+    text-align: left;
+    cursor: pointer;     
+    touch-action: manipulation;   
+    &:focus {
+        outline: none;
+    }    
+}
+
+/* 링크 스타일 최소화 */
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    touch-action: manipulation;
+}
+
+
+
+
+
+
+
+
