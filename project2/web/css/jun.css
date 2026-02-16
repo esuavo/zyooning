@@ -1,0 +1,472 @@
+@charset "utf-8";
+
+/* sub.css로 이동예정 */
+/* pagination */
+.pagination {
+	font-size:0;
+	text-align:center;
+}
+.pagination a {
+	color:#999;
+}
+.pagination span,
+.pagination a:hover,
+.pagination a:focus {
+	color:#be9768;
+}
+.pagination a,
+.pagination span {
+	display:inline-block;
+	position:relative;
+	margin:0 2px 0 3px;
+	padding:4px 10px;
+	font-size:16px;
+	vertical-align:middle;
+	font-family:"Avenir",sans-serif;
+	font-weight:300;
+}
+.pagination a:hover:before,
+.pagination a:focus:before,
+.pagination span:before {
+	content:"";
+	position:absolute;
+	left:10px;
+	right:10px;
+	bottom:0;
+	height:1px;
+	background-color:#be9768;
+	color:#be9768;
+}
+.pagination a[class$=page] {
+	width:9px;
+	height:24px;
+	padding:0 10px;
+	background-repeat:no-repeat;
+	background-position:50% 7px;
+}
+.pagination .first-page {
+	margin-right:4px;
+	background-image:url(/web/images/sub/ico-first-page.png)
+}
+.pagination .last-page {
+	margin-left:5px;
+	background-image:url(/web/images/sub/ico-last-page.png)
+}
+.pagination .prev-page {
+	margin-right:16px;
+	background-image:url(/web/images/sub/ico-prev-page.png)
+}
+.pagination .next-page {
+	margin-left:21px;
+	background-image:url(/web/images/sub/ico-next-page.png)
+}
+.pagination a[class$=page]:hover:before,
+.pagination a[class$=page]:focus:before {
+	display:none;
+}
+a.ico-file {
+	position:relative;
+}
+a.ico-file:after{
+	content:"";
+	position:absolute;	
+	right:-30px;	
+	margin-top:4px;
+	width:20px;
+	height:16px;
+	background:url(/web/images/sub/ico-file.png) no-repeat 50% 50%;
+}
+
+/* 게시판 상세 */
+.bbs-view .detail-date {
+	margin:-3px 0 11px;
+	font-family:"Avenir",sans-serif;
+	font-weight:300;
+	color:#777;
+}
+.bbs-view .detail-title {
+	padding-bottom:38px;
+	border-bottom:1px solid #d7d7d7;
+	font-size:32px;
+	font-weight:300;
+	line-height:42px;
+	color:#000;
+}
+.bbs-view .detail-file {
+	padding:17px 10px 17px 7px;
+	border-bottom:1px solid #d7d7d7;
+}
+.bbs-view .detail-file:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.bbs-view .detail-file span {
+	float:left;
+	height:25px;
+	margin-right:7px;
+	font-weight:300;
+	color:#777;
+	line-height:25px;
+}
+.bbs-view .detail-file .ico-file {
+	display:inline-block;
+	width:20px;
+	background:url(/web/images/sub/ico-file.png) no-repeat 50% 6px;
+}
+.bbs-view .detail-file .btn-mini {
+	float:right;
+}
+.bbs-view .detail-cont {
+	margin-bottom:23px;
+	padding:50px 0;
+	border-bottom:1px solid #d7d7d7;
+	font-size:16px;
+	font-weight:300;
+	line-height:26px;
+	color:#777;
+}
+.bbs-view .detail-cont div img {
+	max-width:100%;
+}
+.bbs-view .detail-cont p {	
+	font-size:16px;
+	font-weight:300;
+	line-height:26px;
+	color:#777;
+}
+.bbs-view .detail-bottom {
+	overflow:hidden;
+}
+.bbs-view .detail-bottom:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.bbs-view .detail-bottom a {
+	position:relative;
+	font-weight:300;
+	line-height:26px;
+	color:#777;
+}
+.bbs-view .detail-bottom .btn-list {
+	padding-left:15px;
+}
+.bbs-view .detail-bottom .btn-list:before {
+	content:"";
+	position:absolute;
+	left:0;
+	top:50%;
+	width:5px;
+	height:8px;
+	margin-top:-4px;
+	background:url(/web/images/sub/ico-prev-page.png) no-repeat 0 0;
+}
+.bbs-view .detail-bottom div {
+	float:right;
+	margin-right:-20px;
+}
+.bbs-view .detail-bottom div a {
+	position:relative;
+	margin:0 20px;
+}
+.bbs-view .detail-bottom div a + a:before {
+	content:"";
+	position:absolute;
+	left:-22px;
+	top:50%;
+	width:1px;
+	height:10px;
+	margin-top:-5px;
+	background-color:#d7d7d7;
+}
+
+
+/* 고객센터 */
+.help-cont {
+	margin-top:70px;
+	position:relative;
+}
+.help-cont .table-type1 td {
+	padding:18px 20px 17px;
+	line-height:23px;
+}
+.help-cont .table-type1 a {
+	position:relative;
+}
+.help-cont .table-type1 a:hover,
+.help-cont .table-type1 a:focus {
+	color:#be9768;
+	text-decoration:underline;	
+}
+
+.help-cont .pagination {
+	margin-top:44px;
+}
+
+.help-cont .table-type1 td.nodata-area {
+	padding:264px 0 325px;
+	font-size:24px;
+	font-weight:333;
+	color:#999999;
+}
+
+/* FAQ */
+.help-cont .select-group.faq {	
+	float:right;
+	top:-15px;
+}
+
+.help-cont .select-group.faq .selectric .label { 	
+ 	margin:0 100px 0 20px;
+}
+
+.help-cont .select-group.faq .selectric-items {
+	width:190px !important;	
+}
+
+.help-cont .select-group.faq .select-styled {
+	border:0;
+	text-align:center;
+	color:#777777;
+}
+
+.help-cont .select-group.faq .select-options {
+	top:45px;
+}
+
+/* QNA */
+.qna-btn {
+	display:inline-block;
+	position:absolute;
+	right:2px;
+	top:-50px;
+}
+
+.qna-top {
+	display:table;
+	width: 100%;
+	border-top:1px solid #be9768;
+	border-bottom:1px solid #d7d7d7;
+	padding:10px 0 10px 5px;
+}
+
+.qna-top .select-group,
+.qna-top .inp-area {
+	display:table-cell;
+	box-sizing:border-box;
+	vertical-align:middle;
+}
+
+.qna-top .select-group {
+	width:205px;
+}
+
+.qna-top .select-group:after {
+	content:"";
+	position:absolute;
+	right:0;
+	top:50%;
+	transform:translateY(-50%);
+	width:1px;
+	height:16px;
+	background-color:#d7d7d7;
+}
+
+.qna-top .select-group .select {
+	width:195px;
+}
+
+.qna-top .select-group .select-styled {
+	border:0px;
+}
+
+.qna-top .inp-area {
+	padding-left:20px;
+}
+
+.qna-top .inp-area .inp-def {
+	width:100%;
+}
+
+.qna-textarea {
+	margin:20px 0;
+}
+
+.qna-textarea .textarea-def {
+	height:365px;
+}
+
+.qna-member .table-type2 tr:first-child th,
+.qna-member .table-type2 tr:first-child td {
+	border-top:1px solid #d7d7d7;
+}
+
+.qna-agree {
+	display:block;
+	margin-top:20px;
+	color:#777777;
+	font-weight:300;
+	line-height:24px;
+}
+
+.qna-agree button {
+	border-bottom:1px solid #777777;
+}
+
+.help-cont .btn-two-column {
+	margin-top:45px;
+}
+
+/* //고객센터 */
+
+
+/* Accordion table(고객센터) */
+.table-type1.accordion-table td {
+	padding:0;
+}
+
+.accordion-table .q-area {
+	display:table;
+	width:100%;
+}
+
+.accordion-table .q-area em {
+	width:183px;
+	font-size:16px;
+	font-weight:300;
+	color:#333333;
+	text-align:center;
+}
+
+.accordion-table .q-area em,
+.accordion-table .q-area .txt-area,
+.accordion-table .q-area .date-area {
+	display:table-cell;
+	box-sizing:border-box;
+	vertical-align:middle;
+}
+
+.accordion-table .q-area em,
+.accordion-table .q-area .date-area {
+	padding:19px 0;
+}
+
+.accordion-table .a-area {
+	border-top:1px solid #dcdcdc;
+	padding:50px 50px 50px 183px;
+}
+
+.accordion-table.table-type1 .a-area .txt-area {
+	position: relative;
+	padding-left:50px;
+	text-align:left;
+	font-size:16px;
+	line-height:24px;
+	color:#777777;
+	font-weight:333;
+}
+
+.accordion-table.table-type1 .ac-btn {
+	position:relative;
+	padding:19px 50px;
+	text-align:left;
+	font-size:16px;
+	line-height:24px;
+	color:#333;
+	font-weight:333;
+}
+
+.accordion-table .ico-badge {
+	position:absolute;
+	left:0;
+	top:17px;
+}
+
+.accordion-table .ico-badge.answer {
+	top:0px;
+}
+
+.accordion-table .a-area {
+	display:none;
+}
+
+.accordion-table .ac-btn {
+	width:100%;
+	cursor:pointer;
+	text-align:left;
+}
+
+.accordion-table .ac-btn:after {
+	content:"";
+	background:url(/web/images/sub/ico-arrow-select.png) no-repeat 0 0;
+	background-position:0px -9px;
+	width:9px;
+	height:9px;
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	right:20px;
+}
+
+.accordion-table .ac-btn.on:after {
+	background:url(/web/images/sub/ico-arrow-select.png) no-repeat 0 0;
+	background-position:0px 0px;
+}
+
+/* 고객센터>문의내역팝업style(CO2.4.T3.1.P1) */
+.accordion-table.type2 .q-area em {
+	width:155px;
+}
+.accordion-table.type2 .q-area .txt-area {
+	width:473px;
+}
+.accordion-table .q-area .date-area{
+	width:116px;
+}
+
+.accordion-table.type2 .ac-btn {
+	padding:19px 0;
+}
+
+.accordion-table.type2 .ac-btn:after {
+	background:none;
+}
+
+.accordion-table.type2 .a-area {
+	padding:0;
+	border-top:1px solid #d7d7d7;
+	background-color:#f5f4f0;
+}
+
+.accordion-table.type2 .a-area dl {
+	text-align:left;
+}
+
+.accordion-table.type2 .a-area dl>dt,
+.accordion-table.type2 .a-area dl>dd {
+	position:relative;
+	padding:52px 50px 52px 60px;
+	font-size:16px;
+	line-height:26px;
+	font-weight:300;
+}
+
+.accordion-table.type2 .a-area .txt-area {
+	padding-left:93px;
+}
+
+.accordion-table.type2 .a-area dl>dt .txt-area {
+	color:#333333;
+}
+
+.accordion-table.type2 .a-area dl>dd {
+	color:#777777;
+	border-top:1px dashed #dcdcdc;
+}
+
+.accordion-table.type2 .ico-badge {
+	top:0;
+}
+
+/* //sub.css로 이동예정 */
