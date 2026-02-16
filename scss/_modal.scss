@@ -1,0 +1,164 @@
+@use 'base' as *;
+
+/* 모달 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity var(--transition-speed), visibility var(--transition-speed);    
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: background-color var(--transition-speed) ease;
+    }
+
+    &__wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include flex-center;
+    }
+
+    &__content {
+        position: relative;        
+        background-color: var(--body-color);
+        padding: 3rem;
+        border-radius: 20px;
+        max-width: 90%;
+        width: 40rem;
+        transform: scale(0.9);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__title {
+        @include responsive-font;
+        color: var(--text-color2);
+        font-weight: 500;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1.4rem;
+        right: 1.4rem;       
+        line-height: 1;
+        width: 4rem;
+        height: 4rem;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2rem;
+            height: 0.2rem;
+            background-color: var(--text-color2);
+            border-radius: 2px;
+        }
+        &:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        .modal__overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal__content {
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.contact-links {
+    margin-top: 1.5rem;
+
+    .button {
+        height: 6rem;
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 3.2rem;
+            height: 3.2rem;
+            background: url(../images/icon_email_light.png) no-repeat 50% / contain;
+        }
+    }
+}
+
+.dark-mode {
+    .contact-links {
+        .button {
+            &:before {
+                background-image: url(../images/icon_email_dark.png);
+            }
+        }
+    }
+}
+
+/* 모바일: 하단에서 올라오기 */
+@media (max-width: 767px) {
+    .modal {
+        &__wrapper {
+            align-items: flex-end;
+        }
+
+        &__content {
+            width: 100%;
+            max-width: 100%;
+            padding: 2rem; // 전체 padding
+            //padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px)); // 하단만 추가
+            border-radius: 20px 20px 0 0;
+            transform: translateY(100%);
+            opacity: 1;
+        }
+
+        &--active &__content {
+            transform: translateY(0);
+        }
+
+        &__close {
+            top: 0.6rem;
+            right: 0.6rem;            
+        }
+    }
+
+    .contact-links {
+        margin-top: 1.5rem;
+
+        .button {
+            height: 4.5rem;
+            font-size: 1.4rem;
+
+            &:before {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+}

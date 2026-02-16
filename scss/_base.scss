@@ -13,8 +13,8 @@ $font-size-common-mobile: 1.4rem;
     --bg-tab-button: #d7d7d7;
     --text-tab-color: #19191b;
     --transition-speed: 0.4s;
-    --safe-top: env(safe-area-inset-top);
-    --safe-bottom: env(safe-area-inset-bottom);
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .dark-mode {
@@ -46,9 +46,7 @@ $font-size-common-mobile: 1.4rem;
     width: 100%;
     border-radius: 10px;
     background-color: var(--bg-button);
-    font-size: $font-size-common-desktop;
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-    -webkit-tap-highlight-color: transparent;
 }
 
 /* ==================================================
@@ -186,7 +184,8 @@ button {
     line-height: 0;       
     text-align: left;
     cursor: pointer;     
-    touch-action: manipulation;   
+    touch-action: manipulation;      
+    -webkit-tap-highlight-color: transparent; 
     &:focus {
         outline: none;
     }    
@@ -199,11 +198,3 @@ a {
     outline: none;
     touch-action: manipulation;
 }
-
-
-
-
-
-
-
-

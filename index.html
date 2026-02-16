@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
     <title>PARKJIYOON Portfolio</title>
     <meta name="description" content="박지윤의 대표 프로젝트를 담은 포트폴리오 사이트입니다.">
@@ -13,7 +14,7 @@
     <meta property="og:description" content="박지윤의 대표 프로젝트를 담은 포트폴리오 사이트입니다.">
     <meta property="og:image" content="https://esuavo.github.io/zyooning/og-image.png">
     <meta property="og:url" content="https://esuavo.github.io/zyooning/">
-
+    <meta name="theme-color" content="#e9ebec">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -22,17 +23,32 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./android-chrome-512x512.png">
 
-    <link rel="manifest" href="./site.webmanifest">
+    <link rel="manifest" href="./site.webmanifest">   
+    <script>
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        history.scrollRestoration = 'manual'; // 브라우저 자동 복원 끄기
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0); // 로드 완료 후 맨 위로
+        });
+    </script> 
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body>
-    <!-- theme-toggle start -->
-    <button class="theme-toggle" aria-label="Change theme" title="다크테마로 변경하기">
-        다크테마로 변경하기
-    </button>
-    <!--// theme-toggle end -->
+<body>   
     <div class="wrap">
+        <!-- switch-container start -->
+        <div class="switch-container">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Change theme">
+                다크테마로 변경하기
+            </button>
+        </div>
+        <!-- <div class="switch-container">
+            <input type="checkbox" id="darkModeToggle" class="checkbox">
+            <label for="darkModeToggle" class="theme-toggle">다크테마로 변경하기</label>
+        </div> -->
+        <!--// switch-container end -->
         <main class="container">
             <!-- profile start -->
             <section class="profile">
@@ -70,46 +86,35 @@
             <!-- profile-actions start -->
             <div class="profile-actions">
                 <a href="file/resume_jiyoonpark_20260210.pdf" class="button button--primary" download="이력서_박지윤.pdf"
-                    target="_blank" rel="noopener noreferrer">
+                    target="_blank" rel="noopener">
                     <span class="button__text">Download CV</span>
                 </a>
-                <a href="#" class="button button--outline">
-                    <span class="button__text">Contact me</span>
-                </a>
+                <button type="button" class="button modal__open">
+                    Contact Me
+                </button>
+                <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__wrapper">
+                        <div class="modal__content">
+                            <h3 id="modalTitle" class="modal__title">Contact Me</h3>
+                            <div class="contact-links">
+                                <a href="mailto:esuavo@gmail.com" class="button">Email Me</a>
+                            </div>
+
+                            <button type="button" class="modal__close" aria-label="닫기">닫기</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--// profile-actions end -->
 
             <!-- tabs start -->
             <div class="tabs">
-                <button class="tabs__button tabs__button--active">Portfolio</button>
-                <button class="tabs__button">Skills</button>
+                <button class="tabs__button tabs__button--active">Skills</button>
+                <button class="tabs__button">Portfolio</button>
             </div>
             <!--// tabs end -->
-
             <div class="tabs__contents tabs__contents--active">
-                <!-- projects start -->
-                <section class="projects">
-                    <h3 class="skills__title">Selected Projects</h3>
-                    <ul class="projects__list">
-                        <li class="project-card">
-                            <a href="project1/" class="project-card__link" target="_blank">
-                                <div class="project-card__thumb">
-                                    <img src="./images/img_project1.png" class="project-card__img">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="project-card">
-                            <a href="javascript:void(0)" class="project-card__link" target="_blank">
-                                <div class="project-card__thumb">
-                                    <img src="./images/img_project1.png" class="project-card__img">
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <!--// projects end -->
-            </div>
-            <div class="tabs__contents">
                 <div class="skills">
                     <h3 class="skills__title">Frontend</h3>
                     <ul class="skills__list">
@@ -160,6 +165,30 @@
                     </ul>
                 </div>
             </div>
+            <div class="tabs__contents">
+                <!-- projects start -->
+                <section class="projects">
+                    <h3 class="skills__title">Selected Projects</h3>
+                    <ul class="projects__list">
+                        <li class="project-card">
+                            <a href="project1/" class="project-card__link" target="_blank">
+                                <div class="project-card__thumb">
+                                    <img src="./images/img_project1.png" class="project-card__img">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="project-card">
+                            <a href="javascript:void(0)" class="project-card__link" target="_blank">
+                                <div class="project-card__thumb">
+                                    <img src="./images/img_project1.png" class="project-card__img">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!--// projects end -->
+            </div>
+
         </main>
         <!-- footer start -->
         <footer class="footer">

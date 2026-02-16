@@ -1,147 +1,116 @@
-:root {
-    --body-color: #e9ebec; // 기본 배경 (라이트)
-    --bg-yellow: #f7d039;
-    --text-color1: #3d3d3d;
-    --text-color2: #575757;
-    --bg-button: #ffffff;
-    --bg-tab-button: #d7d7d7;
-    --text-tab-color: #19191b;
+@use 'base' as *;
+
+.is-resizing * {
+    --trans-speed: 0s !important;
+    transition-duration: 0s !important;
 }
 
-$font-size-common: 2.2rem;
-$theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+.dark-mode {
+    .facts__num {
+        color: var(--text-color2);
+    }
 
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .profile-actions .button {
+        color: var(--text-color2);
 
-@mixin button {
-    width: 100%;
-    height: 8rem;
-    border-radius: 10px;
-    background-color: var(--bg-button);
-    font-size: $font-size-common;
+        &--primary {
+            color: #3d3d3d;
+        }
+    }
+
+    .tabs__button {
+        color: var(--text-color2);
+    }
+
+    .theme-toggle {
+        background-color: #2c3e50;
+
+        &:after {
+            transform: translateX(6rem);
+            background-image: url(../images/icon_moon.png);
+            background-size: 27px;
+        }
+    }
+
+    .skills__icon {
+        &--figma {
+            background-image: url(../images/icon_figma_light.png);
+        }
+
+        &--vscode {
+            background-image: url(../images/icon_vscode_light.png);
+        }
+    }
 }
 
 body {
     background-color: var(--body-color);
     font-weight: 500;
+    transition: background-color var(--transition-speed);
 
-    .button,
-    .tabs,
-    .profile__avatar {
-        transition: $theme-transition;
-    }
+    &.body--locked {
+        overflow: hidden;
+        padding-right: var(--scrollbar-width);
 
-    &.dark-mode {
-        --body-color: #0c151d; // 어두운 배경
-        --bg-yellow: #ffe071;
-        --text-color1: #f1f2f4;
-        --text-color2: #a3abb2;
-        --bg-button: #171f26;
-        --bg-tab-button: #0c151d;
-
-        .facts {
-            &__num {
-                color: var(--text-color2);
-            }
+        .switch-container {
+            padding-right: var(--scrollbar-width);
         }
-
-        .profile-actions {
-            .button {
-                color: var(--text-color2);
-
-                &--primary {
-                    color: #3d3d3d;
-                }
-            }
-        }
-
-        .tabs {
-            &__button {
-                color: var(--text-color2);
-            }
-        }
-
-        .theme-toggle {
-            background-image: url(../images/btn_change_theme_dark.png);
-        }
-        .skills {
-            &__icon {
-                &--figma {
-                    background-image: url(../images/icon_figma_light.png);
-                }
-                &--vscode {
-                    background-image: url(../images/icon_vscode_light.png);
-                }
-            }
-        }
-    }
-}
-
-.theme-toggle {
-    position: absolute;
-    top: 3.6rem;
-    left: 50%;
-    width: 8rem;
-    height: 8rem;
-    transform: translateX(-50%);
-    background: url(../images/btn_change_theme.png) no-repeat 0 0 / 100%;
-    animation: fadeOutAndBack 0.4s ease-in-out forwards;
-    will-change: transform, opacity;
-    z-index: 1;
-    &--fixed {
-        position: fixed;
-        right: max(2rem, calc((100vw - 76rem) / 2 - 10rem));
-        left: auto;
-        transform: translateX(0);
-        animation: fadeInAndShow 0.4s ease-out forwards;
-    }
-}
-
-/* 1. 나타나는 애니메이션 (위에서 아래로) */
-@keyframes fadeInAndShow {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 2. 사라지는 애니메이션 (아래에서 위로 스르륵) */
-@keyframes fadeOutAndBack {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
     }
 }
 
 .wrap {
     max-width: 80rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 17.8rem 2rem 0;
 }
 
-.container {
-    padding-top: 17.8rem;
+.switch-container {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    @include flex-center;
+    padding: 3.3rem 0;
+    transition: background-color var(--transition-speed);
+}
+
+.theme-toggle {
+    position: relative;
+    width: 12rem;
+    height: 6rem;
+    background-color: var(--bg-tab-button);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 0;
+    transition: background-color var(--transition-speed) ease;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6rem;
+        height: 6rem;
+        background: var(--bg-button) url(../images/icon_sun.png) no-repeat 50% / 50%;
+        border-radius: 100%;
+        transform: translateX(0);
+        transition: background-image var(--transition-speed) ease;
+    }
+
+    &.is-animated:after {
+        transition: transform var(--transition-speed) ease;
+        will-change: transform;
+    }
 }
 
 .profile {
-    $profile: &;
     @include flex-center;
-    transition: transform 0.3s ease-out, box-shadow 0.2s;
     background-color: transparent;
+    //margin-top: 3.3rem;
 
     &__inner {
         max-width: 63rem;
@@ -160,33 +129,31 @@ body {
         background-color: var(--bg-yellow);
         border: 10px solid var(--body-color);
         border-radius: 50%;
-        box-shadow: 0 0 0 4px var(--bg-yellow),
-            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 0 4px var(--bg-yellow), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         overflow: hidden;
-
+        transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
     }
 
     &__avatar-image {
         height: 180px;
         transform-origin: bottom;
-        transition: transform 0.4s ease-out;
+        transition: transform var(--transition-speed) ease-out;
         transform: translateZ(0);
         backface-visibility: hidden;
         will-change: transform;
-        filter: blur(0);
     }
 
     &__name {
         color: var(--text-color1);
         font-size: 4.6rem;
         font-weight: 500;
-
+        transition: color var(--transition-speed);
     }
 
     &__job {
         color: var(--text-color2);
-        font-size: $font-size-common;
-
+        transition: color var(--transition-speed);
+        @include responsive-font;
     }
 }
 
@@ -214,13 +181,11 @@ body {
     &__num {
         font-size: 2.4rem;
         color: var(--text-color1);
-
     }
 
     &__label {
-        font-size: $font-size-common;
+        @include responsive-font;
         color: var(--text-color2);
-
     }
 }
 
@@ -233,6 +198,8 @@ body {
     .button {
         @include flex-center;
         @include button;
+        @include responsive-font;
+        height: 8rem;
         color: var(--text-color1);
 
         &--primary {
@@ -262,16 +229,14 @@ body {
     gap: 2.4rem;
     padding: 1.5rem 2.4rem;
     margin-top: 8.6rem;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 
     &__button {
-        width: 100%;
         height: 8rem;
-        background-color: var(--bg-button);
-        border-radius: 10px;
-        font-size: $font-size-common;
+        @include flex-center;
+        @include button;
+        @include responsive-font;
         color: var(--text-tab-color);
-        text-align: center;
-
         &--active {
             background-color: var(--bg-tab-button);
         }
@@ -281,8 +246,7 @@ body {
         display: none;
         margin-top: 7.6rem;
         opacity: 0;
-        transform: translateY(10px); // 살짝 아래에 배치
-        transition: opacity 0.4s ease, transform 0.4s ease;
+        transform: translateY(10px);
 
         &--active {
             display: block;
@@ -314,7 +278,6 @@ body {
 
 .project-card {
     flex: 0 0 calc(50% - 1.6rem);
-    transition: transform 0.3s ease;
 
     &__thumb {
         position: relative;
@@ -344,10 +307,11 @@ body {
 
 .skills {
     &__title {
-        font-size: 2.2rem;
+        @include responsive-font;
         color: var(--text-color1);
         margin: 4.8rem 0 3.2rem;
         font-weight: 500;
+
         &:first-child {
             margin-top: 0;
         }
@@ -368,6 +332,7 @@ body {
         background-color: var(--bg-button);
         border-radius: 15px;
         padding: 2.5rem 1rem;
+        transition: background-color var(--transition-speed) ease;
     }
 
     &__icon {
@@ -381,24 +346,31 @@ body {
         &--html5 {
             background-image: url(../images/icon_html5.png);
         }
+
         &--css3 {
             background-image: url(../images/icon_css.png);
         }
+
         &--scss {
             background-image: url(../images/icon_sass.png);
         }
+
         &--js {
             background-image: url(../images/icon_js.png);
         }
+
         &--vscode {
             background-image: url(../images/icon_vscode_dark.png);
         }
+
         &--git {
             background-image: url(../images/icon_git.png);
         }
+
         &--figma {
             background-image: url(../images/icon_figma_dark.png);
         }
+
         &--slack {
             background-image: url(../images/icon_slack.png);
         }
@@ -408,6 +380,7 @@ body {
         font-size: 1.6rem;
         color: var(--text-color2);
         font-weight: 500;
+        transition: color var(--transition-speed) ease;
     }
 
     &__desc {
@@ -417,6 +390,7 @@ body {
         overflow-wrap: break-word;
         text-align: center;
         margin-top: 1rem;
+        transition: color var(--transition-speed) ease;
     }
 }
 
@@ -426,7 +400,8 @@ body {
 
     &__copy {
         color: var(--text-color2);
-        font-size: $font-size-common;
+        transition: color var(--transition-speed) ease;
+        @include responsive-font;
     }
 }
 
@@ -440,30 +415,33 @@ body {
     }
 }
 
-/* Mobile 기본 */
+/* Mobile */
 @media (max-width: 767px) {
-    $font-size-common: 1.4rem;
-
-    @mixin button {
-        height: 4.4rem;
-        font-size: $font-size-common;
-    }
-
-
-    .theme-toggle {
-        right: 2rem;
-        top: 2rem;
-        width: 4.8rem;
-        height: 4.8rem;
+    .dark-mode {
+        .theme-toggle:after {
+            transform: translateX(4rem);
+            background-size: 16px;
+        }
     }
 
     .wrap {
         max-width: 100%;
-        padding: 0 2.25rem;
+        padding: 9.8rem 2rem 0;
     }
 
-    .container {
-        padding-top: 9.8rem;
+    .switch-container {
+        padding: 2rem 0;
+    }
+
+    .theme-toggle {
+        width: 8rem;
+        height: 4rem;
+        border-radius: 23px;
+
+        &:after {
+            width: 4rem;
+            height: 4rem;
+        }
     }
 
     .profile {
@@ -487,7 +465,6 @@ body {
         }
 
         &__job {
-            font-size: $font-size-common;
             text-align: center;
         }
     }
@@ -502,10 +479,6 @@ body {
         &__num {
             font-size: 1.6rem;
         }
-
-        &__label {
-            font-size: $font-size-common;
-        }
     }
 
     .profile-actions {
@@ -513,31 +486,25 @@ body {
         width: 100%;
 
         .button {
-            @include flex-center;
-            @include button;
+            height: 4.4rem;
 
-            &--primary {
-                .button__text {
-                    &:after {
-                        width: 1.6rem;
-                        height: 1.4rem;
-                        background-size: 100% 100%;
-                        margin-left: .5rem;
-                    }
-                }
+            &--primary .button__text:after {
+                width: 1.6rem;
+                height: 1.4rem;
+                background-size: 100% 100%;
+                margin-left: 0.5rem;
             }
         }
     }
 
     .tabs {
         border-radius: 10px;
-        gap: .9rem;
-        padding: .7rem;
+        gap: 1rem;
+        padding: 0.7rem;
         margin-top: 5.8rem;
 
         &__button {
             height: 5rem;
-            font-size: $font-size-common;
         }
 
         &__contents {
@@ -545,11 +512,9 @@ body {
         }
     }
 
-    .projects {
-        &__list {
-            gap: 0;
-            row-gap: 3rem;
-        }
+    .projects__list {
+        gap: 0;
+        row-gap: 3rem;
     }
 
     .project-card {
@@ -566,12 +531,13 @@ body {
 
     .skills {
         &__title {
-            font-size: 1.4rem;
             margin: 3.2rem 0 2rem;
+
             &:first-child {
                 margin-top: 0;
             }
         }
+
         &__list {
             gap: 1.2rem;
         }
@@ -586,21 +552,11 @@ body {
         }
 
         &__name {
-            font-size: 1.4rem;
+            font-size: $font-size-common-mobile;
         }
     }
-
 
     .footer {
         padding: 4rem 0;
-
-        &__copy {
-            font-size: $font-size-common;
-        }
     }
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-    animation-duration: 0.4s;
 }

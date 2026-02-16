@@ -1,4 +1,17 @@
 var ui = {
+    init: function () {
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            // 1. 리사이즈 시작하자마자 애니메이션 속도를 0으로 강제 고정
+            document.documentElement.style.setProperty('--trans-speed', '0s');
+
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                // 2. 리사이즈 멈추고 0.1초 뒤에 다시 0.3s로 복구
+                document.documentElement.style.removeProperty('--trans-speed');
+            }, 100);
+        });
+    },
     tabActive: function () {
         const buttons = document.querySelectorAll(".tabs__button");
         const contents = document.querySelectorAll(".tabs__contents");
@@ -26,59 +39,83 @@ var ui = {
             });
         });
     },
-
     themeHandler: function () {
-        const btn = document.querySelector(".theme-toggle");
-        const body = document.body;
+        const btn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
         if (!btn) return;
 
-        // --- [1] 다크모드 초기 설정 (새로고침 시 유지) ---
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-            body.classList.add("dark-mode");
+        const updateBtnText = () => {
+            const isDark = html.classList.contains("dark-mode");
+            const newText = isDark ? "라이트테마로 변경하기" : "다크테마로 변경하기";
+
+            btn.textContent = newText;
+            btn.setAttribute("aria-label", newText);
+        };
+
+        // 초기 설정
+        function applyInitialTheme() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            html.classList.toggle('dark-mode', isDarkMode);
+            updateBtnText();
         }
 
-        // --- [2] 다크모드 토글 (startViewTransition 적용) ---
-        btn.addEventListener("click", () => {
-            // 내부 로직: 클래스 바꾸고 로컬스토리지 저장
-            const toggleAndSave = () => {
-                body.classList.toggle("dark-mode");
-                const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
-                localStorage.setItem("theme", currentTheme);
-            };
+        // 토글 함수
+        function toggleDarkMode() {
+            const isDarkMode = html.classList.toggle('dark-mode');
+            btn.classList.add('is-animated');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateBtnText();
+            setTimeout(() => {
+                btn.classList.remove('is-animated');
+            }, 300);
+        }
 
-            // 브라우저가 최신 페이드 효과(View Transitions)를 지원하지 않는 경우
-            if (!document.startViewTransition) {
-                toggleAndSave();
-                return;
-            }
+        applyInitialTheme();
+        btn.addEventListener('click', toggleDarkMode); 
+    },    
+    modal: function () {
+        const modal = document.querySelector('.modal');
+        const openBtn = document.querySelector('.modal__open');
+        if (!modal || !openBtn) return;
 
-            // 지원하는 경우 부드러운 화면 전환 실행
-            document.startViewTransition(() => {
-                toggleAndSave();
-            });
-        });
+        // 1. 내부 전용 열기 함수 (이 스코프 안에서만 유효)
+        const openModal = () => {
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
 
-        // --- [3] 스크롤 시 버튼 위치 제어 ---
-        let isFixed = false;
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
+            document.body.classList.add('body--locked');
+            modal.classList.add('modal--active');
+        };
 
-            if (scrollY > 50 && !isFixed) {
-                btn.classList.add("theme-toggle--fixed");
-                isFixed = true;
-            } else if (scrollY <= 50 && isFixed) {
-                btn.classList.remove("theme-toggle--fixed");
-                isFixed = false;
+        // 2. 내부 전용 닫기 함수
+        const closeModal = () => {
+            modal.classList.remove('modal--active');
+
+            setTimeout(() => {
+                document.body.classList.remove('body--locked');
+                document.documentElement.style.removeProperty('--scrollbar-width');
+            }, 300); // CSS transition 시간에 맞춰 조절
+        };
+
+        // --- 실행부 ---
+
+        // 열기 버튼 클릭
+        openBtn.addEventListener('click', openModal);
+
+        // 닫기 (배경 및 닫기 버튼 클릭)
+        modal.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal__wrapper') || e.target.classList.contains('modal__close')) {
+                closeModal();
             }
         });
     }
 }
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
+    window.scrollTo(0, 0);
+    ui.init();
     ui.tabActive();
     ui.themeHandler();
+    ui.modal();
 });
