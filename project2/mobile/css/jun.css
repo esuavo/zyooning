@@ -57,11 +57,11 @@
 }
 .pagination .prev-page {
 	left:-2px;
-	background-image:url(/mobile/images/sub/ico-prev-page.png)
+	background-image:url(./images/sub/ico-prev-page.png)
 }
 .pagination .next-page {
 	right:-2px;
-	background-image:url(/mobile/images/sub/ico-next-page.png)
+	background-image:url(./images/sub/ico-next-page.png)
 }
 
 .help-cont {
@@ -105,7 +105,7 @@
 	width:10px;
 	height:11px;
 	margin-left:5px;
-	background:url(/mobile/images/sub/ico-file.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-file.png) no-repeat 50% 50%;
 	background-size:10px 11px;
 }
 

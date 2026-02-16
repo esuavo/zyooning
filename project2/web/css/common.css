@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-@import "/web/css/reset.css";
-@import "/web/css/slick.css";
-@import "/web/css/selectric.css";
+@import "./css/reset.css";
+@import "./css/slick.css";
+@import "./css/selectric.css";
 
 html {
     position:relative;
@@ -230,7 +230,7 @@ html,body {
 .header-wrap .btn-combine-booking button {
 	width:200px;
 	height:110px;
-	background:#be9768 url(/web/images/common/ico-combine-booking.png) no-repeat 50% 30px;
+	background:#be9768 url(./images/common/ico-combine-booking.png) no-repeat 50% 30px;
 	color:#fff;
 	font-size:16px;
 	font-weight:500;
@@ -335,11 +335,11 @@ html,body {
 }
 
 .footer-wrap .sns-wrap .btn-insta {
-	background:url(/web/images/common/ico-insta.png) no-repeat;
+	background:url(./images/common/ico-insta.png) no-repeat;
 }
 
 .footer-wrap .sns-wrap .btn-facebook {
-	background:url(/web/images/common/ico-facebook.png) no-repeat;	
+	background:url(./images/common/ico-facebook.png) no-repeat;	
 }
 
 .footer-wrap .address-info {
@@ -431,7 +431,7 @@ html,body {
 	display:inline-block;
 	height:32px;
 	padding-left:15px;
-	background:url(/web/images/main/ico-circle2.png) no-repeat 0 0;	
+	background:url(./images/main/ico-circle2.png) no-repeat 0 0;	
 }
 
 .btn-style1 button {	
@@ -446,7 +446,7 @@ html,body {
 	display:inline-block;
 	width:5px;
 	height:8px;
-	background:url(/web/images/common/ico-gray-arrow5x8.png) no-repeat 100% 50%;	
+	background:url(./images/common/ico-gray-arrow5x8.png) no-repeat 100% 50%;	
 	margin-left:10px;
 }
 
@@ -628,11 +628,11 @@ html,body {
 }
 
 .ico-link.facebook:before {
-	background-image:url(/web/images/sub/ico-facebook.png);
+	background-image:url(./images/sub/ico-facebook.png);
 }
 
 .ico-link.copy:before {
-	background-image:url(/web/images/sub/ico-copy.png);
+	background-image:url(./images/sub/ico-copy.png);
 }
 
 .ico-link>span {
@@ -647,8 +647,8 @@ html,body {
 /* calendar */
 .cm_calender_top {position:relative;text-align:center;padding:40px 0 30px;}
 .cm_calender_top strong {color:#000; font-size:18px; font-weight:500; line-height:1; text-align:center;}
-.cm_calender_top .left {position:absolute;top:41px;left:13px;text-indent: -9999px;background:url(/web/images/common/btn-arrow-calender.png) no-repeat 0 0;width:8px;height:12px;}
-.cm_calender_top .right {position:absolute; top:41px; right:13px;text-indent: -9999px; background:url(/web/images/common/btn-arrow-calender.png) no-repeat -12px 0; width:8px; height:12px;}
+.cm_calender_top .left {position:absolute;top:41px;left:13px;text-indent: -9999px;background:url(./images/common/btn-arrow-calender.png) no-repeat 0 0;width:8px;height:12px;}
+.cm_calender_top .right {position:absolute; top:41px; right:13px;text-indent: -9999px; background:url(./images/common/btn-arrow-calender.png) no-repeat -12px 0; width:8px; height:12px;}
 #cm_calendar_small_0_1 .cm_calender_top .right {display:none;}
 #cm_calendar_small_0_2 .cm_calender_top .left {display:none;}
 
@@ -720,7 +720,7 @@ html,body {
 	position:absolute;
 	top:50px;
 	right:70px;
-	background:url(/web/images/sub/btn-close.png) no-repeat 0 0;
+	background:url(./images/sub/btn-close.png) no-repeat 0 0;
 	width:22px;
 	height:21px;
 	text-indent:-9999px;
@@ -1075,7 +1075,7 @@ input[type="checkbox"].inp-radio + label:before {
 	margin:-2px 8px 0 0; 
 	text-align:center; 
 	vertical-align:middle; 
-	background:url(/web/images/common/ico-radio.png) no-repeat 0 0; 	
+	background:url(./images/common/ico-radio.png) no-repeat 0 0; 	
 } 
 
 input[type="radio"].inp-radio:checked + label:before,
@@ -1093,7 +1093,7 @@ input[type="checkbox"].inp-check + label:before {
 	margin:-2px 8px 0 0; 
 	text-align:center; 
 	vertical-align:middle; 
-	background:url(/web/images/common/ico-check.png) no-repeat 0 0; 	
+	background:url(./images/common/ico-check.png) no-repeat 0 0; 	
 } 
 
 input[type="checkbox"].inp-check:checked + label:before {	
@@ -1110,7 +1110,7 @@ input[type="checkbox"].inp-check2 + label:before {
 	margin:-1px 8px 0 0; 
 	text-align:center; 
 	vertical-align:middle; 
-	background:url(/web/images/common/ico-check2.png) no-repeat 0 0; 	
+	background:url(./images/common/ico-check2.png) no-repeat 0 0; 	
 } 
 
 input[type="checkbox"].inp-check2:checked + label:before {	

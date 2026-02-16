@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "/mobile/css/jin.css";
-@import "/mobile/css/jun.css";
+@import "./css/jin.css";
+@import "./css/jun.css";
 
 div:not(.main) .header {
    background: #fff;
@@ -335,7 +335,7 @@ table .txt-notice:before {
 	font-weight:300;
 	width:100%;
 	height:35px;
-	background:url(/mobile/images/sub/ico-arrow-sel.png) no-repeat 100% 50%;
+	background:url(./images/sub/ico-arrow-sel.png) no-repeat 100% 50%;
 	background-size:18px 5px;
 }
 
@@ -487,32 +487,32 @@ textarea.textarea-def {
 }
 
 .sub-visual.golf {	
-	background:url(/mobile/images/sub/bg-golf.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-golf.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-visual.resident {	
-	background:url(/mobile/images/sub/bg-resident.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-resident.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-visual.activity {	
-	background:url(/mobile/images/sub/bg-activity.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-activity.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-visual.food {	
-	background:url(/mobile/images/sub/bg-food.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-food.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-visual.belle {	
-	background:url(/mobile/images/sub/bg-belle.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-belle.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-visual.edufarm {	
-	background:url(/mobile/images/sub/bg-edufarm.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-edufarm.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
@@ -567,7 +567,7 @@ textarea.textarea-def {
 	bottom:0;
 	right:10px;
 	margin:auto 0;	
-	background:url(/mobile/images/common/btn-dropdown-arrow.png) no-repeat 0 0;
+	background:url(./images/common/btn-dropdown-arrow.png) no-repeat 0 0;
 	width:8px;
 	height:5px;
 	background-size:100%;	
@@ -622,7 +622,7 @@ textarea.textarea-def {
 	bottom:0;
 	right:10px;
 	margin:auto 0;	
-	background:url(/mobile/images/common/btn-dropdown-arrow.png) no-repeat 0 0;
+	background:url(./images/common/btn-dropdown-arrow.png) no-repeat 0 0;
 	width:8px;
 	height:5px;
 	background-size:100%;	
@@ -692,16 +692,16 @@ textarea.textarea-def {
 	margin:auto 0 auto 5px;
 	width:11px;
 	height:11px;
-	background:url(/mobile/images/sub/ico-detail-view.png) no-repeat 0 0;
+	background:url(./images/sub/ico-detail-view.png) no-repeat 0 0;
 	background-size:100%;
 }
 
 .view-img.golf-view01 {
-	background-image:url(/mobile/images/sub/bg-golf-view1.jpg);
+	background-image:url(./images/sub/bg-golf-view1.jpg);
 }
 
 .view-img.golf-view02 {
-	background-image:url(/mobile/images/sub/bg-golf-view2.jpg);	
+	background-image:url(./images/sub/bg-golf-view2.jpg);	
 }
 
 .txt-tel {

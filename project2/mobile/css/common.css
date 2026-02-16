@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "/mobile/css/reset.css";
-@import "/mobile/css/slick.css";
+@import "./css/reset.css";
+@import "./css/slick.css";
 
 /* header */
 .h1-logo  {
@@ -84,7 +84,7 @@
 	font-size:0;
 	width:58px;
 	height:54px;
-	background:#be9768 url(/mobile/images/common/ico-combine-booking.png) no-repeat 50%;
+	background:#be9768 url(./images/common/ico-combine-booking.png) no-repeat 50%;
 	background-size:20px 20px;
 	z-index:105;
 }
@@ -166,7 +166,7 @@
 	bottom:0;
 	right:20px;
 	margin:auto 0;	
-	background:url(/mobile/images/common/btn-dropdown-arrow.png) no-repeat 0 0;
+	background:url(./images/common/btn-dropdown-arrow.png) no-repeat 0 0;
 	width:8px;
 	height:5px;
 	background-size:100%;	
@@ -335,7 +335,7 @@ button {
 	display:inline-block;
 	width:5px;
 	height:8px;
-	background:url(/mobile/images/common/ico-gray-arrow-10x16.png) no-repeat 100% 50%;	
+	background:url(./images/common/ico-gray-arrow-10x16.png) no-repeat 100% 50%;	
 	margin-left:8px;
 	background-size:100%;
 }
@@ -501,11 +501,11 @@ button {
 }
 
 .ico-link.facebook:before {
-	background-image:url(/mobile/images/sub/ico-facebook.png);
+	background-image:url(./images/sub/ico-facebook.png);
 }
 
 .ico-link.copy:before {
-	background-image:url(/mobile/images/sub/ico-copy.png);
+	background-image:url(./images/sub/ico-copy.png);
 }
 
 .ico-link>span {
@@ -558,7 +558,7 @@ footer .sns-wrap button {
 	display:inline-block;
 	width:30px;
 	height:30px;
-	background:url(/mobile/images/common/ico-sns.png) no-repeat -50px 0;
+	background:url(./images/common/ico-sns.png) no-repeat -50px 0;
 	background-size:80px 30px;
 	margin:0 10px;	
 }
@@ -912,7 +912,7 @@ footer .sns-wrap .btn-facebook {
 	display:block;
 	width:40px;
 	height:40px;
-	background:url(/mobile/images/common/btn-top.png) no-repeat 0 0;
+	background:url(./images/common/btn-top.png) no-repeat 0 0;
 	font-size:0;
 	padding:0;
 	background-size:100%;
@@ -953,7 +953,7 @@ footer .sns-wrap .btn-facebook {
     right:20px;   
     width:11px;
     height:7px;
-    background:url(/mobile/images/sub/ico-dropdown.png) no-repeat;
+    background:url(./images/sub/ico-dropdown.png) no-repeat;
     background-size:100%;
 }
 
@@ -1294,7 +1294,7 @@ input[type="checkbox"].inp-check + label:before {
 	margin:-2px 5px 0 0;
 	text-align:center; 
 	vertical-align:middle; 
-	background:url(/mobile/images/common/ico-check.png) no-repeat 0 0;
+	background:url(./images/common/ico-check.png) no-repeat 0 0;
 	background-size:100%;
 	background-position:0 0;
 } 
@@ -1312,7 +1312,7 @@ input[type="checkbox"].inp-check2 + label:before {
 	margin:0 5px 0 0;
 	text-align:center; 
 	vertical-align:middle; 
-	background:url(/mobile/images/common/ico-check2.png) no-repeat 0 0;
+	background:url(./images/common/ico-check2.png) no-repeat 0 0;
 	background-size:100%;
 	background-position:0 0;
 } 

@@ -11,8 +11,8 @@
 .calLayout .todayLay {width:100%;display:inline-block;}
 .todayLay{margin-top:13px;}
 .calHeader{margin-top:15px;}
-.calTitle #CalbirthDaybefore {text-indent:-9999px;cursor:pointer;background:url(/mobile/images/common/btn-arrow-calender.png) no-repeat 8px 3px;background-size:100%;width:6px;height:8px;}/* 이전달 */
-.calTitle #CalbirthDaynext {text-indent:-9999px;cursor:pointer;background:url(/mobile/images/common/btn-arrow-calender.png) no-repeat -8px 3px;background-size:100%;width:6px; height:8px;}/* 다음달 */
+.calTitle #CalbirthDaybefore {text-indent:-9999px;cursor:pointer;background:url(./images/common/btn-arrow-calender.png) no-repeat 8px 3px;background-size:100%;width:6px;height:8px;}/* 이전달 */
+.calTitle #CalbirthDaynext {text-indent:-9999px;cursor:pointer;background:url(./images/common/btn-arrow-calender.png) no-repeat -8px 3px;background-size:100%;width:6px; height:8px;}/* 다음달 */
 
 .calTitle select {
     height:15px;
@@ -25,7 +25,7 @@
 	-moz-appearance:none;
 	-o-appearance:none;
 	appearance:none; 
- 	background:#ffffff url(/mobile/images/sub/ico-select.png) no-repeat 80% 50%;
+ 	background:#ffffff url(./images/sub/ico-select.png) no-repeat 80% 50%;
 	background-size:7px 5px;
 }
 
@@ -86,7 +86,7 @@
 	display:inline-block;
 	width:5px;
 	height:8px;
-	background:url(/mobile/images/common/ico-gray-arrow-10x16.png) no-repeat 0 0;	
+	background:url(./images/common/ico-gray-arrow-10x16.png) no-repeat 0 0;	
 	background-size:100% 100%;
 	background-position:0 0;
 	margin-left:5px;
@@ -211,7 +211,7 @@
 
 .birth-group .btn-calender {
 	text-indent:-9999px;
-	background:url(/mobile/images/sub/btn-calendar.png) no-repeat left 50%;
+	background:url(./images/sub/btn-calendar.png) no-repeat left 50%;
 	background-size:35px 35px;
 	width:35px;
 	height:35px;
@@ -255,7 +255,7 @@ dl.ico-hyphen-list>dt:before {
 	content:'';
 	width:4px;
 	height:1px;
-	background: url(/mobile/images/sub/ico-hyphen.png) no-repeat 0 0;
+	background: url(./images/sub/ico-hyphen.png) no-repeat 0 0;
 	background-size:100% 100%;
 	position:absolute;
 	left:0;
@@ -275,7 +275,7 @@ dl.ico-dot-list>dt:before {
 	content:'';
 	width:2px;
 	height:2px;
-	background: url(/mobile/images/sub/ico-dot.png) no-repeat 0 0;
+	background: url(./images/sub/ico-dot.png) no-repeat 0 0;
 	background-size:100% 100%;
 	position:absolute;
 	left:0;
@@ -349,7 +349,7 @@ dl.ico-dot-list>dt:before {
 	display:inline-block;
 	width:10px;
 	height:10px;
-	background:url(/mobile/images/sub/ico-refer.png) no-repeat 0 0;
+	background:url(./images/sub/ico-refer.png) no-repeat 0 0;
 	background-size:100%;
 	margin-right:5px;
 }
@@ -366,7 +366,7 @@ dl.ico-dot-list>dt:before {
 	display:inline-block;
 	width:9px;
 	height:9px;
-	background:url(/mobile/images/sub/ico-refer2.png) no-repeat 0 0;
+	background:url(./images/sub/ico-refer2.png) no-repeat 0 0;
 	background-size:100%;
 	margin-right:5px;
 }
@@ -631,7 +631,7 @@ dl.ico-dot-list>dt:before {
 	display:inline-block;
 	width:5px;
 	height:8px;
-	background:url(/mobile/images/common/ico-black-arrow-10x16.png) no-repeat 0 0;
+	background:url(./images/common/ico-black-arrow-10x16.png) no-repeat 0 0;
 	background-size:100% 100%;
 	position: absolute;
 	right:10px;
@@ -1024,7 +1024,7 @@ dl.ico-dot-list>dt:before {
 	display:block;
 	width:12px;
 	height:15px;
-	background:url(/mobile/images/sub/ico-share.png) no-repeat center;
+	background:url(./images/sub/ico-share.png) no-repeat center;
 	background-size:100%;
 }
 

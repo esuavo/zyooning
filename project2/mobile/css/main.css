@@ -59,12 +59,12 @@
 }
 
 .main-visual .btn-style1 button.fc-white:after {	
-	background:url(/mobile/images/common/ico-white-arrow-10x16.png) no-repeat 100% 50%;		
+	background:url(./images/common/ico-white-arrow-10x16.png) no-repeat 100% 50%;		
 	background-size:100%;
 }
 
 .main-visual .btn-style1 button.fc-black:after {	
-	background:url(/mobile/images/common/ico-black-arrow-10x16.png) no-repeat 100% 50%;		
+	background:url(./images/common/ico-black-arrow-10x16.png) no-repeat 100% 50%;		
 	background-size:100%;
 }
 
@@ -173,7 +173,7 @@ h4.main-title {
 	margin-top:-18px;
 	width:35px;
 	height:35px;	
-	background:url(/mobile/images/main/btn-util-info.png) no-repeat;
+	background:url(./images/main/btn-util-info.png) no-repeat;
 	background-size:35px 145px;
 }
 

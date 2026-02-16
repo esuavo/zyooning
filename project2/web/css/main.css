@@ -35,7 +35,7 @@
 .main-visual .slick-dots button {
 	width:14px;
 	height:14px;
-	background:url(/web/images/main/btn-visual-indicator.png) no-repeat -63px -2px;
+	background:url(./images/main/btn-visual-indicator.png) no-repeat -63px -2px;
 	text-indent: -9999px;
 	margin:0 3px;
 }
@@ -48,7 +48,7 @@
 .btn-control .slick-arrow {	
 	width:12px;
 	height:14px;
-	background:url(/web/images/main/btn-visual-indicator.png) no-repeat;
+	background:url(./images/main/btn-visual-indicator.png) no-repeat;
 	text-indent: -9999px;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .main-visual .btn-style1 {			
-	background:url(/web/images/main/ico-circle1.png) no-repeat 0 0;
+	background:url(./images/main/ico-circle1.png) no-repeat 0 0;
 	margin:40px auto 0;
 }
 
@@ -107,11 +107,11 @@
 }
 
 .main-visual .btn-style1 button.fc-white:after {	
-	background:url(/web/images/common/ico-white-arrow5x8.png) no-repeat 100% 50%;		
+	background:url(./images/common/ico-white-arrow5x8.png) no-repeat 100% 50%;		
 }
 
 .main-visual .btn-style1 button.fc-black:after {	
-	background:url(/web/images/common/ico-black-arrow5x8.png) no-repeat 100% 50%;		
+	background:url(./images/common/ico-black-arrow5x8.png) no-repeat 100% 50%;		
 }
 
 .reserve-wrap {	
@@ -151,13 +151,13 @@
 }
 
 .reserve-wrap .reserve-type {
-	background:url(/web/images/main/ico-reserve-type.png) no-repeat 40px 50%;	
+	background:url(./images/main/ico-reserve-type.png) no-repeat 40px 50%;	
 	width:370px;		
 }
 
 .reserve-wrap .reserve-date {
 	width:630px;
-	background:url(/web/images/main/ico-calendar-black.png) no-repeat 40px 50%;		
+	background:url(./images/main/ico-calendar-black.png) no-repeat 40px 50%;		
 }
 
 .reserve-wrap button {
@@ -186,7 +186,7 @@
 	width:9px;
 	height:6px;
 	margin-top:-3px;
-	background:url(/web/images/common/ico-arrow-updown-9x6.png) no-repeat 0 -6px;
+	background:url(./images/common/ico-arrow-updown-9x6.png) no-repeat 0 -6px;
 } 
 
 .reserve-wrap .reserve-type .btn-dropdown.on:before,
@@ -231,7 +231,7 @@
 	width:9px;
 	height:6px;
 	margin-top:-3px;
-	background:url(/web/images/common/ico-arrow-updown-9x6.png) no-repeat 0 -6px;
+	background:url(./images/common/ico-arrow-updown-9x6.png) no-repeat 0 -6px;
 }
 
 .reserve-wrap .reserve-date.on:before {
@@ -359,7 +359,7 @@
 .main-special-offer .slick-arrow {
 	width:28px;
 	height:28px;
-	background:url(/web/images/main/btn-indi.png) no-repeat;
+	background:url(./images/main/btn-indi.png) no-repeat;
 }
 
 .main-special-offer .btn-prev {	
@@ -393,7 +393,7 @@
 	top:0;
 	width:100%;
 	height:100%;
-	background:url(/web/images/main/bg-opacity.png) repeat 0 0;
+	background:url(./images/main/bg-opacity.png) repeat 0 0;
 }
 
 .belleforet-intro a:nth-child(3n) {
@@ -429,7 +429,7 @@
 .belleforet-intro .txt-item .detail-view {
 	display:inline-block;
 	font-weight:300;	
-	background:url(/web/images/main/btn-detail-view.png) no-repeat 100% 50%;
+	background:url(./images/main/btn-detail-view.png) no-repeat 100% 50%;
 	padding-right:20px;	
 }
 
@@ -489,7 +489,7 @@
 	position:absolute;
 	top:0;
 	left:50%;
-	background:url(/web/images/main/bg-line-dashed.png) repeat-y 0 0;
+	background:url(./images/main/bg-line-dashed.png) repeat-y 0 0;
 	width:1px;
 	height:100%;
 }
@@ -592,7 +592,7 @@ h4.main-title {
 	margin:0 auto;
 	font-size:42px;
 	font-family: "Avenir",sans-serif;
-	background:url(/web/images/main/ico-insta.png) no-repeat 0 3px;
+	background:url(./images/main/ico-insta.png) no-repeat 0 3px;
 	padding-left:50px;
 }
 

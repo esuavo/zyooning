@@ -14,8 +14,8 @@
 .calLayout .todayLay {width:100%;display:inline-block;overflow:hidden;}
 .todayLay{margin-top:16px;}
 .calHeader{margin-top:16px;}
-.calTitle #CalbirthDaybefore {text-indent:-9999px;cursor:pointer;background:url(/web/images/common/btn-arrow-calender.png) no-repeat 8px 3px;width:8px;height:12px;}/* 이전달 */
-.calTitle #CalbirthDaynext {text-indent:-9999px;cursor:pointer;background:url(/web/images/common/btn-arrow-calender.png) no-repeat -8px 3px;width:8px; height:12px;}/* 다음달 */
+.calTitle #CalbirthDaybefore {text-indent:-9999px;cursor:pointer;background:url(./images/common/btn-arrow-calender.png) no-repeat 8px 3px;width:8px;height:12px;}/* 이전달 */
+.calTitle #CalbirthDaynext {text-indent:-9999px;cursor:pointer;background:url(./images/common/btn-arrow-calender.png) no-repeat -8px 3px;width:8px; height:12px;}/* 다음달 */
 
 .calTitle select {
 	display:inline-block;
@@ -31,7 +31,7 @@
     -o-appearance:none;
     appearance:none;
     background-color:#fff;
-    background-image:url(/web/images/sub/ico-select.png);
+    background-image:url(./images/sub/ico-select.png);
     background-image:none\0/IE9;/* ie9 dropdown 화살표제어 */
     background-position:center right;
     background-repeat:no-repeat;
@@ -87,7 +87,7 @@
 	display:inline-block;
 	width:6px;
 	height:9px;
-	background:url(/web/images/common/ico-gray-arrow-6x9.png) no-repeat 100% 50%;	
+	background:url(./images/common/ico-gray-arrow-6x9.png) no-repeat 100% 50%;	
 	margin-left:10px;
 }
 
@@ -118,7 +118,7 @@
 
 .birth-group .btn-calender {
 	text-indent:-9999px;
-	background:url(/web/images/sub/btn-calendar.png) no-repeat 0 0;
+	background:url(./images/sub/btn-calendar.png) no-repeat 0 0;
 	width:40px;
 	height:40px;
 }
@@ -190,7 +190,7 @@ dl.ico-hyphen-list>dt:before {
 	content:'';
 	height:11px;
 	padding-left:9px;
-	background:url(/web/images/sub/ico-hyphen.png) no-repeat left 50%;
+	background:url(./images/sub/ico-hyphen.png) no-repeat left 50%;
 }
 
 .ico-hyphen2:before,
@@ -200,7 +200,7 @@ dl.ico-hyphen2-list>dt:before {
 	content:'';
 	height:11px;
 	padding-left:9px;
-	background:url(/web/images/sub/ico-hyphen02.png) no-repeat left 50%;
+	background:url(./images/sub/ico-hyphen02.png) no-repeat left 50%;
 }
 
 .ico-hyphen3:before,
@@ -210,7 +210,7 @@ dl.ico-hyphen3-list>dt:before {
 	content:'';
 	height:11px;
 	padding-left:9px;
-	background:url(/web/images/sub/ico-hyphen03.png) no-repeat left 50%;
+	background:url(./images/sub/ico-hyphen03.png) no-repeat left 50%;
 }
 
 .ico-dot:before,
@@ -220,7 +220,7 @@ dl.ico-dot-list>dt:before {
 	content:'';
 	height:12px;
 	padding-left:9px;
-	background:url(/web/images/sub/ico-dot.png) no-repeat left 50%;
+	background:url(./images/sub/ico-dot.png) no-repeat left 50%;
 }
 
 .ico-dot2:before,
@@ -230,7 +230,7 @@ dl.ico-dot2-list>dt:before {
 	content:'';
 	height:11px;
 	padding-left:9px;
-	background:url(/web/images/sub/ico-dot02.png) no-repeat left 50%;
+	background:url(./images/sub/ico-dot02.png) no-repeat left 50%;
 }
 
 .circle-num {
@@ -300,7 +300,7 @@ dl.ico-dot2-list>dt:before {
 	width:12px;
 	height:12px;
 	padding-left:7px;
-	background:url(/web/images/sub/ico-refer.png) no-repeat left 50%;
+	background:url(./images/sub/ico-refer.png) no-repeat left 50%;
 }
 
 .txt-refer2 {
@@ -316,7 +316,7 @@ dl.ico-dot2-list>dt:before {
 	width:10px;
 	height:11px;
 	padding-left:7px;
-	background:url(/web/images/sub/ico-refer2.png) no-repeat left 50%;
+	background:url(./images/sub/ico-refer2.png) no-repeat left 50%;
 }
 
 /* Singup(CO2.3) */
@@ -1209,6 +1209,6 @@ dl.ico-dot2-list>dt:before {
 	margin-top:-7px;
 	width:14px;
 	height:15px;
-	background:url(/web/images/sub/ico-share.png) no-repeat 0 0;	
+	background:url(./images/sub/ico-share.png) no-repeat 0 0;	
 }
 /* //sub.css로 이동예정 */

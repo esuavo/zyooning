@@ -46,19 +46,19 @@
 }
 .pagination .first-page {
 	margin-right:4px;
-	background-image:url(/web/images/sub/ico-first-page.png)
+	background-image:url(./images/sub/ico-first-page.png)
 }
 .pagination .last-page {
 	margin-left:5px;
-	background-image:url(/web/images/sub/ico-last-page.png)
+	background-image:url(./images/sub/ico-last-page.png)
 }
 .pagination .prev-page {
 	margin-right:16px;
-	background-image:url(/web/images/sub/ico-prev-page.png)
+	background-image:url(./images/sub/ico-prev-page.png)
 }
 .pagination .next-page {
 	margin-left:21px;
-	background-image:url(/web/images/sub/ico-next-page.png)
+	background-image:url(./images/sub/ico-next-page.png)
 }
 .pagination a[class$=page]:hover:before,
 .pagination a[class$=page]:focus:before {
@@ -74,7 +74,7 @@ a.ico-file:after{
 	margin-top:4px;
 	width:20px;
 	height:16px;
-	background:url(/web/images/sub/ico-file.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-file.png) no-repeat 50% 50%;
 }
 
 /* 게시판 상세 */
@@ -112,7 +112,7 @@ a.ico-file:after{
 .bbs-view .detail-file .ico-file {
 	display:inline-block;
 	width:20px;
-	background:url(/web/images/sub/ico-file.png) no-repeat 50% 6px;
+	background:url(./images/sub/ico-file.png) no-repeat 50% 6px;
 }
 .bbs-view .detail-file .btn-mini {
 	float:right;
@@ -160,7 +160,7 @@ a.ico-file:after{
 	width:5px;
 	height:8px;
 	margin-top:-4px;
-	background:url(/web/images/sub/ico-prev-page.png) no-repeat 0 0;
+	background:url(./images/sub/ico-prev-page.png) no-repeat 0 0;
 }
 .bbs-view .detail-bottom div {
 	float:right;
@@ -399,7 +399,7 @@ a.ico-file:after{
 
 .accordion-table .ac-btn:after {
 	content:"";
-	background:url(/web/images/sub/ico-arrow-select.png) no-repeat 0 0;
+	background:url(./images/sub/ico-arrow-select.png) no-repeat 0 0;
 	background-position:0px -9px;
 	width:9px;
 	height:9px;
@@ -410,7 +410,7 @@ a.ico-file:after{
 }
 
 .accordion-table .ac-btn.on:after {
-	background:url(/web/images/sub/ico-arrow-select.png) no-repeat 0 0;
+	background:url(./images/sub/ico-arrow-select.png) no-repeat 0 0;
 	background-position:0px 0px;
 }
 

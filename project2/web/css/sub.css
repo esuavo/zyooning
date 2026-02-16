@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "/web/css/jin.css";
-@import "/web/css/jun.css";
+@import "./css/jin.css";
+@import "./css/jun.css";
 
 div:not(.main) #header {
    background: #fff;
@@ -39,42 +39,42 @@ div:not(.main) #header {
 
 
 .sub-visual.dummy {
-	background:url(/web/images/sub/bg-dummy.png) no-repeat 50%;	
+	background:url(./images/sub/bg-dummy.png) no-repeat 50%;	
 	background-size:cover;	
 }
 
 .sub-visual.offer {
-	background:url(/web/images/sub/bg-offer.png) no-repeat 50%;
+	background:url(./images/sub/bg-offer.png) no-repeat 50%;
 	background-size:cover;			
 }
 
 .sub-visual.golf {
-	background:url(/web/images/sub/bg-golf.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-golf.jpg) no-repeat 50%;
 	background-size:cover;			
 }
 
 .sub-visual.resident {
-	background:url(/web/images/sub/bg-resident.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-resident.jpg) no-repeat 50%;
 	background-size:cover;			
 }
 
 .sub-visual.activity {
-	background:url(/web/images/sub/bg-activity.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-activity.jpg) no-repeat 50%;
 	background-size:cover;			
 }
 
 .sub-visual.food {
-	background:url(/web/images/sub/bg-food.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-food.jpg) no-repeat 50%;
 	background-size:cover;			
 }
 
 .sub-visual.belle {	
-	background:url(/web/images/sub/bg-belle.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-belle.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-visual.edufarm {	
-	background:url(/web/images/sub/bg-edufarm.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-edufarm.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
@@ -115,7 +115,7 @@ div:not(.main) #header {
 	width:404px;
 	height:262px;
 	padding:20px 30px 30px;
-	background:url(/web/images/sub/bg-opacity-black60.png) no-repeat 0 0;	
+	background:url(./images/sub/bg-opacity-black60.png) no-repeat 0 0;	
 }
 
 .right-schedule .item {
@@ -164,12 +164,12 @@ div:not(.main) #header {
 }
 
 .right-schedule .type:before {
-	background:url(/web/images/sub/ico_course.png) no-repeat 0 0;	
+	background:url(./images/sub/ico_course.png) no-repeat 0 0;	
 	height:20px;
 }
 
 .right-schedule .type.calendar:before {	
-	background:url(/web/images/sub/ico-calendar-gray.png) no-repeat 0 0;
+	background:url(./images/sub/ico-calendar-gray.png) no-repeat 0 0;
 	height:21px;
 	
 }
@@ -198,7 +198,7 @@ div:not(.main) #header {
 	top:50%;
 	right:10px;
 	margin-top:-2px;
-	background:url(/web/images/sub/ico-arrow-white-updown-9x6.png) no-repeat 0 0;
+	background:url(./images/sub/ico-arrow-white-updown-9x6.png) no-repeat 0 0;
 	width:9px;
 	height:6px;
 }
@@ -264,7 +264,7 @@ div:not(.main) #header {
 	width:60px;
 	height:60px;
 	text-indent:-9999px;
-	background:url(/web/images/sub/ico-home.png) no-repeat 50%;
+	background:url(./images/sub/ico-home.png) no-repeat 50%;
 }
 
 .location-menu {		
@@ -321,7 +321,7 @@ div:not(.main) #header {
 	right:20px;
 	width:9px;
 	height:6px;
-	background:url(/web/images/common/ico-arrow-updown-9x6.png) no-repeat 0 0;
+	background:url(./images/common/ico-arrow-updown-9x6.png) no-repeat 0 0;
 	margin-top:-3px;
 }
 
@@ -580,16 +580,16 @@ textarea.textarea-def {
 	top:0;
 	width:100%;
 	height:100%;
-	background:url(/web/images/sub/bg-opacity45.png) repeat;	
+	background:url(./images/sub/bg-opacity45.png) repeat;	
 }
 
 .sub-inner-con2 .view-area.img01 {
-	background:url(/web/images/sub/bg-golf-view.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-golf-view.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
 .sub-inner-con2 .view-area.img02 {
-	background:url(/web/images/sub/bg-golf-view02.jpg) no-repeat 50%;
+	background:url(./images/sub/bg-golf-view02.jpg) no-repeat 50%;
 	background-size:cover;
 }
 
@@ -684,28 +684,28 @@ textarea.textarea-def {
 
 .inner-detail .detail-block.inquiry dt:before{
 	height:36px;
-	background:url(/web/images/sub/ico-phone.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-phone.png) no-repeat 50% 50%;
 }
 
 
 .inner-detail .detail-block.teeoff dt:before {
 	height:36px;
-	background:url(/web/images/sub/ico-teeoff.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-teeoff.png) no-repeat 50% 50%;
 }
 
 .inner-detail .detail-block.clothes dt:before {
 	height:40px;
-	background:url(/web/images/sub/ico-clothes.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-clothes.png) no-repeat 50% 50%;
 }
 
 .inner-detail .detail-block.booking dt:before {
 	height:34px;
-	background:url(/web/images/sub/ico-calendar.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-calendar.png) no-repeat 50% 50%;
 }
 
 .inner-detail .detail-block.caution dt:before {
 	height:38px;
-	background:url(/web/images/sub/ico-caution.png) no-repeat 50% 50%;
+	background:url(./images/sub/ico-caution.png) no-repeat 50% 50%;
 }
 
 .caution-list p {
@@ -809,7 +809,7 @@ textarea.textarea-def {
 
 .golf-view .btn-prev,
 .golf-view .btn-next {	
-	background:url(/web/images/sub/ico-arrow-gray-6x11.png) no-repeat 0 0;
+	background:url(./images/sub/ico-arrow-gray-6x11.png) no-repeat 0 0;
 	width:6px;
 	height:11px;
 	background-size:12px 11px;
@@ -817,7 +817,7 @@ textarea.textarea-def {
 
 .golf-view .btn-prev.on,
 .golf-view .btn-next.on {
-	background:url(/web/images/sub/ico-arrow-black-6x11.png) no-repeat 0 0;	
+	background:url(./images/sub/ico-arrow-black-6x11.png) no-repeat 0 0;	
 }
 
 .golf-view .btn-prev,
@@ -948,12 +948,12 @@ textarea.textarea-def {
 }
 
 .thumbnail-slide .slick-prev {
-	background:url(/web/images/sub/ico-arrow-prev-33x50.png) no-repeat;
+	background:url(./images/sub/ico-arrow-prev-33x50.png) no-repeat;
 	left:40px;
 }
 
 .thumbnail-slide .slick-next {
-	background:url(/web/images/sub/ico-arrow-next-33x50.png) no-repeat;
+	background:url(./images/sub/ico-arrow-next-33x50.png) no-repeat;
 	right:40px;
 }
 
@@ -1139,12 +1139,12 @@ textarea.textarea-def {
 }
 
 .carousel .slick-prev {
-	background:url(/web/images/sub/ico-arrow-prev-33x50.png) no-repeat;
+	background:url(./images/sub/ico-arrow-prev-33x50.png) no-repeat;
 	left:40px;
 }
 
 .carousel .slick-next {
-	background:url(/web/images/sub/ico-arrow-next-33x50.png) no-repeat;
+	background:url(./images/sub/ico-arrow-next-33x50.png) no-repeat;
 	right:40px;
 }
 
@@ -1280,7 +1280,7 @@ textarea.textarea-def {
 
 .selectric .button:after {
   	content:"";
-	background:url(/web/images/sub/ico-arrow-select.png) no-repeat;
+	background:url(./images/sub/ico-arrow-select.png) no-repeat;
 	background-position:0px -9px;
 	width:9px;
 	height:9px;
@@ -1293,7 +1293,7 @@ textarea.textarea-def {
 }
 
 .selectric-open .selectric .button:after {
-	background:url(/web/images/sub/ico-arrow-select.png) no-repeat 0 0;	
+	background:url(./images/sub/ico-arrow-select.png) no-repeat 0 0;	
 }
 
 .selectric-items {
@@ -1385,7 +1385,7 @@ textarea.textarea-def {
 	top:0;
 	width:100%;
 	height:100%;
-	background:url(/web/images/main/bg-opacity.png) repeat 0 0;
+	background:url(./images/main/bg-opacity.png) repeat 0 0;
 }
 
 .belleforet-intro a:nth-child(3n) {
@@ -1427,7 +1427,7 @@ textarea.textarea-def {
 .belleforet-intro .txt-item .detail-view {
 	display:inline-block;
 	font-weight:300;	
-	background:url(/web/images/main/btn-detail-view.png) no-repeat 100% 50%;
+	background:url(./images/main/btn-detail-view.png) no-repeat 100% 50%;
 	padding-right:20px;	
 }
 
