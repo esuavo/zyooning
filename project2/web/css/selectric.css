@@ -30,9 +30,9 @@
   color: #444;
   height: 38px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .selectric .button {
@@ -47,7 +47,7 @@
   color: #BBB;
   text-align: center;
   font: 0/0 a;
-  *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+  font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
 }
 
 .selectric .button:after {
@@ -98,9 +98,9 @@
   opacity: 0.5;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .selectric-hide-select {
@@ -147,7 +147,7 @@
   height: 1px !important;
   outline: none !important;
   border: none !important;
-  *font: 0/0 a !important;
+  font: 0/0 a !important;
   background: none !important;
 }
 
@@ -174,7 +174,8 @@
   overflow: auto;
 }
 
-.selectric-items ul, .selectric-items li {
+.selectric-items ul,
+.selectric-items li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -212,9 +213,9 @@
   background: none !important;
   color: #666 !important;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .selectric-items .selectric-group .selectric-group-label {
@@ -222,9 +223,9 @@
   padding-left: 10px;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background: none;
   color: #444;
 }

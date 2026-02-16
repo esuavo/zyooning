@@ -1,126 +1,470 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 /* 요소(element) 여백 초기화 */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,
-p,blockquote,pre,abbr,address,cite,code,del,dfn,em,
-img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,
-dl,dt,dd,ol,ul,li,fieldset,form,label,legend,article,aside,
-canvas,details,figcaption,figure,footer,header,hgroup,
-menu,nav,section,summary,time,mark,audio,video,a {margin:0; padding:0;}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+a {
+	margin: 0;
+	padding: 0;
+}
 
-html,body {width:100%; min-height:100%;}
-html {overflow-y:scroll;} /* 모양 틀어짐 방지 */
+html,
+body {
+	width: 100%;
+	min-height: 100%;
+}
 
-body {   
-	font-family:'Noto Sans KR',sans-serif;	
-	font-size:14px;
+html {
+	overflow-y: scroll;
+}
+
+/* 모양 틀어짐 방지 */
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 14px;
 	text-decoration: none;
-	line-height:1;	
+	line-height: 1;
 }
 
 * {
 	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
 }
 
 
- @media screen and (min-width:0\0){ /* IE 9+10 hack (속성 핵) */
- 	body {
- 		letter-spacing: -.5px;
- 	}
- } 
+@media screen and (min-width:0\0) {
+
+	/* IE 9+10 hack (속성 핵) */
+	body {
+		letter-spacing: -.5px;
+	}
+}
 
 /* 제목요소 */
-h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
 
 /* 테두리 없애기 */
-fieldset, img, abbr, acronym {border:0 none;}
+fieldset,
+img,
+abbr,
+acronym {
+	border: 0 none;
+}
 
 /* 목록 */
-ol, ul {list-style:none;}
+ol,
+ul {
+	list-style: none;
+}
 
 /* 테이블 - 마크업에 'cellpadding="0" 지정 함께 필요 */
-table {width:100%; border-collapse:collapse; border-spacing:0; border:0 none;}
-caption, th, td {text-align:left; font-weight:normal;}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 0 none;
+}
+
+caption,
+th,
+td {
+	text-align: left;
+	font-weight: normal;
+}
 
 /* 텍스트 관련 요소 초기화 */
-address, caption, em, cite {font-weight:normal; font-style:normal;}
-strong {font-weight:700;}
-ins {text-decoration:none;}
-del {text-decoration:line-through;}
+address,
+caption,
+em,
+cite {
+	font-weight: normal;
+	font-style: normal;
+}
+
+strong {
+	font-weight: 700;
+}
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
 
 /* 인용문 */
-blockquote:before, blockquote:after, q:before, q:after {content:"";}
-blockquote,q {quotes:"" "";}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
 
 /* 수평선 */
-hr {display:none;}
+hr {
+	display: none;
+}
 
 /* etc */
-.blind,legend {display:block; overflow:hidden; position:absolute; top:-1000em; left:0; color:#fff; text-indent:-9999px;}
-caption {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0} 
-img {vertical-align:top;width:100%;}
-input, select, textarea,button {outline-style:none;} 
-select {-webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
-label,button {cursor:pointer}
-button {/*vertical-align:middle;*/vertical-align:top; border:0; background:transparent; padding:0; margin:0; cursor:pointer;}
-button .ie-press {position:relative;} /* ie 움직임 방지 */
-a {color:#666; text-decoration:none; cursor:pointer; outline:none;}
-a,input,textarea,select,button,table,label {font-family:'Noto Sans KR',sans-serif; color:#333; font-size:16px; font-weight:300;}
-::-webkit-input-placeholder {color:#ccc;}
-:-ms-input-placeholder {color:#ccc;}
-::placeholder {color:#ccc;}  
-textarea {resize:none;}
-.pos-rel {position:relative;}
-.over-hide {overflow:hidden;}
-.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix {display: inline-block;} * html .clearfix {height: 1%;} .clearfix {display: block;}
-.hide {display:none;}
+.blind,
+legend {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	top: -1000em;
+	left: 0;
+	color: #fff;
+	text-indent: -9999px;
+}
+
+caption {
+	visibility: hidden;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0
+}
+
+img {
+	vertical-align: top;
+	width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+	outline-style: none;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+label,
+button {
+	cursor: pointer
+}
+
+button {
+	/*vertical-align:middle;*/
+	vertical-align: top;
+	border: 0;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+button .ie-press {
+	position: relative;
+}
+
+/* ie 움직임 방지 */
+a {
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+}
+
+a,
+input,
+textarea,
+select,
+button,
+table,
+label {
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #333;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+:-ms-input-placeholder {
+	color: #ccc;
+}
+
+::placeholder {
+	color: #ccc;
+}
+
+textarea {
+	resize: none;
+}
+
+.pos-rel {
+	position: relative;
+}
+
+.over-hide {
+	overflow: hidden;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
 
 /* skipMenu */
-#skipMenu a {position:absolute; display:block; top:-10000px; left:0; width:100%; padding:9px 0; background:#be9768; font-size:13px; font-weight:500; line-height:23px; color:#fff; text-align:center; z-index:500;}
-#skipMenu a:hover, #skipMenu a:focus, #skipMenu a:active {top:0;}
+#skipMenu a {
+	position: absolute;
+	display: block;
+	top: -10000px;
+	left: 0;
+	width: 100%;
+	padding: 9px 0;
+	background: #be9768;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 23px;
+	color: #fff;
+	text-align: center;
+	z-index: 500;
+}
+
+#skipMenu a:hover,
+#skipMenu a:focus,
+#skipMenu a:active {
+	top: 0;
+}
 
 /* margin-left */
-.mgl10 {margin-left:10px !important;}
-.mgl20 {margin-left:20px !important;}
+.mgl10 {
+	margin-left: 10px !important;
+}
+
+.mgl20 {
+	margin-left: 20px !important;
+}
 
 /* margin-top */
-.mgt0 {margin-top:0 !important;}
-.mgt10 {margin-top:10px !important;}
+.mgt0 {
+	margin-top: 0 !important;
+}
+
+.mgt10 {
+	margin-top: 10px !important;
+}
 
 /* padding-top */
-.pdt10 {padding-top:10px !important;}
-.pdt80 {padding-top:80px !important;}
+.pdt10 {
+	padding-top: 10px !important;
+}
+
+.pdt80 {
+	padding-top: 80px !important;
+}
 
 /* font */
-.f300 {font-weight:300 !important;} /* light */
-.f500 {font-weight:500 !important;} /* medium */
-.f700 {font-weight:700 !important;} /* bold */
+.f300 {
+	font-weight: 300 !important;
+}
 
-.fc-white {color:#fff !important;}
-.fc-black {color:#000 !important;}
+/* light */
+.f500 {
+	font-weight: 500 !important;
+}
+
+/* medium */
+.f700 {
+	font-weight: 700 !important;
+}
+
+/* bold */
+
+.fc-white {
+	color: #fff !important;
+}
+
+.fc-black {
+	color: #000 !important;
+}
 
 /* text etc */
-.ellipsis{overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical; word-wrap:break-word; white-space:nowrap; display:block;}
-.ellipsis2{display: inline-block; width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	white-space: nowrap;
+	display: block;
+}
 
-.ellipsis.line2{display:inline-block; display:-webkit-box; -webkit-line-clamp:2; white-space:normal;} /* 2줄 */
-.ellipsis.line3{display:inline-block; display:-webkit-box; -webkit-line-clamp:3; white-space:normal;} /* 3줄 */
-.ellipsis.line4{display:inline-block; display:-webkit-box; -webkit-line-clamp:4; white-space:normal;} /* 4줄 */
-.ellipsis.line5{display:inline-block; display:-webkit-box; -webkit-line-clamp:5; white-space:normal;} /* 5줄 */
-.msie .ellipsis {display:block; white-space:nowrap;}
+.ellipsis2 {
+	display: inline-block;
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ellipsis.line2 {
+	display: inline-block;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	white-space: normal;
+}
+
+/* 2줄 */
+.ellipsis.line3 {
+	display: inline-block;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	white-space: normal;
+}
+
+/* 3줄 */
+.ellipsis.line4 {
+	display: inline-block;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	white-space: normal;
+}
+
+/* 4줄 */
+.ellipsis.line5 {
+	display: inline-block;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	white-space: normal;
+}
+
+/* 5줄 */
+.msie .ellipsis {
+	display: block;
+	white-space: nowrap;
+}
+
 .msie .ellipsis.line2,
 .msie .ellipsis.line3,
 .msie .ellipsis.line4,
-.msie .ellipsis.line5{white-space:normal;}
+.msie .ellipsis.line5 {
+	white-space: normal;
+}
 
 /* 정렬 */
-.al {text-align:left !important;}
-.ac {text-align:center !important;}
-.ar {text-align:right !important;}
+.al {
+	text-align: left !important;
+}
 
-.fl {float:left;}
-.fr {float:right;}
+.ac {
+	text-align: center !important;
+}
 
+.ar {
+	text-align: right !important;
+}
 
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}

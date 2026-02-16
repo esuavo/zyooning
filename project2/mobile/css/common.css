@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "./css/reset.css";
-@import "./css/slick.css";
+@import "reset.css";
+@import "slick.css";
 
 /* header */
 .h1-logo  {

@@ -1,94 +1,185 @@
 @charset "utf-8";
 
 /* common.css로 이동예정 */
-.inner-pd{
-	padding:120px 0px 150px;
+.inner-pd {
+	padding: 120px 0px 150px;
 }
 
 /* Birth calendar */
-.calLayout{display:none;border:1px solid #d7d7d7;background:#fff;text-align:center;overflow:hidden;width:325px;padding:40px 35px 30px;z-index:1;}
-.calLayout .calTitle table>tbody>tr>td {border:0;padding:0;text-align:center;}
+.calLayout {
+	display: none;
+	border: 1px solid #d7d7d7;
+	background: #fff;
+	text-align: center;
+	overflow: hidden;
+	width: 325px;
+	padding: 40px 35px 30px;
+	z-index: 1;
+}
+
+.calLayout .calTitle table>tbody>tr>td {
+	border: 0;
+	padding: 0;
+	text-align: center;
+}
+
 .calLayout .calTitle,
 .calLayout .calHeader,
 .calLayout .calBody,
-.calLayout .todayLay {width:100%;display:inline-block;overflow:hidden;}
-.todayLay{margin-top:16px;}
-.calHeader{margin-top:16px;}
-.calTitle #CalbirthDaybefore {text-indent:-9999px;cursor:pointer;background:url(./images/common/btn-arrow-calender.png) no-repeat 8px 3px;width:8px;height:12px;}/* 이전달 */
-.calTitle #CalbirthDaynext {text-indent:-9999px;cursor:pointer;background:url(./images/common/btn-arrow-calender.png) no-repeat -8px 3px;width:8px; height:12px;}/* 다음달 */
+.calLayout .todayLay {
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.todayLay {
+	margin-top: 16px;
+}
+
+.calHeader {
+	margin-top: 16px;
+}
+
+.calTitle #CalbirthDaybefore {
+	text-indent: -9999px;
+	cursor: pointer;
+	background: url(./images/common/btn-arrow-calender.png) no-repeat 8px 3px;
+	width: 8px;
+	height: 12px;
+}
+
+/* 이전달 */
+.calTitle #CalbirthDaynext {
+	text-indent: -9999px;
+	cursor: pointer;
+	background: url(./images/common/btn-arrow-calender.png) no-repeat -8px 3px;
+	width: 8px;
+	height: 12px;
+}
+
+/* 다음달 */
 
 .calTitle select {
-	display:inline-block;
-	width:35%;
-   	height:18px;
-    line-height:18px;
-    color:#000;
-    font-size:18px;
-    font-weight:500;
-    border:0;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -o-appearance:none;
-    appearance:none;
-    background-color:#fff;
-    background-image:url(./images/sub/ico-select.png);
-    background-image:none\0/IE9;/* ie9 dropdown 화살표제어 */
-    background-position:center right;
-    background-repeat:no-repeat;
-    background-size:10px 6px;
+	display: inline-block;
+	width: 35%;
+	height: 18px;
+	line-height: 18px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 500;
+	border: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url(./images/sub/ico-select.png);
+	background-image: none\0/IE9;
+	/* ie9 dropdown 화살표제어 */
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: 10px 6px;
 }
 
 .calTitle select::-ms-expand {
-	display:none;
-} /* id10이상 dropdown 화살표제어 */
+	display: none;
+}
+
+/* id10이상 dropdown 화살표제어 */
 
 .calTitle #CalbirthDayselMon {
-	border-left:1px solid #d7d7d7;
-	padding-left:30px;
-	margin-left:25px;
+	border-left: 1px solid #d7d7d7;
+	padding-left: 30px;
+	margin-left: 25px;
 }
 
 .calHeader .calDayTitle,
 .calBody .calDay,
 .calBody .calOtherDay,
 .calBody .calSatDay,
-.calBody .calSunDay {float:left;width: 26px;height: 26px;line-height: 26px;margin: 5px;font-size:12px;font-weight:300;color:#333;text-align:center;}
+.calBody .calSunDay {
+	float: left;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	margin: 5px;
+	font-size: 12px;
+	font-weight: 300;
+	color: #333;
+	text-align: center;
+}
 
 .calBody .calDay,
-.calBody .calOtherDay, 
+.calBody .calOtherDay,
 .calBody .calSatDay,
-.calBody .calSunDay {cursor:pointer;}
+.calBody .calSunDay {
+	cursor: pointer;
+}
 
-.calBody .calSelDay, .calBody .calOnDay{color:#fff;background-color:#be9768}/* 선택날짜 */
-.calBody .dayToday{color:#be9768;text-decoration:underline;}/* 오늘 */
-.calBody .calSunDay, .calHeader .calSunDay {color:#b45541;} /* 일요일 및 공휴일 */
-.calBody .calOtherDay {color:#999;}/* 이전,다음달 날짜 */
+.calBody .calSelDay,
+.calBody .calOnDay {
+	color: #fff;
+	background-color: #be9768
+}
 
-.todayBtn{display:inline-block;cursor:pointer;border:1px solid #999999;color:#777;height:25px;line-height:25px;padding:0 10px;font-size:12px;font-weight:300;}
+/* 선택날짜 */
+.calBody .dayToday {
+	color: #be9768;
+	text-decoration: underline;
+}
+
+/* 오늘 */
+.calBody .calSunDay,
+.calHeader .calSunDay {
+	color: #b45541;
+}
+
+/* 일요일 및 공휴일 */
+.calBody .calOtherDay {
+	color: #999;
+}
+
+/* 이전,다음달 날짜 */
+
+.todayBtn {
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid #999999;
+	color: #777;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	font-size: 12px;
+	font-weight: 300;
+}
 
 .calHeader:after,
-.calBody:after {clear:both;display:block;content:'';}
+.calBody:after {
+	clear: both;
+	display: block;
+	content: '';
+}
 
 /* button */
 .btn-style2 {
-	display:inline-block;
-	height:32px;
+	display: inline-block;
+	height: 32px;
 }
 
-.btn-style2 button {	
-	font-weight:300;
-	color:#777777;	
-	font-size:16px;
-	line-height:32px;
+.btn-style2 button {
+	font-weight: 300;
+	color: #777777;
+	font-size: 16px;
+	line-height: 32px;
 }
 
 .btn-style2 button:after {
-	content:"";
-	display:inline-block;
-	width:6px;
-	height:9px;
-	background:url(./images/common/ico-gray-arrow-6x9.png) no-repeat 100% 50%;	
-	margin-left:10px;
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 9px;
+	background: url(./images/common/ico-gray-arrow-6x9.png) no-repeat 100% 50%;
+	margin-left: 10px;
 }
 
 
@@ -96,1119 +187,1126 @@
 
 /* sub.css로 이동예정 */
 .sub-contents-bg {
-	width:100%;
-	background-color:#f5f4f0;
+	width: 100%;
+	background-color: #f5f4f0;
 }
 
 /* form */
 .birth-group {
-	position:relative;
-}/* form > 생년월일 */
+	position: relative;
+}
 
-.birth-group .calLayout {	
-	position:absolute;
-	left:0;
-	top:40px;
+/* form > 생년월일 */
+
+.birth-group .calLayout {
+	position: absolute;
+	left: 0;
+	top: 40px;
 }
 
 .birth-group .radio-group {
-	display:inline-block;
-	margin-left:30px;
+	display: inline-block;
+	margin-left: 30px;
 }
 
 .birth-group .btn-calender {
-	text-indent:-9999px;
-	background:url(./images/sub/btn-calendar.png) no-repeat 0 0;
-	width:40px;
-	height:40px;
+	text-indent: -9999px;
+	background: url(./images/sub/btn-calendar.png) no-repeat 0 0;
+	width: 40px;
+	height: 40px;
 }
 
 .email-group .selectric {
-	width:185px;
-	border:1px solid #d7d7d7;
+	width: 185px;
+	border: 1px solid #d7d7d7;
 }
 
 .email-group .selectric-items {
-	top:39px;
+	top: 39px;
 }
 
 .email-group:after {
-	content:"";
-	clear:both;
-	display:block;
+	content: "";
+	clear: both;
+	display: block;
 }
 
 .email-group span {
-	position:relative;
-	float:left;
-	margin-left:30px;	
+	position: relative;
+	float: left;
+	margin-left: 30px;
 }
 
 .email-group span:before {
-	content:"@";
-	position:absolute;
-	left:-24px;	
-	color:#d7d7d7;
-	font-size:16px;
-	line-height:40px;
-	font-weight:300;
+	content: "@";
+	position: absolute;
+	left: -24px;
+	color: #d7d7d7;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: 300;
 }
 
 .email-group span:first-child {
-	margin-left:0;
+	margin-left: 0;
 }
 
 .email-group span.label {
-	margin-left:20px;
-	line-height:38px;
-	height:38px;
+	margin-left: 20px;
+	line-height: 38px;
+	height: 38px;
 }
 
 .email-group span:first-child:before {
-	display:none;
+	display: none;
 }
 
 .email-group .inp-def {
-	width:185px;
+	width: 185px;
 }
 
 .email-group .select-group {
-	float:left;
-	margin-left:10px;
+	float: left;
+	margin-left: 10px;
 }
 
 .certi-group .txt-notice {
-	display:block;
-	margin-top:10px;
-}/* form > 휴대폰번호(인증) */
+	display: block;
+	margin-top: 10px;
+}
+
+/* form > 휴대폰번호(인증) */
 
 /* List icon */
 .ico-hyphen:before,
 ul.ico-hyphen-list>li:before,
 dl.ico-hyphen-list>dt:before {
-	display:inline-block;
-	content:'';
-	height:11px;
-	padding-left:9px;
-	background:url(./images/sub/ico-hyphen.png) no-repeat left 50%;
+	display: inline-block;
+	content: '';
+	height: 11px;
+	padding-left: 9px;
+	background: url(./images/sub/ico-hyphen.png) no-repeat left 50%;
 }
 
 .ico-hyphen2:before,
 ul.ico-hyphen2-list>li:before,
 dl.ico-hyphen2-list>dt:before {
-	display:inline-block;
-	content:'';
-	height:11px;
-	padding-left:9px;
-	background:url(./images/sub/ico-hyphen02.png) no-repeat left 50%;
+	display: inline-block;
+	content: '';
+	height: 11px;
+	padding-left: 9px;
+	background: url(./images/sub/ico-hyphen02.png) no-repeat left 50%;
 }
 
 .ico-hyphen3:before,
 ul.ico-hyphen3-list>li:before,
 dl.ico-hyphen3-list>dt:before {
-	display:inline-block;
-	content:'';
-	height:11px;
-	padding-left:9px;
-	background:url(./images/sub/ico-hyphen03.png) no-repeat left 50%;
+	display: inline-block;
+	content: '';
+	height: 11px;
+	padding-left: 9px;
+	background: url(./images/sub/ico-hyphen03.png) no-repeat left 50%;
 }
 
 .ico-dot:before,
 ul.ico-dot-list>li:before,
 dl.ico-dot-list>dt:before {
-	display:inline-block;
-	content:'';
-	height:12px;
-	padding-left:9px;
-	background:url(./images/sub/ico-dot.png) no-repeat left 50%;
+	display: inline-block;
+	content: '';
+	height: 12px;
+	padding-left: 9px;
+	background: url(./images/sub/ico-dot.png) no-repeat left 50%;
 }
 
 .ico-dot2:before,
 ul.ico-dot2-list>li:before,
 dl.ico-dot2-list>dt:before {
-	display:inline-block;
-	content:'';
-	height:11px;
-	padding-left:9px;
-	background:url(./images/sub/ico-dot02.png) no-repeat left 50%;
+	display: inline-block;
+	content: '';
+	height: 11px;
+	padding-left: 9px;
+	background: url(./images/sub/ico-dot02.png) no-repeat left 50%;
 }
 
 .circle-num {
-	display:inline-block;
-	width:16px;
-	height:16px;
-	line-height:13px;
-	font-size:13px;
-	color:#333333;
-	font-weight:300;
-	border:1px solid #333333;
-	-webkit-border-radius:100%;
-	border-radius:100%;
-	background:#fff;
-	text-align:center; 
-	vertical-align:middle;
-	margin:-3px 5px 0 0;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 13px;
+	font-size: 13px;
+	color: #333333;
+	font-weight: 300;
+	border: 1px solid #333333;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background: #fff;
+	text-align: center;
+	vertical-align: middle;
+	margin: -3px 5px 0 0;
 }
 
 .txt-star {
-	position:relative;
-	display:inline-block;
-	font-size:14px;
-	font-weight:300;
-	color:#999;
-	padding-left:10px;
-	line-height:23px;
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 300;
+	color: #999;
+	padding-left: 10px;
+	line-height: 23px;
 }
 
 .txt-star:before {
-	content:"*";
-	position:absolute;
-	top:0;
-	left:3px;
+	content: "*";
+	position: absolute;
+	top: 0;
+	left: 3px;
 }
 
 .txt-star2 {
-	position:relative;
-	font-size:16px;
-	font-weight:500; 
-	color:#c4b2a0;
-	font-style:normal;
+	position: relative;
+	font-size: 16px;
+	font-weight: 500;
+	color: #c4b2a0;
+	font-style: normal;
 }
 
 .txt-star2:before {
-	content:"*";
-	position:absolute;
-	top:0;
-	left:3px;
+	content: "*";
+	position: absolute;
+	top: 0;
+	left: 3px;
 }
 
 .txt-star2 span {
-	text-indent:-9999px; 
-	font-size:0; 
+	text-indent: -9999px;
+	font-size: 0;
 }
 
 .txt-refer {
-	font-size:16px;
-	line-height:26px;
-	font-weight:300;
-	color:#777;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #777;
 }
 
 .txt-refer:before {
-	content:'';
-	display:inline-block;
-	width:12px;
-	height:12px;
-	padding-left:7px;
-	background:url(./images/sub/ico-refer.png) no-repeat left 50%;
+	content: '';
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	padding-left: 7px;
+	background: url(./images/sub/ico-refer.png) no-repeat left 50%;
 }
 
 .txt-refer2 {
-	font-size:14px;
-	line-height:24px;
-	font-weight:300;
-	color:#999999;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 300;
+	color: #999999;
 }
 
 .txt-refer2:before {
-	content:'';
-	display:inline-block;
-	width:10px;
-	height:11px;
-	padding-left:7px;
-	background:url(./images/sub/ico-refer2.png) no-repeat left 50%;
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 11px;
+	padding-left: 7px;
+	background: url(./images/sub/ico-refer2.png) no-repeat left 50%;
 }
 
 /* Singup(CO2.3) */
 .signup-step ol {
-	display:table;
-	width:100%;
+	display: table;
+	width: 100%;
 }
 
 .signup-step ol li {
-	display:table-cell;
-	box-sizing:border-box;
-	text-align:left;
-	font-size:20px;
-	color:#cccccc;
-	font-weight:500;
-	border-right:1px solid #d7d7d7;
+	display: table-cell;
+	box-sizing: border-box;
+	text-align: left;
+	font-size: 20px;
+	color: #cccccc;
+	font-weight: 500;
+	border-right: 1px solid #d7d7d7;
 }
 
 .signup-step ol li.on {
-	color:#be9768;
+	color: #be9768;
 }
 
 .signup-step ol li:first-child {
-	width:254px;
+	width: 254px;
 }
 
 .signup-step ol li:nth-child(2) {
-	width:344px;
+	width: 344px;
 }
 
 .signup-step ol li:nth-child(3) {
-	width:336px;
+	width: 336px;
 }
 
 .signup-step ol li:last-child {
-	width:263px;
-	text-align:right;
-	border-right:0px;
+	width: 263px;
+	text-align: right;
+	border-right: 0px;
 }
 
 .signup-step ol li:nth-child(2),
 .signup-step ol li:nth-child(3) {
-	text-align:center;
+	text-align: center;
 }
 
 .signup-step .area-txt,
 .signup-step .area-num {
-	display:inline-block;
-	text-align:left;
+	display: inline-block;
+	text-align: left;
 }
 
 .signup-step .area-num {
-	font-family: "Avenir",sans-serif;
-	font-size:54px;
-	font-weight:300;
+	font-family: "Avenir", sans-serif;
+	font-size: 54px;
+	font-weight: 300;
 }
 
 .signup-step .area-txt {
-	padding:7px 0 0 20px;
-	font-size:20px;
-	font-weight:400;
+	padding: 7px 0 0 20px;
+	font-size: 20px;
+	font-weight: 400;
 }
 
 .signup-step .area-txt span {
-	display:block;
-	padding-bottom:8px;
-	font-size:16px;
-	font-weight:300;
+	display: block;
+	padding-bottom: 8px;
+	font-size: 16px;
+	font-weight: 300;
 }
 
 .signup-cont {
- 	margin-top:85px;
+	margin-top: 85px;
 }
 
 .signup-cont h4 {
-	font-size:20px;
-	color:#000000;
-	font-weight:500;
-	margin-bottom:30px;
+	font-size: 20px;
+	color: #000000;
+	font-weight: 500;
+	margin-bottom: 30px;
 }
 
 .signup-cont .input-block,
 .mypage-cont .input-block {
-	margin-bottom:70px;
+	margin-bottom: 70px;
 }
 
 .signup-cont .input-block:last-child {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 .signup-cont .signup-btn {
-	margin-top:70px;
+	margin-top: 70px;
 }
 
 .signup-cont .terms-block {
-	border-top:1px solid #d7d7d7;
+	border-top: 1px solid #d7d7d7;
 }
 
 .signup-cont .terms-block:after {
-	display:block;
-	content:'';
-	clear:both;
+	display: block;
+	content: '';
+	clear: both;
 }
 
 .signup-cont dl.terms-group {
-	border-bottom:1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
 }
 
 .signup-cont .terms-group dt {
-	padding:18px 30px 17px;
-	font-size:16px;
-	color:#333333;
-	font-weight:500;
-	line-height:25px;
+	padding: 18px 30px 17px;
+	font-size: 16px;
+	color: #333333;
+	font-weight: 500;
+	line-height: 25px;
 }
 
 .signup-cont .terms-group dt em {
-	font-weight:500;
-	color:#b45541;
+	font-weight: 500;
+	color: #b45541;
 }
 
 .signup-cont .terms-group dt em.txt-choice {
-	color:#053885;
+	color: #053885;
 }
 
 .signup-cont .terms-group .btn-opcls {
-	margin-left:20px;
-	width:82px;
+	margin-left: 20px;
+	width: 82px;
 }
 
 .signup-cont .terms-group .agree-check {
-	float:right;
+	float: right;
 }
 
 .signup-cont .terms-group .agree-check span:last-child {
-	margin-right:0;
+	margin-right: 0;
 }
 
 .signup-cont .terms-group dd {
-	display:none;
-	border-top:1px solid #d7d7d7;
-	background:#f5f4f0;
-	overflow:auto;
-	overflow-x:hidden;
-	width:100%;
-	height:350px;
-	padding:46px 30px 45px;
-	font-size:16px;
-	line-height:26px;
-	color:#777777;
-	font-weight:333;
+	display: none;
+	border-top: 1px solid #d7d7d7;
+	background: #f5f4f0;
+	overflow: auto;
+	overflow-x: hidden;
+	width: 100%;
+	height: 350px;
+	padding: 46px 30px 45px;
+	font-size: 16px;
+	line-height: 26px;
+	color: #777777;
+	font-weight: 333;
 }
 
 .signup-cont .terms-group.on dd {
-	display:block;
+	display: block;
 }
 
 .signup-cont .terms-agreeall {
-	text-align:right;
-	margin:24px 45px 0 ;
+	text-align: right;
+	margin: 24px 45px 0;
 }
 
 .signup-cont .terms-agreeall span {
-	margin:0;
+	margin: 0;
 }
 
 .signup-cont .certi-block {
-	padding:70px 30px;
-	border-top:1px solid #d7d7d7;
-	border-bottom:1px solid #d7d7d7;
+	padding: 70px 30px;
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
 }
 
 .signup-cont .certi-block p {
-	text-align:center;
-	font-size:16px;
-	font-weight:300;
-	color:#777777;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 300;
+	color: #777777;
 }
 
 .signup-cont .certi-block .btn-two-column {
-	margin-top:30px;
+	margin-top: 30px;
 }
 
 .signup-cont .certi-block .btn-two-column button {
-	padding:0 50px;
+	padding: 0 50px;
 }
 
 .signup-cont .certi-info {
-	margin-top:50px;
-	background-color:#f6f6f6;
-	padding:48px 50px;
+	margin-top: 50px;
+	background-color: #f6f6f6;
+	padding: 48px 50px;
 }
 
 .signup-cont .certi-info>li {
-	font-size:14px;
-	line-height:20px;
-	font-weight:300;
-	color:#999999;
-	margin-bottom:30px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #999999;
+	margin-bottom: 30px;
 }
 
 .signup-cont .certi-info li:last-child {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 .signup-cont .certi-info .ico-dot2-list>li {
-	margin-top:5px;
+	margin-top: 5px;
 }
 
 .signup-cont .certi-guide {
-	margin-top:23px;
-	font-size:16px;
-	line-height:25px;
-	color:#777777;
-	font-weight:300;
+	margin-top: 23px;
+	font-size: 16px;
+	line-height: 25px;
+	color: #777777;
+	font-weight: 300;
 }
 
 .signup-cont .certi-guide button {
-	margin-left:20px;
+	margin-left: 20px;
 }
 
 .signup-cont .certi-mem-info {
 	margin-top: 68px;
-	font-size:16px;
-	line-height:26px;
-	color:#777777;
-	font-weight:300;
-	text-align:center;
+	font-size: 16px;
+	line-height: 26px;
+	color: #777777;
+	font-weight: 300;
+	text-align: center;
 }
 
-.signup-cont .certi-mem-info strong{
-	display:block;
-	font-size:20px;
-	color:#be9768;
-	font-weight:500;
+.signup-cont .certi-mem-info strong {
+	display: block;
+	font-size: 20px;
+	color: #be9768;
+	font-weight: 500;
 	margin-bottom: 12px;
 }
 
 .signup-cont .birth_calender_area {
-	position:absolute;
-	top:60px;
-	right:0;
-	background:#fff;
-	z-index:100;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	background: #fff;
+	z-index: 100;
 }
+
 /* //Signup(CO2.3) */
 
 /* Login(CO2.1) */
 .inner-login {
-	width:540px;
-	margin:0 auto;
+	width: 540px;
+	margin: 0 auto;
 }
 
 .inner-idfind {
-	border-top:1px solid #d7d7d7;
+	border-top: 1px solid #d7d7d7;
 }
 
-.inner-idfind:first-child{
-	border-top:0;
+.inner-idfind:first-child {
+	border-top: 0;
 }
 
 .inner-idfind:last-child {
-	margin-top:150px;
-	padding-top:150px;
+	margin-top: 150px;
+	padding-top: 150px;
 }
 
 .login-input li {
-	display:table;
-	width:100%;
-	padding:20px 10px;
-	border-bottom:1px solid #999999;
-	margin-bottom:20px;
+	display: table;
+	width: 100%;
+	padding: 20px 10px;
+	border-bottom: 1px solid #999999;
+	margin-bottom: 20px;
 }
 
 .login-input li:last-child {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 .login-input strong,
-.login-input .input-area{
-	display:table-cell;
-	box-sizing:border-box;
-	vertical-align:middle;
- }
+.login-input .input-area {
+	display: table-cell;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
 
 .login-input strong {
-	width:85px;
-	font-size:20px;
-	font-weight:500;
-	color:#333333;
+	width: 85px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #333333;
 }
 
 .login-input .inp-def {
-	width:100%;
-	border:0;
-	font-size:20px;
-	color:#333333;
-	font-weight:333;
+	width: 100%;
+	border: 0;
+	font-size: 20px;
+	color: #333333;
+	font-weight: 333;
 }
 
 .login-input input.inp-def::placeholder {
-  color:#cccccc;
+	color: #cccccc;
 }
 
 .login-set {
-	margin-top:25px;
+	margin-top: 25px;
 }
 
 .login-set:after {
-	clear:both;
-	display:block;
-	content:'';
+	clear: both;
+	display: block;
+	content: '';
 }
 
 .login-set .btn-style2 {
-	float:left;
+	float: left;
 }
 
 .login-set .check-group {
-	float:right;
-	line-height:32px;
-	height:32px;
+	float: right;
+	line-height: 32px;
+	height: 32px;
 }
 
 .inner-login .btn-one-column {
-	margin-top:50px;
+	margin-top: 50px;
 }
 
 .login-signup {
-	margin-top:45px;
-	padding-top:50px;
-	border-top:1px solid #d7d7d7;
+	margin-top: 45px;
+	padding-top: 50px;
+	border-top: 1px solid #d7d7d7;
 }
 
 .login-signup:after {
-	clear:both;
-	display:block;
-	content:'';
+	clear: both;
+	display: block;
+	content: '';
 }
 
 .login-signup .txt-area {
-	width:270px;
-	float:left;
-	font-size:16px;
-	line-height:26px;
-	font-weight:300;
-	color:#777777;
+	width: 270px;
+	float: left;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #777777;
 }
 
 .login-signup .txt-area strong {
-	display:block;
-	padding-bottom:11px;
-	font-size:24px;
-	font-weight:500;
-	color:#333333;
+	display: block;
+	padding-bottom: 11px;
+	font-size: 24px;
+	font-weight: 500;
+	color: #333333;
 }
 
 .login-signup .btn-one-column {
-	float:right;
-	margin-top:20px;
+	float: right;
+	margin-top: 20px;
 }
 
 .login-signup .btn-one-column button {
-	width:156px;
+	width: 156px;
 }
 
 .login-findid {
-	margin-top:120px;
-	font-size:32px;
-	font-weight:333;
-	line-height:42px;
-	color:#000000;
-	text-align:center;
+	margin-top: 120px;
+	font-size: 32px;
+	font-weight: 333;
+	line-height: 42px;
+	color: #000000;
+	text-align: center;
 }
 
 .login-findid em {
-	color:#be9768;
-	font-weight:333;
+	color: #be9768;
+	font-weight: 333;
 }
 
 .idfind-wrap {
-	width:1200px;
-	margin:0 auto;
-	padding-left:100px;
+	width: 1200px;
+	margin: 0 auto;
+	padding-left: 100px;
 }
 
 .idfind-wrap:after {
-	clear:both;
-	display:block;
-	content:'';
+	clear: both;
+	display: block;
+	content: '';
 }
 
 .idfind-wrap .left-area,
 .idfind-wrap .inner-login {
-	float:left;
+	float: left;
 }
 
 .idfind-wrap .left-area {
-	font-size:16px;
-	font-weight:300;
-	line-height:26px;
-	color:#777777;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 26px;
+	color: #777777;
 	width: 322px;
 }
 
 .idfind-wrap .left-area strong {
-	display:block;
-	font-size:32px;
-	font-weight:300;
-	line-height:42px;
-	color:#000000;
-	padding-bottom:23px;
+	display: block;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 42px;
+	color: #000000;
+	padding-bottom: 23px;
 }
 
 .idfind-wrap .login-input strong {
-	width:115px;
+	width: 115px;
 }
+
 /* //Login(CO2.1) */
 
 /* My page (MY.4.T1) */
 .mypage-cont {
- 	margin-top:70px;
+	margin-top: 70px;
 }
 
 .mypage-cont h4 {
-	font-size:20px;
-	color:#000000;
-	font-weight:500;
-	margin-bottom:30px;
+	font-size: 20px;
+	color: #000000;
+	font-weight: 500;
+	margin-bottom: 30px;
 }
 
 .mypage-cont .mypage-btn {
-	margin-top:70px;
+	margin-top: 70px;
 }
 
-.mypage-cont .txtbox-area{
-	padding:45px 30px;
-	border-top:1px solid #d7d7d7;
-	border-bottom:1px solid #d7d7d7;	
+.mypage-cont .txtbox-area {
+	padding: 45px 30px;
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
 }
 
 .mypage-cont .txtbox-area li {
-	font-size:16px;
-	line-height:26px;
-	color:#777777;
-	font-weight:300;
+	font-size: 16px;
+	line-height: 26px;
+	color: #777777;
+	font-weight: 300;
 }
 
 /* Footer > 사이트맵(CO3.7) */
 .sitemap-cont .menu-list {
-	width:100%;
-	padding:0 20px;
+	width: 100%;
+	padding: 0 20px;
 }
 
 .sitemap-cont .menu-list:after,
 .sitemap-cont .util-list:after {
-	clear:both;
-	display:block;
-	content:'';
+	clear: both;
+	display: block;
+	content: '';
 }
 
 .sitemap-cont .menu-list>li {
-	float:left;
-	text-align:left;
-	width:25%;
-	margin-bottom:120px;
+	float: left;
+	text-align: left;
+	width: 25%;
+	margin-bottom: 120px;
 }
 
 .sitemap-cont .menu-list>li:nth-child(4n) {
-	margin-right:0;
+	margin-right: 0;
 }
 
 .sitemap-cont .menu-list h4 {
-	font-size:32px;
-	font-weight:300;
-	color:#333333;
+	font-size: 32px;
+	font-weight: 300;
+	color: #333333;
 }
 
 .sitemap-cont .menu-list2 {
-	margin-top:50px;
+	margin-top: 50px;
 }
 
 .sitemap-cont .menu-list2 li {
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
 .sitemap-cont .menu-list2 li:last-child {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 .sitemap-cont ul li a {
-	position:relative;
-	display:inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .sitemap-cont ul li a.on:after,
 .sitemap-cont ul li a:hover:after {
-	content:"";
-	width:100%;
-	display:block;
-	position:absolute;
-	bottom:0;
-	left:0;
-	z-index:1;
+	content: "";
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
 }
 
 .sitemap-cont .menu-list2 li a {
-	font-size:16px;
-	height:18px;
-	font-weight:300;
-	color:#777777;
+	font-size: 16px;
+	height: 18px;
+	font-weight: 300;
+	color: #777777;
 }
 
 .sitemap-cont .menu-list2 li a.on,
 .sitemap-cont .menu-list2 li a:hover {
-	color:#be9768;
+	color: #be9768;
 }
 
 .sitemap-cont .menu-list2 li a.on:after,
 .sitemap-cont .menu-list2 li a:hover:after {
-	border-bottom:1px solid #be9768;
+	border-bottom: 1px solid #be9768;
 }
 
 .sitemap-cont .left-area li a.on:after,
 .sitemap-cont .left-area li a:hover:after {
-	border-bottom:1px solid #333333;
+	border-bottom: 1px solid #333333;
 }
 
 .sitemap-cont .right-area li a.on:after,
 .sitemap-cont .right-area li a:hover:after {
-	border-bottom:1px solid #777777;
+	border-bottom: 1px solid #777777;
 }
 
 .sitemap-cont .util-list {
-	width:100%;
-	border-top:1px solid #d7d7d7;
-	padding:119px 20px 0;
-	text-align:left;
+	width: 100%;
+	border-top: 1px solid #d7d7d7;
+	padding: 119px 20px 0;
+	text-align: left;
 }
 
 .sitemap-cont .util-list .left-area {
-	float:left;
-	width:75%;
+	float: left;
+	width: 75%;
 }
 
 .sitemap-cont .util-list .right-area {
-	float:left;
-	width:25%;
+	float: left;
+	width: 25%;
 }
 
 .sitemap-cont .util-list .left-area ul {
-	float:left;
-	margin-right:120px
+	float: left;
+	margin-right: 120px
 }
 
 .sitemap-cont .util-list .left-area ul li {
-	margin-bottom:18px;
+	margin-bottom: 18px;
 }
 
 .sitemap-cont .util-list .right-area ul li {
-	margin-bottom:8px;
+	margin-bottom: 8px;
 }
 
 .sitemap-cont .util-list ul li:last-child {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 .sitemap-cont .util-list .left-area a {
-	font-size:20px;
-	height:23px;
-	font-weight:300;
-	color:#333333;
+	font-size: 20px;
+	height: 23px;
+	font-weight: 300;
+	color: #333333;
 }
 
 .sitemap-cont .util-list .right-area a {
-	font-size:16px;
-	height:18px;
-	font-weight:300;
-	color:#777777;
+	font-size: 16px;
+	height: 18px;
+	font-weight: 300;
+	color: #777777;
 }
 
 /* Footer > 이용약관(CO3.3),개인정보취급방침(CO3.4),이메일무단수집거부(MO_CO3.5) */
 .privacy-cont {
-	font-size:16px;
-	line-height:26px;
-	font-weight:300;
-	color:#777777;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #777777;
 }
 
 .privacy-cont .link-area.space {
-	margin-top:25px;
+	margin-top: 25px;
 }
 
 .privacy-cont .link-area li {
-	position:relative;
-	font-size:16px;
-	line-height:26px;
-	padding-left:10px;
+	position: relative;
+	font-size: 16px;
+	line-height: 26px;
+	padding-left: 10px;
 }
 
 .privacy-cont .link-area li>a {
-	color:#be9768;
-	font-weight:500;
-	text-decoration:underline;
+	color: #be9768;
+	font-weight: 500;
+	text-decoration: underline;
 }
 
-.privacy-cont .link-area li:before{
-	content:"";
-	position:absolute;
-	top:50%;
-	left:0px;	
-	display:inline-block;
-	width:5px;
-	height:2px;
-	border-top:1px solid #be9768;
+.privacy-cont .link-area li:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	display: inline-block;
+	width: 5px;
+	height: 2px;
+	border-top: 1px solid #be9768;
 }
 
 /* Footer > 분양/입점문의(CO3.1) */
-.sell-cont h4 {	
-	position:relative;
-	margin-top:148px;
-	font-size:28px;
-	font-weight:300;
-	color:#333;
+.sell-cont h4 {
+	position: relative;
+	margin-top: 148px;
+	font-size: 28px;
+	font-weight: 300;
+	color: #333;
 }
 
 .sell-cont h4:before {
-	content:"";
-	position:absolute;
-	bottom:-20px;
-	left:0;
-	width:25px;
-	height:1px;
-	background:#333;	
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	width: 25px;
+	height: 1px;
+	background: #333;
 }
 
 .sell-cont h4:first-child {
-	margin-top:0;
+	margin-top: 0;
 }
 
 .sell-cont .txt-sup {
-	margin:40px 0 20px;
-	color:#999;
-	font-size:14px;
-	font-weight:300;
-	display:block;
+	margin: 40px 0 20px;
+	color: #999;
+	font-size: 14px;
+	font-weight: 300;
+	display: block;
 }
 
 .sell-cont .info-area .refer {
-	margin-top:15px;
+	margin-top: 15px;
 }
 
 .sell-cont .info-area .txt-star {
-	display:block;
+	display: block;
 }
 
-.sell-cont .info-area>li {	
-	margin-top:145px;	
+.sell-cont .info-area>li {
+	margin-top: 145px;
 }
 
 .sell-cont .info-area>li:first-child {
-	margin-top:0;
+	margin-top: 0;
 }
 
 .sell-cont td.left .ico-dot-list>li {
-	line-height:26px;
-	font-weight:500;
+	line-height: 26px;
+	font-weight: 500;
 }
 
 .sell-cont td.left .ico-hyphen-list {
-	padding:0 0 24px 15px;
+	padding: 0 0 24px 15px;
 
 }
 
 .sell-cont td.left .ico-hyphen-list>li {
-	line-height:26px;
-	font-weight:300;
+	line-height: 26px;
+	font-weight: 300;
 }
 
 
 .sell-cont .t-title {
-	display:inline-block;
-	font-size:20px;
-	font-weight:500;
-	color:#333;
-	padding:120px 0 20px;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 500;
+	color: #333;
+	padding: 120px 0 20px;
 }
 
 .sell-cont .t-title:first-of-type {
-	padding-top:40px;
+	padding-top: 40px;
 }
 
 .sell-cont .s-title {
-	display:block;
-	color:#777;
-	font-size:16px;	
-	font-weight:500;
-	padding:90px 0 20px;
+	display: block;
+	color: #777;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 90px 0 20px;
 }
 
 .sell-cont .info-call {
-	display:table;
-	width:100%;
-	color:#be9768;
-	font-size:16px;
-	font-weight:300;
-	margin-top:30px;
+	display: table;
+	width: 100%;
+	color: #be9768;
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: 30px;
 }
 
 .sell-cont .info-call dt,
 .sell-cont .info-call dd {
-	display:table-cell;
-	box-sizing:border-box;
-	vertical-align:middle;
+	display: table-cell;
+	box-sizing: border-box;
+	vertical-align: middle;
 }
 
 .sell-cont .info-call dt {
-	width:93px;
-	font-size:18px;
-	font-weight:500;
+	width: 93px;
+	font-size: 18px;
+	font-weight: 500;
 }
 
 .sell-cont .info-area2 {
-	margin-top:42px;
+	margin-top: 42px;
 }
 
 .sell-cont .info-area2 li {
-	font-size:16px;
-	line-height:26px;
-	font-weight:300;
-	color:#777777;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #777777;
 }
 
 /* 약관공용 (회원약관동의,Footer컨텐츠) */
 .terms-list {
-	margin-top:30px;
+	margin-top: 30px;
 }
 
 .terms-list:first-child {
-	margin-top:0;
+	margin-top: 0;
 }
 
 .terms-list strong {
-	display:block;
-	font-weight:500;
+	display: block;
+	font-weight: 500;
 }
 
 .terms-list strong span {
-	font-weight:300;
+	font-weight: 300;
 }
 
 .terms-list em {
-	display:block;
-	font-weight:300; 
+	display: block;
+	font-weight: 300;
 }
 
 .terms-list .table-type2,
 .terms-list .table-type4 {
-	margin:15px 0;
+	margin: 15px 0;
 }
 
 .terms-list .table-type4 td {
-	padding:17px 0;
-	background-color:#fff;
+	padding: 17px 0;
+	background-color: #fff;
 }
 
 .terms-list .table-type4 .left {
-	text-align:left;
-	padding:17px 30px;
-}
- 
-.terms-list .table-type2 th,
-.terms-list .table-type2 td {
-	color:#777777;
-}
-
-.terms-list .table-type2 td {
-	background:#fff;
-	padding:10px 20px 10px 30px;
+	text-align: left;
+	padding: 17px 30px;
 }
 
 .terms-list .table-type2 th,
 .terms-list .table-type2 td {
-	border-left:1px solid #d7d7d7;
+	color: #777777;
+}
+
+.terms-list .table-type2 td {
+	background: #fff;
+	padding: 10px 20px 10px 30px;
+}
+
+.terms-list .table-type2 th,
+.terms-list .table-type2 td {
+	border-left: 1px solid #d7d7d7;
 }
 
 .terms-list .table-type2 th:last-child,
 .terms-list .table-type2 td:last-child {
-	border-right:1px solid #d7d7d7;
+	border-right: 1px solid #d7d7d7;
 }
 
 .terms-list .txt-refer {
-	margin-top:15px;
+	margin-top: 15px;
 }
 
 /* 잇 벨포레 */
 .belle-cont.b-story {
-	padding-top:30px;
+	padding-top: 30px;
 }
 
 .belle-cont.b-story .detail-top .title-area {
-	margin-top:10px;
+	margin-top: 10px;
 }
 
 .belle-cont.b-story .detail-top .t-category {
-	font-size:16px;
-	line-height:26px;
-	padding-left:0;
+	font-size: 16px;
+	line-height: 26px;
+	padding-left: 0;
 }
 
 .belle-cont .detail-top .t-category {
-	display:inline-block;
-	font-size:20px;
-	line-height:40px;
-	font-weight:300;
-	color:#be9768;
-	padding-left:20px;
+	display: inline-block;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: 300;
+	color: #be9768;
+	padding-left: 20px;
 }
 
 .belle-cont .detail-top .title-area {
-	display:block;
-	margin-top:23px;
-	font-size:32px;
-	line-height:42px;
-	font-weight:300;
-	color:#000;
+	display: block;
+	margin-top: 23px;
+	font-size: 32px;
+	line-height: 42px;
+	font-weight: 300;
+	color: #000;
 }
 
 .belle-cont .detail-top .date-area {
-	margin-top:35px;
-	padding:16px 0 16px 10px;
-	border-top:1px solid #d7d7d7;
-	border-bottom:1px solid #d7d7d7;
+	margin-top: 35px;
+	padding: 16px 0 16px 10px;
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
 }
 
 .belle-cont .detail-top .date-area:after {
-	content:"";
-	display:block;
-	clear:both;
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .belle-cont .detail-top .t-date {
-	display:inline-block;
-	font-size:16px;
-	line-height:26px;
-	font-weight:300;
-	color:#777777;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #777777;
 }
 
 .belle-cont .detail-top .t-date>span {
-	position:relative;
-	margin-left:20px;
-	padding-left:20px;
-	font-family:"Avenir",sans-serif;
+	position: relative;
+	margin-left: 20px;
+	padding-left: 20px;
+	font-family: "Avenir", sans-serif;
 }
 
 .belle-cont .detail-top .t-date>span:before {
-	content:"";
-	position:absolute;
-	left:0;
-	top:50%;
-	width:1px;
-	height:10px;
-	margin-top:-5px;
-	background-color:#d7d7d7;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 1px;
+	height: 10px;
+	margin-top: -5px;
+	background-color: #d7d7d7;
 }
 
 .belle-cont .detail-top .btn-share {
-	float:right;
+	float: right;
 }
 
 .belle-cont.bbs-view .detail-cont {
-	padding:50px 0 70px;
+	padding: 50px 0 70px;
 }
 
 .btn-share {
-	position:relative;
-	padding-left:25px;
-	font-size:14px;
-	line-height:26px;
-	font-weight:300;
-	color:#777777;
+	position: relative;
+	padding-left: 25px;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #777777;
 }
 
 .btn-share:before {
-	content:"";
-	position:absolute;
-	left:0;
-	top:50%;
-	margin-top:-7px;
-	width:14px;
-	height:15px;
-	background:url(./images/sub/ico-share.png) no-repeat 0 0;	
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -7px;
+	width: 14px;
+	height: 15px;
+	background: url(./images/sub/ico-share.png) no-repeat 0 0;
 }
+
 /* //sub.css로 이동예정 */

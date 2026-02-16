@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-@import "./css/reset.css";
-@import "./css/slick.css";
-@import "./css/selectric.css";
+@import "reset.css";
+@import "slick.css";
+@import "selectric.css";
 
 html {
     position:relative;
@@ -659,9 +659,9 @@ html,body {
 .cm_calender_tbl th.hol, .cm_calender_tbl td.hol a {color:#b45541;}  /* 일요일 및 공휴일 */
 .cm_calender_tbl th.sat , .cm_calender_tbl td.sat a {color:#333;} /* 토요일 */
 .cm_calender_tbl td a.cal_end {color:#999; background-color:#e6e6e6;}  /* 마감 */
-.cm_calender_tbl td a.cal_live {color:#fffff; } /* 예약가능 */
-.cm_calender_tbl td a.cal_cho {color:#fffff; background-color:#9bcd62} /* 추첨가능 */
-.cm_calender_tbl td a.cal_sta {color:#fffff; background-color:#b881c4}  /* 대기가능 */
+.cm_calender_tbl td a.cal_live {color:#fff; } /* 예약가능 */
+.cm_calender_tbl td a.cal_cho {color:#fff; background-color:#9bcd62} /* 추첨가능 */
+.cm_calender_tbl td a.cal_sta {color:#fff; background-color:#b881c4}  /* 대기가능 */
 .cm_calender_tbl td a.cal_today {color: #be9768;text-decoration:underline;} /* 오늘 */
 .cm_calender_tbl td a.cal_act {color:#fff; font-weight:300; background-color:#be9768}   /* 선택날짜 */
 
