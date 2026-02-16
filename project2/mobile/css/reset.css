@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/*reset */
+html,body,div,span,object,iframe,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,
+var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,
+legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,
+summary,time,mark,audio,video,h1,h2,h3,h4,h5,h6 {margin:0; padding:0; border:0; background:transparent;}
+article, aside, details, summary, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+ol,ul {list-style:none;}
+h1, h2, h3, h4, h5, h6 {font:inherit;}
+blockquote, q {quotes:none;} 
+blockquote:before, blockquote:after, q:before, q:after {content:''; content:none;}
+table {width:100%; border-collapse:collapse; border-spacing:0;}
+img {width:100%;vertical-align: top;}
+em {font-style: normal}
+caption {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0} 
+
+/*default*/ 
+* {-webkit-text-size-adjust:auto; -webkit-overflow-scrolling:touch; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+html,body {width:100%; height:100%; font-family:AppleSDGothicNeo,Droid Sans,Roboto,'Noto Sans KR',Sans-serif;}
+body {-webkit-text-size-adjust:none; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; line-height:1; font-size:14px;}
+
+*:focus {outline: transparent}
+
+/*anchor */
+a {
+	display:block;
+	color:inherit;
+	text-align:center;	
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+	text-decoration:none;		
+}
+
+.pos-rel {position:relative;}
+
+/* form */
+input, select, button, textarea {font:inherit; margin:0; padding:0; color:inherit; border:0;}
+input,select, textarea {-webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
+input[type=button],input[type=submit],button {cursor:pointer; background:transparent; border:0; text-align:center;}
+input[type=radio],input[type=checkbox] {padding:0; border:0;}
+button {width:auto; overflow:visible; vertical-align:middle; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+textarea {resize:none;}
+input,button,select,textarea {vertical-align:middle;}
+button[disabled=disabled],
+button.btn-disable,
+a.btn-disable {cursor:default;}
+::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}  
+
+/*hidden */
+hr, .hide, legend {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; font-size:1px; line-height: 1px}
+
+/* font */
+.f300 {font-weight:300 !important;} /* light */
+.f500 {font-weight:500 !important;} /* medium */
+.f700 {font-weight:700 !important;} /* bold */
+
+.fc-white {color:#fff !important;}
+.fc-black {color:#000 !important;}
+
+/* text etc */
+.ellipsis{overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical; word-wrap:break-word; white-space:nowrap; display:block;}
+.ellipsis.line2{display:inline-block; display:-webkit-box; -webkit-line-clamp:2; white-space:normal;} /* 2줄 */
+.ellipsis.line3{display:inline-block; display:-webkit-box; -webkit-line-clamp:3; white-space:normal;} /* 3줄 */
+.ellipsis.line4{display:inline-block; display:-webkit-box; -webkit-line-clamp:4; white-space:normal;} /* 4줄 */
+.ellipsis.line5{display:inline-block; display:-webkit-box; -webkit-line-clamp:5; white-space:normal;} /* 5줄 */
+.msie .ellipsis {display:block; white-space:nowrap;}
+.msie .ellipsis.line2,
+.msie .ellipsis.line3,
+.msie .ellipsis.line4,
+.msie .ellipsis.line5{white-space:normal;}
+
+/* 정렬 */
+.al {text-align:left !important;}
+.ac {text-align:center !important;}
+.ar {text-align:right !important;}
+
+.fl {float:left;}
+.fr {float:right;}
+
+/* 간격 */
+.mgt20 {margin-top:20px !important;}
+.mgt25 {margin-top:25px !important;}
+.mgt40 {margin-top:40px !important;}
+.mgt60 {margin-top:60px !important;}
+
+.pdt60 {padding-top:60px !important;}
+
+/* 자간 */
+.ls-minus {letter-spacing:-.5px;}
+
+
+
+
+

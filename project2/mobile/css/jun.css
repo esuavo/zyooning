@@ -1,0 +1,306 @@
+@charset "utf-8";
+
+/* sub.css로 이동예정 */
+.pagination {
+	position:relative;
+	height:30px;
+}
+.pagination:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.pagination .pagination-number a {
+	color:#999;
+}
+.pagination .pagination-number span {
+	color:#be9768;
+}
+.pagination .pagination-number {
+	width:calc(100% - 48px);
+	margin:0 auto;
+	font-size:0;
+	text-align:center;
+}
+.pagination .pagination-number a,
+.pagination .pagination-number span {
+	display:inline-block;
+	position:relative;
+	width:10%;
+	margin:0 5%;
+	font-size:14px;
+	font-family:"Avenir",sans-serif;
+	font-weight:300;
+	line-height:30px;
+	text-align:center;
+}
+.pagination span:before {
+	content:"";
+	position:absolute;
+	left:calc(50% - 8px);
+	right:calc(50% - 8px);
+	bottom:3px;
+	height:1px;
+	background-color:#be9768;
+	color:#be9768;
+}
+.pagination .prev-page,
+.pagination .next-page {
+	position:absolute;
+	top:50%;
+	width:30px;
+	height:30px;
+	margin-top:-14px;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	background-size:5px 8px;
+}
+.pagination .prev-page {
+	left:-2px;
+	background-image:url(/mobile/images/sub/ico-prev-page.png)
+}
+.pagination .next-page {
+	right:-2px;
+	background-image:url(/mobile/images/sub/ico-next-page.png)
+}
+
+.help-cont {
+	position:relative;
+	margin-top:50px;
+}
+
+.help-cont .btn-column {
+	margin-top:20px;
+}
+
+/* 공지사항 리스트 */
+.notice-list {
+	margin-bottom:30px;
+	border-top:1px solid #d7d7d7;
+}
+.notice-list li {
+	padding: 9px 5px 13px;
+	border-bottom:1px solid #d7d7d7;
+}
+.notice-list li .notice-date {
+	font-family:"Avenir",sans-serif;
+	font-size:12px;
+	font-weight:300;
+	text-align:left;
+	color:#777;
+}
+.notice-list li .notice-title {
+	margin-bottom: 3px;
+}
+.notice-list li .notice-title a {
+	font-size:14px;
+	font-weight:300;
+	line-height: 23px;
+	text-align:left;
+	color:#333;
+}
+.ico-file {
+	display:inline-block;
+	position:relative;
+	width:10px;
+	height:11px;
+	margin-left:5px;
+	background:url(/mobile/images/sub/ico-file.png) no-repeat 50% 50%;
+	background-size:10px 11px;
+}
+
+.nodata-area {
+	padding:110px 0 125px;
+	font-size:14px;
+	font-weight:333;
+	color:#333333;
+	text-align:center;
+}
+
+/* 공지사항 상세 */
+.bbs-view .detail-date {
+	margin:-3px 0 13px;
+	font-family:"Avenir",sans-serif;
+	font-size:14px;
+	font-weight:300;
+	color:#777;
+}
+.bbs-view .detail-title {
+	padding-bottom:25px;
+	border-bottom:1px solid #d7d7d7;
+	font-size:18px;
+	font-weight:500;
+	color:#000;
+}
+
+.bbs-view .file-name {
+	padding:7px 0;
+	border-bottom:1px solid #d7d7d7;
+	font-size:0;
+	font-weight:300;
+	color:#777;
+}
+.bbs-view .file-name .ico-file {
+	width:20px;
+	height:42px;
+	margin-left:0;
+	vertical-align:top;
+}
+.bbs-view .file-name button {
+	display:inline-block;
+	padding:15px 0;
+	width:calc(100% - 23px);
+	text-align:left;
+	vertical-align:top;
+	font-size:12px;
+}
+.bbs-view .detail-cont {
+	margin-bottom:20px;
+	padding:20px 0;
+	border-bottom:1px solid #d7d7d7;
+}
+.bbs-view .detail-cont div img {
+	max-width:100%;
+}
+.bbs-view .detail-cont p {
+	padding:0 5px;
+	font-size:14px;
+	font-weight:300;
+	line-height:23px;
+	color:#777;
+}
+
+/* faq */
+.accordion-list.faq-list {
+	margin-bottom:29px;
+}
+.accordion-list.faq-list li button, 
+.accordion-list.faq-list li .cont {
+	position:relative;
+	padding:15px 20px 15px 10px;
+}
+.accordion-list.faq-list li button {
+	font-size:12px;
+	font-weight:300;
+	color:#be9768;
+}
+.accordion-list.faq-list li button:before {
+	top:22px;
+	bottom:auto;
+}
+
+.accordion-list.faq-list .detail-sort,
+.accordion-list.faq-list .detail-answer {
+	position: relative;
+	padding-left:30px;
+}
+.accordion-list.faq-list .detail-question {
+	display:block;	
+	padding:7px 10px 0 30px;
+	font-size:14px;
+	font-weight:300;
+	line-height:23px;
+	color:#333;
+}
+
+.accordion-list.qna {
+	margin-top:20px;
+}
+
+.accordion-list.qna li button {
+	font-size:14px;
+}
+
+.accordion-list.qna .detail-question {
+	padding:7px 0 0 0;
+}
+
+.accordion-list.faq-list .answer-area {
+	font-size:14px;
+	line-height:23px;
+	color:#777;
+	font-weight:300;
+}
+
+.accordion-list.faq-list .answer-area dt {
+	border-bottom:1px dashed #dcdcdc;	
+	color:#333;
+	padding-bottom:15px;
+	margin-bottom:15px;
+}
+
+.accordion-list.faq-list .answer-area dt,
+.accordion-list.faq-list .answer-area dd {
+	position: relative;
+	padding-left:30px;
+}
+
+.accordion-list.faq-list .answer-area .txt-date {
+	display:block;
+	margin-top:8px;
+	font-size:12px;
+	font-weight:300; 
+}
+
+.accordion-list .ico-badge {
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+/* QNA */
+.qna-btn {
+	text-align:right;
+	margin-top:-10px;
+}
+
+.qna-btn button {
+	display:inline-block;
+}
+
+.qna-area {
+	margin-top:10px;
+	padding-top:10px;
+	border-top:1px solid #be9768;
+	font-size:14px;
+	font-weight:300;
+}
+
+.qna-area .inp-area {
+	display:block;
+	margin-top:10px;
+}
+
+.qna-area .textarea-def,
+.qna-area .table-type2 {
+	margin-top:10px;
+}
+
+.qna-area .sel-def {
+
+}
+
+.qna-area .table-type2 tr:first-child th,
+.qna-area .table-type2 tr:first-child td {
+	border-top:1px solid #d7d7d7;
+}
+
+.qna-area .textarea-def {
+	height:125px;
+}
+
+.qna-agree {
+	display:block;
+	margin-top:10px;
+}
+
+.qna-agree button {
+	padding:0;
+	font-size:14px;
+	line-height:20px;
+	color:#777777;
+	font-weight:300;
+	text-align:left;
+	border-bottom:1px solid #777777;
+}
+/* //sub.css로 이동예정 */

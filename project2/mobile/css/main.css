@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+.main-visual {
+	position:relative;	
+	-webkit-overflow-scrolling:touch;
+}
+
+.main-visual .slick-slide {
+	position:relative;
+}
+
+.main-visual .slick-dots {
+	position:absolute;
+	left:0;
+	right:0;
+	text-align:center;
+	bottom:25px;	
+}
+
+.main-visual .slick-dots li.slick-active button {	
+	background:#fff;	
+}
+
+.main-visual .slick-dots button {	
+	border:1px solid #fff;
+	background:transparent;	
+}
+
+.main-visual .txt-wrap {
+	position:absolute;	
+	top:200px;	
+	left:20px;
+	right:20px;
+	margin:0 auto;	
+	text-align:center;	
+}
+
+.main-visual .txt-wrap .tit {	
+	font-size:30px;
+}
+
+.main-visual .txt-wrap .desc {	
+	line-height:23px;
+	font-size:14px;
+	font-weight:400;
+	margin-top:20px;
+}
+
+.main-visual .btn-style1 {
+	margin-top:35px;
+}
+
+.main-visual .btn-style1 button.fc-white {	
+	color:#fff;	
+}
+
+.main-visual .btn-style1 button.fc-black {	
+	color:#000;	
+}
+
+.main-visual .btn-style1 button.fc-white:after {	
+	background:url(/mobile/images/common/ico-white-arrow-10x16.png) no-repeat 100% 50%;		
+	background-size:100%;
+}
+
+.main-visual .btn-style1 button.fc-black:after {	
+	background:url(/mobile/images/common/ico-black-arrow-10x16.png) no-repeat 100% 50%;		
+	background-size:100%;
+}
+
+.inner {
+	padding:50px 20px;
+}
+
+.main-title {
+	color:#000;
+	font-weight:300;
+	text-align:center;
+}
+
+h3.main-title {
+	font-size:25px;
+	padding-bottom:30px;
+}
+
+h4.main-title {
+	font-size:20px;
+	padding-bottom:25px;
+}
+
+.main-spacial-offer .spacial-offer-list {
+	padding-top:0;
+}
+
+.main-spacial-offer .spacial-offer-list .spacial-offer-box {
+	margin-top:0;
+}
+
+.main-belleforet-intro {
+	background:#f5f4f0;
+}
+
+.main-belleforet-intro .belleforet-intro-list {
+	padding-top:0;
+}
+
+.main-belleforet-intro .belleforet-intro .item {
+	border-top:0;
+	padding-top:0;
+}
+
+.main-belleforet-intro .belleforet-intro .txt-item {
+	padding-bottom:0;	
+}
+
+.main-spacial-offer .spacial-offer-list .slick-dots,
+.main-belleforet-intro .belleforet-intro .slick-dots {
+	margin-top:25px;
+	text-align:center;
+	font-size:0;
+}
+
+.etc-category {
+	text-align:center;
+}
+
+.etc-category .category {
+	color:#000;
+	font-size:14px;
+	font-weight:500;
+	margin-top:25px;
+}
+
+.etc-category .title {
+	color:#000;
+	font-size:20px;
+	font-weight:300;
+	line-height:29px;
+	margin-top:15px;
+}
+
+.etc-category .btn-style1 {
+	margin-top:20px;
+}
+
+.etc-category .item {
+	border-top:1px dashed #d7d7d7;
+	padding-top:50px;
+	margin-top:50px;
+}
+
+.etc-category .item:first-child {
+	border-top:0;
+	padding-top:0;
+	margin-top:0;
+}
+
+.guide-wrap {
+	border-top:1px solid #d7d7d7;
+}
+
+.address-area a {
+	position:relative;
+	margin-top:10px;	
+	padding-right:40px;
+}
+
+.address-area a:before {
+	content:"";
+	position:absolute;
+	top:50%;
+	right:0;
+	margin-top:-18px;
+	width:35px;
+	height:35px;	
+	background:url(/mobile/images/main/btn-util-info.png) no-repeat;
+	background-size:35px 145px;
+}
+
+.address-area a:first-child {
+	margin-top:20px;
+}
+
+.address-area em,
+.address-area span {
+	display:block;
+	font-size:14px;
+	text-align:left;
+	line-height:23px;
+}
+
+.address-area em {
+	color:#333;
+	font-weight:500;
+}
+
+.address-area span {
+	color:#777;
+	font-weight:300;
+}
+
+.address-area a.addr-item:before {
+	background-position:0 0;	
+}
+
+.address-area a.tel-item:before {
+	background-position:0 -55px;	
+}
+
+.address-area a.email-item:before {
+	background-position:0 -110px;	
+}
+
+.follow-belle {
+	background:#ece8e2;
+	padding-bottom:50px;
+}
+
+.follow-belle .main-title {
+	padding-top:40px;
+	font-family:"Avenir",sans-serif;
+	line-height:34px;	
+}
+
+.follow-belle a {
+	width:120px;
+	height:120px;
+}
+
+
