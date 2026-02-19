@@ -20,22 +20,13 @@ var ui = {
 
         buttons.forEach((button, index) => {
             button.addEventListener("click", () => {
-                const changeTab = () => {
-                    buttons.forEach(btn => btn.classList.remove("tabs__button--active"));
-                    contents.forEach(content => content.classList.remove("tabs__contents--active"));
+                // 1. 모든 버튼과 컨텐츠에서 활성화 클래스 제거
+                buttons.forEach(btn => btn.classList.remove("tabs__button--active"));
+                contents.forEach(content => content.classList.remove("tabs__contents--active"));
 
-                    button.classList.add("tabs__button--active");
-                    contents[index].classList.add("tabs__contents--active");
-                };
-
-                if (!document.startViewTransition) {
-                    changeTab();
-                    return;
-                }
-
-                document.startViewTransition(() => {
-                    changeTab();
-                });
+                // 2. 클릭된 버튼과 해당 순서의 컨텐츠에 클래스 추가
+                button.classList.add("tabs__button--active");
+                contents[index].classList.add("tabs__contents--active");
             });
         });
     },
@@ -72,8 +63,8 @@ var ui = {
         }
 
         applyInitialTheme();
-        btn.addEventListener('click', toggleDarkMode); 
-    },    
+        btn.addEventListener('click', toggleDarkMode);
+    },
     modal: function () {
         const modal = document.querySelector('.modal');
         const openBtn = document.querySelector('.modal__open');

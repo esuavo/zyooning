@@ -66,7 +66,7 @@ body {
 
 .switch-container {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -135,7 +135,7 @@ body {
     }
 
     &__avatar-image {
-        height: 180px;
+        height: 18rem;
         transform-origin: bottom;
         transition: transform var(--transition-speed) ease-out;
         transform: translateZ(0);
@@ -243,28 +243,35 @@ body {
         }
     }
 
-    &__contents {
-        display: none;
+    &__container {
+        position: relative;
         margin-top: 7.6rem;
+    }
+
+    &__contents {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
         opacity: 0;
-        transform: translateY(10px);
+        visibility: hidden;
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+        transform: translateY(10px) translateZ(0);
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
 
         &--active {
-            display: block;
-            animation: tabFadeIn 0.5s ease forwards;
+            position: relative;
+            height: auto;
+            overflow: visible;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) translateZ(0);
+            z-index: 1;
+            transition-delay: 0.05s;
         }
-    }
-}
-
-@keyframes tabFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -281,6 +288,9 @@ body {
 
     &__link {
         display: block;
+        &:last-child {
+            cursor: default;
+        }
     }
 
     &__thumb {
@@ -295,6 +305,7 @@ body {
         backface-visibility: hidden;
         transform: translateZ(0);
         transition: transform var(--transition-speed) ease-out;
+
         &:after {
             content: "";
             position: absolute;
@@ -312,7 +323,14 @@ body {
         }
 
         &.project-item2 {
-            background-image: url(../images/img_project2.png);
+            background-image: url(../images/img_project2.png);   
+            &:after {
+                content: "준비중";
+                @include flex-center;
+                @include responsive-font;
+                background-color: var(--bg-button);
+                color: var(--text-color2);
+            }         
         }
     }
 }
@@ -420,13 +438,26 @@ body {
 @media (hover: hover) {
     .project-card__thumb:hover {
         transform: scale(1.05) translateZ(0);
-        &::after {
+        &:after {
             background-color: rgba(0, 0, 0, 0);
+        }
+    }
+    .project-card__thumb.project-item2:hover {
+        transform: scale(1);
+        &:after {
+            background-color: var(--bg-button);
         }
     }
 
     .profile__avatar:hover .profile__avatar-image {
         transform: scale(1.1) translateZ(0);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+    html {
+        font-size: 56.25%;
     }
 }
 
@@ -522,12 +553,12 @@ body {
             height: 5rem;
         }
 
-        &__contents {
+        &__container {
             margin-top: 4rem;
         }
     }
 
-    .projects__list {        
+    .projects__list {
         gap: 1.6rem;
     }
 
