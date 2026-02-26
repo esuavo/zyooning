@@ -327,22 +327,25 @@ body {
         &.project-item1 {
             background-image: url(../images/img_project1.png);
         }
-    }
-    &:last-child {
-        .project-card__link {
-            cursor: default;
-        }
-        .project-item2 {
-            background-image: url(../images/img_project2.png);
-            &:after {
-                content: '준비중';
-                @include flex-center;
-                @include responsive-font;
-                background-color: var(--bg-button);
-                color: var(--text-color2);
-            }
+        &.project-item3 {
+            background-image: url(../images/img_project3.png);
         }
     }
+    // &:last-child {
+    //     .project-card__link {
+    //         cursor: default;
+    //     }
+    //     .project-item2 {
+    //         background-image: url(../images/img_project2.png);
+    //         &:after {
+    //             content: '준비중';
+    //             @include flex-center;
+    //             @include responsive-font;
+    //             background-color: var(--bg-button);
+    //             color: var(--text-color2);
+    //         }
+    //     }
+    // }
 }
 
 .skills {
@@ -452,42 +455,42 @@ body {
             background-color: rgba(0, 0, 0, 0);
         }
     }
-    .project-card__thumb.project-item2 {
-        &:after {
-            content: '준비중';
-            @include flex-center;
-            @include responsive-font;
-            background-color: var(--bg-button);
-            color: var(--text-color2);
-        }
-    }
-    .project-card__thumb.project-item2:hover {
-        transform: scale(1);
-    }
+    // .project-card__thumb.project-item2 {
+    //     &:after {
+    //         content: '준비중';
+    //         @include flex-center;
+    //         @include responsive-font;
+    //         background-color: var(--bg-button);
+    //         color: var(--text-color2);
+    //     }
+    // }
+    // .project-card__thumb.project-item2:hover {
+    //     transform: scale(1);
+    // }
 
     .profile__avatar:hover .profile__avatar-image {
         transform: scale(1.1) translateZ(0);
     }
 }
 
-@media (pointer: coarse) {
-    .project-card {
-        &__link {
-            -webkit-tap-highlight-color: transparent;
-        }
-        &:last-child {
-            .project-item2 {
-                &:after {
-                    content: '준비중';
-                    @include flex-center;
-                    @include responsive-font;
-                    background-color: var(--bg-button);
-                    color: var(--text-color2);
-                }
-            }
-        }
-    }
-}
+// @media (pointer: coarse) {
+//     .project-card {
+//         &__link {
+//             -webkit-tap-highlight-color: transparent;
+//         }
+//         &:last-child {
+//             .project-item2 {
+//                 &:after {
+//                     content: '준비중';
+//                     @include flex-center;
+//                     @include responsive-font;
+//                     background-color: var(--bg-button);
+//                     color: var(--text-color2);
+//                 }
+//             }
+//         }
+//     }
+// }
 
 /* Tablet */
 @media (max-width: 1200px) {
