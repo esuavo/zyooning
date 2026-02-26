@@ -1,0 +1,63 @@
+@use './variables' as *;
+@use './mixin' as *;
+
+.section {
+    &__inner {
+        @include inner-layout;
+    }
+    &__contents {
+        @include flex-set($direction: column);
+        width: 100%;
+        gap: 1.5rem;
+    }
+    &__label {
+        @include label;
+    }
+    &__title {
+        @include font-set($size: 4rem, $m-size: 2.4rem, $weight: 500, $opacity: 1, $is-crimson: true);
+    }
+    &__subject {
+        @include font-set($size: 2rem, $weight: 400);
+    }
+    &__description {
+        @include font-set($size: 1.5rem, $weight: 400, $opacity: 0.5);
+    }
+    &__button {
+        @include button-set;
+    }
+}
+
+@include tablet {
+    .section {
+        &__inner {
+            @include flex-set($direction: column-reverse);
+            gap: 3rem;
+        }
+    }
+}
+
+// PC에서만 보이고 모바일(태블릿 이하)에서 숨김
+.pc-only {
+    @include tablet {
+        display: none !important; // 다른 스타일과 충돌을 방지하기 위해 !important 권장
+    }
+}
+
+// 모바일에서만 보이고 PC에서 숨김
+.mo-only {
+    display: none !important;
+
+    @include tablet {
+        display: block !important; // 필요에 따라 flex, inline-block 등으로 조절
+    }
+}
+
+// 텍스트 숨김 처리 (SEO용, 로고 등에 사용)
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}

@@ -18,7 +18,7 @@ Thumbs.db
 
 # 의존성 및 빌드 결과물 (모든 하위 폴더 포함)
 node_modules/
-dist/
+#dist/
 build/
 
 # 환경 변수 파일 (보안상 매우 중요!)
