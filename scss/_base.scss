@@ -46,16 +46,19 @@ $font-size-common-mobile: 1.4rem;
     width: 100%;
     border-radius: 10px;
     background-color: var(--bg-button);
-    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    transition:
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease;
 }
 
 /* ==================================================
 3. RESET & BASE STYLES (리셋 및 기본 태그 설정)
 ================================================== */
 /* Poppins - Regular */
-@font-face { 
+@font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+    src:
+        url('../fonts/Poppins-Regular.woff2') format('woff2'),
         url('../fonts/Poppins-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
@@ -66,7 +69,8 @@ $font-size-common-mobile: 1.4rem;
 /* Poppins - Medium */
 @font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+    src:
+        url('../fonts/Poppins-Medium.woff2') format('woff2'),
         url('../fonts/Poppins-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
@@ -74,22 +78,23 @@ $font-size-common-mobile: 1.4rem;
     unicode-range: U+0000-007F; /* 영어, 숫자 등 */
 }
 
-
 /* Poppins - Bold */
 @font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+    src:
+        url('../fonts/Poppins-Bold.woff2') format('woff2'),
         url('../fonts/Poppins-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
     unicode-range: U+0000-007F; /* 영어, 숫자 등 */
-}   
+}
 
 /* Noto Sans KR - Regular */
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+    src:
+        url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
         url('../fonts/NotoSansKR-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
@@ -100,7 +105,8 @@ $font-size-common-mobile: 1.4rem;
 /* Noto Sans KR - Bold */
 @font-face {
     font-family: 'Noto Sans KR';
-    src: url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
+    src:
+        url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
         url('../fonts/NotoSansKR-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
@@ -159,7 +165,7 @@ img {
 img,
 picture {
     max-width: 100%;
-    display: block;    
+    display: block;
 }
 
 /* 폼 요소 폰트 상속 */
@@ -171,7 +177,7 @@ select {
 }
 
 button {
-    all: unset;           
+    all: unset;
     display: inline-block;
     width: auto;
     height: auto;
@@ -179,16 +185,16 @@ button {
     margin: 0;
     border: none;
     background: none;
-    color: transparent;   
-    font-size: 0;         
-    line-height: 0;       
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
     text-align: left;
-    cursor: pointer;     
-    touch-action: manipulation;      
-    -webkit-tap-highlight-color: transparent; 
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     &:focus {
         outline: none;
-    }    
+    }
 }
 
 /* 링크 스타일 최소화 */

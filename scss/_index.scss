@@ -89,7 +89,7 @@ body {
     transition: background-color var(--transition-speed) ease;
 
     &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -129,9 +129,13 @@ body {
         background-color: var(--bg-yellow);
         border: 10px solid var(--body-color);
         border-radius: 50%;
-        box-shadow: 0 0 0 4px var(--bg-yellow), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow:
+            0 0 0 4px var(--bg-yellow),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         overflow: hidden;
-        transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        transition:
+            background-color var(--transition-speed) ease,
+            border-color var(--transition-speed) ease;
     }
 
     &__avatar-image {
@@ -209,7 +213,7 @@ body {
                 display: block;
 
                 &:after {
-                    content: "";
+                    content: '';
                     display: inline-block;
                     width: 2.7rem;
                     height: 2.4rem;
@@ -229,7 +233,9 @@ body {
     gap: 2.4rem;
     padding: 1.5rem 2.4rem;
     margin-top: 8.6rem;
-    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    transition:
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease;
 
     &__button {
         height: 8rem;
@@ -260,7 +266,10 @@ body {
         will-change: transform, opacity;
         backface-visibility: hidden;
         transform: translateY(10px) translateZ(0);
-        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease,
+            visibility 0.5s;
 
         &--active {
             position: relative;
@@ -288,9 +297,6 @@ body {
 
     &__link {
         display: block;
-        &:last-child {
-            cursor: default;
-        }
     }
 
     &__thumb {
@@ -307,7 +313,7 @@ body {
         transition: transform var(--transition-speed) ease-out;
 
         &:after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
@@ -321,16 +327,20 @@ body {
         &.project-item1 {
             background-image: url(../images/img_project1.png);
         }
-
-        &.project-item2 {
-            background-image: url(../images/img_project2.png);   
+    }
+    &:last-child {
+        .project-card__link {
+            cursor: default;
+        }
+        .project-item2 {
+            background-image: url(../images/img_project2.png);
             &:after {
-                content: "준비중";
+                content: '준비중';
                 @include flex-center;
                 @include responsive-font;
                 background-color: var(--bg-button);
                 color: var(--text-color2);
-            }         
+            }
         }
     }
 }
@@ -442,15 +452,40 @@ body {
             background-color: rgba(0, 0, 0, 0);
         }
     }
+    .project-card__thumb.project-item2 {
+        &:after {
+            content: '준비중';
+            @include flex-center;
+            @include responsive-font;
+            background-color: var(--bg-button);
+            color: var(--text-color2);
+        }
+    }
     .project-card__thumb.project-item2:hover {
         transform: scale(1);
-        &:after {
-            background-color: var(--bg-button);
-        }
     }
 
     .profile__avatar:hover .profile__avatar-image {
         transform: scale(1.1) translateZ(0);
+    }
+}
+
+@media (pointer: coarse) {
+    .project-card {
+        &__link {
+            -webkit-tap-highlight-color: transparent;
+        }
+        &:last-child {
+            .project-item2 {
+                &:after {
+                    content: '준비중';
+                    @include flex-center;
+                    @include responsive-font;
+                    background-color: var(--bg-button);
+                    color: var(--text-color2);
+                }
+            }
+        }
     }
 }
 
@@ -564,14 +599,6 @@ body {
 
     .project-card {
         flex-basis: 100%;
-
-        &__thumb {
-            border-radius: 15px;
-        }
-
-        &__img {
-            height: 210px;
-        }
     }
 
     .skills {
