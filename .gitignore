@@ -1,0 +1,26 @@
+# 소스 맵 파일 제외
+*.map
+
+# 루트 및 하위 폴더의 임시/테스트용 HTML 제외
+index2.html
+index3.html
+index4.html
+naver-style-modal.html
+
+# 특정 프로젝트의 특정 경로 파일 제외
+project2/dist_20190718/web/page-list.html
+project2/dist_20190718/page-list.html
+
+# 에디터 및 OS 설정 파일 (폴더와 파일 모두 대응)
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 의존성 및 빌드 결과물 (모든 하위 폴더 포함)
+node_modules/
+dist/
+build/
+
+# 환경 변수 파일 (보안상 매우 중요!)
+.env
+.env.local
