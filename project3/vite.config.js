@@ -3,10 +3,9 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-    //base: process.env.NODE_ENV === 'production' ? '/zyooning/' : '/',
     plugins: [vue()],
     // 깃허브 배포용 경로 설정
-    base: './', // 반드시 마침표(.)를 포함하세요!
+    base: '/zyooning/project3/',
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))

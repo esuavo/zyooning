@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory('/zyooning/project3/'),
     routes: [
         {
             path: '/', // 사용자가 브라우저 주소창에 기본 주소만 쳤을 때
