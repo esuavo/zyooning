@@ -94,6 +94,7 @@ onUnmounted(() => {
     width: 100%;
     background-color: $color-green;
     height: 12.3rem;
+    z-index: 2;
     @include flex-set;
     &__wrap {
         color: $color-white;
