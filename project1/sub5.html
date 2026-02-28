@@ -1,167 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <title>(주)프리오</title> 
-    <link rel="stylesheet" href="css/common.css">
-</head>
-<body>
-    <div class="wrap sub">     
-        <header>
-            <div class="header">
-                <h1 class="logo pc_ver"><a href="index.html">PRIO 프리오</a></h1>
-                <h2 class="sub_title">자료</h2>
-                <button type="button" class="btn_home" onclick="location.href='index.html'">메인홈</button>
-                <button type="button" class="btn_navigation"><span>메뉴</span></button>
-                <div class="dimmed"></div>                
-                <div class="navigation_wrap">
-                    <ul class="navigation">
-                        <li><a href="sub1.html">회사소개</a></li>
-                        <li><a href="sub2.html">제품</a></li>
-                        <li><a href="sub3.html">사업</a></li>
-                        <li><a href="sub4.html">실적</a></li>
-                        <li><a href="sub5.html" class="active">자료</a></li>
-                    </ul>               
-                    <button type="button" class="pc_ver btn_layer btn_search" data-popup="layer2">검색</button>
-                    <button type="button" class="mo_ver btn_layer btn_search" onclick="location.href='sub7.html'">검색</button>
-                    <div class="sns_btn">
-                        <a href="javascript:void(0);" class="btn_blog">블로그</a>
-                        <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
-                        <a href="javascript:void(0);" class="btn_twitter">트위터</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
+        <title>(주)프리오</title>
+        <link rel="stylesheet" href="css/common.css" />
+        <script src="js/jquery-3.3.1.min.js" defer></script>
+        <script src="js/modernizr.min.js" defer></script>
+        <script src="js/flowtype.js" defer></script>
+        <script src="js/slick.js" defer></script>
+        <script src="js/ui-common.js" defer></script>
+    </head>
+    <body>
+        <div class="wrap sub">
+            <header>
+                <div class="header">
+                    <h1 class="logo pc_ver"><a href="index.html">PRIO 프리오</a></h1>
+                    <h2 class="sub_title">자료</h2>
+                    <button type="button" class="btn_home" onclick="location.href = 'index.html'">메인홈</button>
+                    <button type="button" class="btn_navigation" aria-label="전체 메뉴 열기"><span>메뉴</span></button>
+                    <div class="dimmed"></div>
+                    <div class="navigation_wrap">
+                        <ul class="navigation">
+                            <li><a href="sub1.html">회사소개</a></li>
+                            <li><a href="sub2.html">제품</a></li>
+                            <li><a href="sub3.html">사업</a></li>
+                            <li><a href="sub4.html">실적</a></li>
+                            <li><a href="sub5.html" class="active">자료</a></li>
+                        </ul>
+                        <button type="button" class="pc_ver btn_layer btn_search" data-popup="layer2">검색</button>
+                        <button type="button" class="mo_ver btn_layer btn_search" onclick="location.href = 'sub7.html'">검색</button>
+                        <div class="sns_btn">
+                            <a href="javascript:void(0);" class="btn_blog">블로그</a>
+                            <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
+                            <a href="javascript:void(0);" class="btn_twitter">트위터</a>
+                        </div>
                     </div>
-                </div>                
-            </div>
-        </header>
-        <section class="container">
-            <!-- 자료 start -->
-            <article class="article data">
-                <div class="title_wrap">
-                    <h2 class="title">자료</h2>
-                    <p class="description">기업의 지속 성장에 핵심인 SCM의 End-to-End 서비스를<br>지원하는 프리오는 성장의 동반자가 되기 위하여 항상 3S를<br>실천하기 위한 노력하고 있습니다.</p>
                 </div>
-                <div class="sub_contents">
-                    <ul class="data_list">
+            </header>
+            <main class="container">
+                <!-- 자료 start -->
+                <article class="article data">
+                    <div class="title_wrap">
+                        <h2 class="title">자료</h2>
+                        <p class="description">
+                            기업의 지속 성장에 핵심인 SCM의 End-to-End 서비스를<br />지원하는 프리오는 성장의 동반자가 되기 위하여 항상 3S를<br />실천하기
+                            위한 노력하고 있습니다.
+                        </p>
+                    </div>
+                    <div class="sub_contents">
+                        <ul class="data_list">
+                            <li>
+                                <a href="javascript:void(0);" class="download">
+                                    <!-- 다운로드 아이콘 있을때 class="download" 추가 -->
+                                    <span class="number">006</span>
+                                    <em>OTOOSOLUTION 서비스 소개서 다운로드</em>
+                                </a>
+                                <span class="date">2021-03-20</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="download">
+                                    <span class="number">005</span>
+                                    <em>일나와 물류현장 근태관리 서비스 소개서 다운로드</em>
+                                </a>
+                                <span class="date">2021-03-08</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="download">
+                                    <span class="number">004</span>
+                                    <em>PRIO 회사 소개서 다운로드</em>
+                                </a>
+                                <span class="date">2021-02-15</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="download">
+                                    <span class="number">003</span>
+                                    <em>OTOOSOLUTION 서비스 소개서 다운로드</em>
+                                </a>
+                                <span class="date">2021-02-15</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="download">
+                                    <span class="number">002</span>
+                                    <em>일나와 물류현장 근태관리 서비스 소개서 다운로드</em>
+                                </a>
+                                <span class="date">2021-02-15</span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="download">
+                                    <span class="number">001</span>
+                                    <em>PRIO 회사 소개서 다운로드</em>
+                                </a>
+                                <span class="date">2021-02-15</span>
+                            </li>
+                        </ul>
+                        <!-- pc ver pagination -->
+                        <div class="pagination pc_ver">
+                            <a href="javascript:void(0);" class="prev">이전페이지</a>
+                            <a href="javascript:void(0);">1</a>
+                            <strong>2</strong>
+                            <a href="javascript:void(0);">3</a>
+                            <a href="javascript:void(0);">4</a>
+                            <a href="javascript:void(0);">5</a>
+                            <a href="javascript:void(0);">6</a>
+                            <a href="javascript:void(0);">7</a>
+                            <a href="javascript:void(0);">8</a>
+                            <a href="javascript:void(0);">9</a>
+                            <a href="javascript:void(0);">10</a>
+                            <a href="javascript:void(0);" class="next on">다음페이지</a>
+                        </div>
+                        <!-- mobile ver pagination -->
+                        <div class="pagination mo_ver">
+                            <a href="javascript:void(0);" class="prev">이전페이지</a>
+                            <a href="javascript:void(0);">1</a>
+                            <strong>2</strong>
+                            <a href="javascript:void(0);">3</a>
+                            <a href="javascript:void(0);">4</a>
+                            <a href="javascript:void(0);">5</a>
+                            <a href="javascript:void(0);" class="next on">다음페이지</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- //자료 end -->
+            </main>
+            <footer class="footer">
+                <div class="footer_inner">
+                    <ul>
                         <li>
-                            <a href="javascript:void(0);" class="download"> <!-- 다운로드 아이콘 있을때 class="download" 추가 -->
-                                <span class="number">006</span>
-                                <em>OTOOSOLUTION 서비스 소개서 다운로드</em>                                
-                            </a>
-                            <span class="date">2021-03-20</span>
+                            <span>회사명</span>
+                            <em>(주)프리오</em>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="download">
-                                <span class="number">005</span>
-                                <em>일나와 물류현장 근태관리 서비스 소개서 다운로드</em>
-                            </a>
-                            <span class="date">2021-03-08</span>
+                            <span>대표</span>
+                            <em>박재원</em>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="download">
-                                <span class="number">004</span>
-                                <em>PRIO 회사 소개서 다운로드</em>
-                            </a>
-                            <span class="date">2021-02-15</span>
+                            <span>사업자등록번호</span>
+                            <em>214-88-08220</em>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="download">
-                                <span class="number">003</span>
-                                <em>OTOOSOLUTION 서비스 소개서 다운로드</em>
-                            </a>
-                            <span class="date">2021-02-15</span>
+                            <span>TEL</span>
+                            <em>02-6203-3200</em>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="download">
-                                <span class="number">002</span>
-                                <em>일나와 물류현장 근태관리 서비스 소개서 다운로드</em>
-                            </a>
-                            <span class="date">2021-02-15</span>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="download">
-                                <span class="number">001</span>
-                                <em>PRIO 회사 소개서 다운로드</em>
-                            </a>
-                            <span class="date">2021-02-15</span>
+                            <span>연구소</span>
+                            <em>02-3454-0001</em>
                         </li>
                     </ul>
-                    <!-- pc ver pagination -->
-                    <div class="pagination pc_ver">
-                        <a href="javascript:void(0);" class="prev">이전페이지</a>
-                        <a href="javascript:void(0);">1</a>
-                        <strong>2</strong>                        
-                        <a href="javascript:void(0);">3</a>
-                        <a href="javascript:void(0);">4</a>
-                        <a href="javascript:void(0);">5</a>
-                        <a href="javascript:void(0);">6</a>
-                        <a href="javascript:void(0);">7</a>
-                        <a href="javascript:void(0);">8</a>
-                        <a href="javascript:void(0);">9</a>
-                        <a href="javascript:void(0);">10</a>
-                        <a href="javascript:void(0);" class="next on">다음페이지</a>
-                    </div>
-                    <!-- mobile ver pagination -->
-                    <div class="pagination mo_ver">
-                        <a href="javascript:void(0);" class="prev">이전페이지</a>
-                        <a href="javascript:void(0);">1</a>
-                        <strong>2</strong>                        
-                        <a href="javascript:void(0);">3</a>
-                        <a href="javascript:void(0);">4</a>
-                        <a href="javascript:void(0);">5</a>
-                        <a href="javascript:void(0);" class="next on">다음페이지</a>
+                    <ul>
+                        <li>
+                            <span>주소</span>
+                            <em>서울특별시 금천구 벚꽃로298, 1202호 (가산동, 대륭포스트타워6차) 08510</em>
+                        </li>
+                    </ul>
+                    <p>COPYRIGHT(C) WWW.PRIO.CO.KR.ALL RIGHTS RESERVED.</p>
+                    <div class="sns_btn">
+                        <a href="javascript:void(0);" class="btn_blog" aria-label="프리오 블로그 바로가기">블로그</a>
+                        <a href="javascript:void(0);" class="btn_facebook" aria-label="프리오 페이스북 바로가기">페이스북</a>
+                        <a href="javascript:void(0);" class="btn_twitter" aria-label="프리오 트위터 바로가기">트위터</a>
                     </div>
                 </div>
-            </article>
-            <!-- //자료 end -->
-        </section>        
-        <footer class="footer">
-            <div class="footer_inner">
-                <ul>
-                    <li>
-                        <span>회사명</span>
-                        <em>(주)프리오</em>
-                    </li>
-                    <li>
-                        <span>대표</span>
-                        <em>박재원</em>
-                    </li>
-                    <li>
-                        <span>사업자등록번호</span>
-                        <em>214-88-08220</em>
-                    </li>
-                    <li>
-                        <span>TEL</span>
-                        <em>02-6203-3200</em>
-                    </li>
-                    <li>
-                        <span>연구소</span>
-                        <em>02-3454-0001</em>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <span>주소</span>
-                        <em>서울특별시 금천구 벚꽃로298, 1202호 (가산동, 대륭포스트타워6차) 08510</em>
-                    </li>
-                </ul>
-                <p>COPYRIGHT(C) WWW.PRIO.CO.KR.ALL RIGHTS RESERVED.</p>
-                <div class="sns_btn">
-                    <a href="javascript:void(0);" class="btn_blog">블로그</a>
-                    <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
-                    <a href="javascript:void(0);" class="btn_twitter">트위터</a>
-                </div>
-            </div>
-        </footer>
-        <button type="button" class="pc_ver btn_layer btn_quick" data-popup="layer1">문의</button>
-        <button type="button" class="mo_ver btn_quick" onclick="location.href='sub6.html'">문의</button>
-        <button type="button" class="btn_top"><span>위로가기</span></button>
-    </div>   
-    <script src="js/jquery-3.3.1.min.js"></script>   
-    <script src="js/modernizr.min.js"></script> 
-    <script src="js/flowtype.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/ui-common.js"></script>
-</body>
+            </footer>
+            <button type="button" class="pc_ver btn_layer btn_quick" data-popup="layer1">문의</button>
+            <button type="button" class="mo_ver btn_quick" onclick="location.href = 'sub6.html'">문의</button>
+            <button type="button" class="btn_top" aria-label="페이지 상단으로 이동"><span>위로가기</span></button>
+        </div>
+    </body>
 </html>

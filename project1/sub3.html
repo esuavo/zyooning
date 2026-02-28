@@ -1,115 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <title>(주)프리오</title> 
-    <link rel="stylesheet" href="css/common.css">
-</head>
-<body>
-    <div class="wrap sub">     
-        <header>
-            <div class="header">
-                <h1 class="logo pc_ver"><a href="index.html">PRIO 프리오</a></h1>
-                <h2 class="sub_title">사업</h2>
-                <button type="button" class="btn_home" onclick="location.href='index.html'">메인홈</button>
-                <button type="button" class="btn_navigation"><span>메뉴</span></button>
-                <div class="dimmed"></div>                
-                <div class="navigation_wrap">
-                    <ul class="navigation">
-                        <li><a href="sub1.html">회사소개</a></li>
-                        <li><a href="sub2.html">제품</a></li>
-                        <li><a href="sub3.html" class="active">사업</a></li>
-                        <li><a href="sub4.html">실적</a></li>
-                        <li><a href="sub5.html">자료</a></li>
-                    </ul>               
-                    <button type="button" class="pc_ver btn_layer btn_search" data-popup="layer2">검색</button>
-                    <button type="button" class="mo_ver btn_layer btn_search" onclick="location.href='sub7.html'">검색</button>
-                    <div class="sns_btn">
-                        <a href="javascript:void(0);" class="btn_blog">블로그</a>
-                        <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
-                        <a href="javascript:void(0);" class="btn_twitter">트위터</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
+        <title>(주)프리오</title>
+        <link rel="stylesheet" href="css/common.css" />
+        <script src="js/jquery-3.3.1.min.js" defer></script>
+        <script src="js/modernizr.min.js" defer></script>
+        <script src="js/flowtype.js" defer></script>
+        <script src="js/slick.js" defer></script>
+        <script src="js/ui-common.js" defer></script>
+        <script src="js/aos.js" defer></script>
+    </head>
+    <body>
+        <div class="wrap sub">
+            <header>
+                <div class="header">
+                    <h1 class="logo pc_ver"><a href="index.html">PRIO 프리오</a></h1>
+                    <h2 class="sub_title">사업</h2>
+                    <button type="button" class="btn_home" onclick="location.href = 'index.html'">메인홈</button>
+                    <button type="button" class="btn_navigation" aria-label="전체 메뉴 열기"><span>메뉴</span></button>
+                    <div class="dimmed"></div>
+                    <div class="navigation_wrap">
+                        <ul class="navigation">
+                            <li><a href="sub1.html">회사소개</a></li>
+                            <li><a href="sub2.html">제품</a></li>
+                            <li><a href="sub3.html" class="active">사업</a></li>
+                            <li><a href="sub4.html">실적</a></li>
+                            <li><a href="sub5.html">자료</a></li>
+                        </ul>
+                        <button type="button" class="pc_ver btn_layer btn_search" data-popup="layer2">검색</button>
+                        <button type="button" class="mo_ver btn_layer btn_search" onclick="location.href = 'sub7.html'">검색</button>
+                        <div class="sns_btn">
+                            <a href="javascript:void(0);" class="btn_blog">블로그</a>
+                            <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
+                            <a href="javascript:void(0);" class="btn_twitter">트위터</a>
+                        </div>
                     </div>
-                </div>                
-            </div>
-        </header>
-        <section class="container">
-            <!-- 사업 start -->
-            <article class="article business">
-                <div class="title_wrap">
-                    <h2 class="title">사업</h2>
-                    <p class="description">기업의 지속 성장에 핵심인 SCM의 End-to-End 서비스를<br>지원하는 프리오는 성장의 동반자가 되기 위하여 항상 3S를<br>실천하기 위한 노력하고 있습니다.</p>
                 </div>
-                <div class="sub_contents">
-                    <div class="title_xlarge">PRIO’s Total Solution</div>
-                    <p class="paragraph2">진보적인 창고관리(WMS) 솔루션을 순수 독자기술로 개발하여 다양한 고객사 환경에 구축하여 <br class="mo_ver">제품의 안정성을 입증 받았으며, <br>한국정보통신기술협회 '굿소프트웨어 인증'<br class="mo_ver"> GS인증을 받아 고객의 신뢰를 확보하였습니다.</p>
-                    <ul class="circle_symbol">
-                        <li class="item" data-aos="zoom-out">
-                            <div class="ball solution"><span class="icon">SOLUTION</span></div>
-                            <p class="substance">창고관리 WMS 솔루션<br>검증된 어플리케이션<br>프레임웍 제공</p>
+            </header>
+            <main class="container">
+                <!-- 사업 start -->
+                <article class="article business">
+                    <div class="title_wrap">
+                        <h2 class="title">사업</h2>
+                        <p class="description">
+                            기업의 지속 성장에 핵심인 SCM의 End-to-End 서비스를<br />지원하는 프리오는 성장의 동반자가 되기 위하여 항상 3S를<br />실천하기
+                            위한 노력하고 있습니다.
+                        </p>
+                    </div>
+                    <div class="sub_contents">
+                        <div class="title_xlarge">PRIO’s Total Solution</div>
+                        <p class="paragraph2">
+                            진보적인 창고관리(WMS) 솔루션을 순수 독자기술로 개발하여 다양한 고객사 환경에 구축하여 <br class="mo_ver" />제품의
+                            안정성을 입증 받았으며, <br />한국정보통신기술협회 '굿소프트웨어 인증'<br class="mo_ver" />
+                            GS인증을 받아 고객의 신뢰를 확보하였습니다.
+                        </p>
+                        <ul class="circle_symbol">
+                            <li class="item" data-aos="zoom-out">
+                                <div class="ball solution"><span class="icon">SOLUTION</span></div>
+                                <p class="substance">창고관리 WMS 솔루션<br />검증된 어플리케이션<br />프레임웍 제공</p>
+                            </li>
+                            <li class="item" data-aos="zoom-out">
+                                <div class="ball panel">
+                                    <span class="icon">SERVICE&amp<br />CONSULTING</span>
+                                </div>
+                                <p class="substance">풍부한 경험과 기술력<br />교육 및 기술지원<br />창고관리, 물류매니지먼트, 성과지표 교육</p>
+                            </li>
+                            <li class="item" data-aos="zoom-out">
+                                <div class="ball global"><span class="icon">GLOBAL</span></div>
+                                <p class="substance">
+                                    중국, 일본 등 해외시장 진출<br />해외솔루션 국내공급<br />국내솔루션 해외판매<br />산업용 물류장비 유통
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- //사업 end -->
+            </main>
+            <footer class="footer">
+                <div class="footer_inner">
+                    <ul>
+                        <li>
+                            <span>회사명</span>
+                            <em>(주)프리오</em>
                         </li>
-                        <li class="item" data-aos="zoom-out">
-                            <div class="ball panel"><span class="icon">SERVICE&amp<br>CONSULTING</span></div>
-                            <p class="substance">풍부한 경험과 기술력<br>교육 및 기술지원<br>창고관리, 물류매니지먼트, 성과지표 교육 </p>
+                        <li>
+                            <span>대표</span>
+                            <em>박재원</em>
                         </li>
-                        <li class="item" data-aos="zoom-out">
-                            <div class="ball global"><span class="icon">GLOBAL</span></div>
-                            <p class="substance">중국, 일본 등 해외시장 진출<br>해외솔루션 국내공급<br>국내솔루션 해외판매<br>산업용 물류장비 유통</p>
+                        <li>
+                            <span>사업자등록번호</span>
+                            <em>214-88-08220</em>
+                        </li>
+                        <li>
+                            <span>TEL</span>
+                            <em>02-6203-3200</em>
+                        </li>
+                        <li>
+                            <span>연구소</span>
+                            <em>02-3454-0001</em>
                         </li>
                     </ul>
+                    <ul>
+                        <li>
+                            <span>주소</span>
+                            <em>서울특별시 금천구 벚꽃로298, 1202호 (가산동, 대륭포스트타워6차) 08510</em>
+                        </li>
+                    </ul>
+                    <p>COPYRIGHT(C) WWW.PRIO.CO.KR.ALL RIGHTS RESERVED.</p>
+                    <div class="sns_btn">
+                        <a href="javascript:void(0);" class="btn_blog" aria-label="프리오 블로그 바로가기">블로그</a>
+                        <a href="javascript:void(0);" class="btn_facebook" aria-label="프리오 페이스북 바로가기">페이스북</a>
+                        <a href="javascript:void(0);" class="btn_twitter" aria-label="프리오 트위터 바로가기">트위터</a>
+                    </div>
                 </div>
-            </article>
-            <!-- //사업 end -->            
-        </section>        
-        <footer class="footer">
-            <div class="footer_inner">
-                <ul>
-                    <li>
-                        <span>회사명</span>
-                        <em>(주)프리오</em>
-                    </li>
-                    <li>
-                        <span>대표</span>
-                        <em>박재원</em>
-                    </li>
-                    <li>
-                        <span>사업자등록번호</span>
-                        <em>214-88-08220</em>
-                    </li>
-                    <li>
-                        <span>TEL</span>
-                        <em>02-6203-3200</em>
-                    </li>
-                    <li>
-                        <span>연구소</span>
-                        <em>02-3454-0001</em>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <span>주소</span>
-                        <em>서울특별시 금천구 벚꽃로298, 1202호 (가산동, 대륭포스트타워6차) 08510</em>
-                    </li>
-                </ul>
-                <p>COPYRIGHT(C) WWW.PRIO.CO.KR.ALL RIGHTS RESERVED.</p>
-                <div class="sns_btn">
-                    <a href="javascript:void(0);" class="btn_blog">블로그</a>
-                    <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
-                    <a href="javascript:void(0);" class="btn_twitter">트위터</a>
-                </div>
-            </div>
-        </footer>
-        <button type="button" class="pc_ver btn_layer btn_quick" data-popup="layer1">문의</button>
-        <button type="button" class="mo_ver btn_quick" onclick="location.href='sub6.html'">문의</button>
-        <button type="button" class="btn_top"><span>위로가기</span></button>
-    </div>  
-    <script src="js/jquery-3.3.1.min.js"></script>   
-    <script src="js/modernizr.min.js"></script> 
-    <script src="js/flowtype.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/ui-common.js"></script>
-    <script src="js/aos.js"></script>
-</body>
+            </footer>
+            <button type="button" class="pc_ver btn_layer btn_quick" data-popup="layer1">문의</button>
+            <button type="button" class="mo_ver btn_quick" onclick="location.href = 'sub6.html'">문의</button>
+            <button type="button" class="btn_top" aria-label="페이지 상단으로 이동"><span>위로가기</span></button>
+        </div>
+    </body>
 </html>

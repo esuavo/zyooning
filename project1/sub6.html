@@ -1,207 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <title>(주)프리오</title> 
-    <link rel="stylesheet" href="css/common.css">
-</head>
-<body>
-    <div class="wrap">     
-        <header>
-            <div class="header">
-                <h1 class="logo pc_ver"><a href="index.html">PRIO 프리오</a></h1>
-                <h2 class="sub_title">문의하기</h2>
-                <button type="button" class="btn_prev"><span>이전페이지로 이동</span></button>               
-                <button type="button" class="btn_navigation"><span>메뉴</span></button>
-                <div class="dimmed"></div>                
-                <div class="navigation_wrap">
-                    <ul class="navigation">
-                        <li><a href="sub1.html" class="navi_link">회사소개</a></li>
-                        <li><a href="sub2.html" class="navi_link">제품</a></li>
-                        <li><a href="sub3.html" class="navi_link">사업</a></li>
-                        <li><a href="sub4.html" class="navi_link">실적</a></li>
-                        <li><a href="sub5.html" class="navi_link">자료</a></li>
-                    </ul>               
-                    <button type="button" class="pc_ver btn_layer btn_search" data-popup="layer2">검색</button>
-                    <button type="button" class="mo_ver btn_layer btn_search" onclick="location.href='sub7.html'">검색</button>
-                    <div class="sns_btn">
-                        <a href="javascript:void(0);" class="btn_blog">블로그</a>
-                        <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
-                        <a href="javascript:void(0);" class="btn_twitter">트위터</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
+        <title>(주)프리오</title>
+        <link rel="stylesheet" href="css/common.css" />
+        <script src="js/jquery-3.3.1.min.js" defer></script>
+        <script src="js/modernizr.min.js" defer></script>
+        <script src="js/flowtype.js" defer></script>
+        <script src="js/slick.js" defer></script>
+        <script src="js/ui-common.js" defer></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="header">
+                    <h1 class="logo pc_ver"><a href="index.html">PRIO 프리오</a></h1>
+                    <h2 class="sub_title">문의하기</h2>
+                    <button type="button" class="btn_prev"><span>이전페이지로 이동</span></button>
+                    <button type="button" class="btn_navigation" aria-label="전체 메뉴 열기"><span>메뉴</span></button>
+                    <div class="dimmed"></div>
+                    <div class="navigation_wrap">
+                        <ul class="navigation">
+                            <li><a href="sub1.html" class="navi_link">회사소개</a></li>
+                            <li><a href="sub2.html" class="navi_link">제품</a></li>
+                            <li><a href="sub3.html" class="navi_link">사업</a></li>
+                            <li><a href="sub4.html" class="navi_link">실적</a></li>
+                            <li><a href="sub5.html" class="navi_link">자료</a></li>
+                        </ul>
+                        <button type="button" class="pc_ver btn_layer btn_search" data-popup="layer2">검색</button>
+                        <button type="button" class="mo_ver btn_layer btn_search" onclick="location.href = 'sub7.html'">검색</button>
+                        <div class="sns_btn">
+                            <a href="javascript:void(0);" class="btn_blog">블로그</a>
+                            <a href="javascript:void(0);" class="btn_facebook">페이스북</a>
+                            <a href="javascript:void(0);" class="btn_twitter">트위터</a>
+                        </div>
                     </div>
-                </div>                
-            </div>
-        </header>
-        <section class="container">
-            <div class="form_list">
-                <ul>
-                    <li>
-                        <span class="title">회사명</span>
-                        <div class="row">
-                            <div class="input">
-                                <input type="text" class="input_text" placeholder="회사명을 입력하세요.">
-                                <button type="button" class="input_clear">삭제</button>
+                </div>
+            </header>
+            <main class="container">
+                <div class="form_list">
+                    <ul>
+                        <li>
+                            <span class="title">회사명</span>
+                            <div class="row">
+                                <div class="input">
+                                    <input type="text" class="input_text" placeholder="회사명을 입력하세요." />
+                                    <button type="button" class="input_clear">삭제</button>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">신청자</span>
-                        <div class="row">
-                            <div class="input">
-                                <input type="text" class="input_text" placeholder="신청자 이름을 입력하세요.">
-                                <button type="button" class="input_clear">삭제</button>
+                        </li>
+                        <li>
+                            <span class="title">신청자</span>
+                            <div class="row">
+                                <div class="input">
+                                    <input type="text" class="input_text" placeholder="신청자 이름을 입력하세요." />
+                                    <button type="button" class="input_clear">삭제</button>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">직책</span>
-                        <div class="row">
-                            <div class="input">
-                                <input type="text" class="input_text" placeholder="직책을 입력하세요.">
-                                <button type="button" class="input_clear">삭제</button>
+                        </li>
+                        <li>
+                            <span class="title">직책</span>
+                            <div class="row">
+                                <div class="input">
+                                    <input type="text" class="input_text" placeholder="직책을 입력하세요." />
+                                    <button type="button" class="input_clear">삭제</button>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">회사 전화번호</span>
-                        <div class="row part">
-                            <div class="select_item">
-                                <label for="select">02</label>
-                                <select id="select">
-                                    <option value="">02</option>
-                                    <option value="">031</option>
-                                    <option value="">010</option>
-                                </select>
+                        </li>
+                        <li>
+                            <span class="title">회사 전화번호</span>
+                            <div class="row part">
+                                <div class="select_item">
+                                    <label for="select">02</label>
+                                    <select id="select">
+                                        <option value="">02</option>
+                                        <option value="">031</option>
+                                        <option value="">010</option>
+                                    </select>
+                                </div>
+                                <span class="bar"></span>
+                                <div class="input">
+                                    <input type="number" class="input_text" />
+                                    <button type="button" class="input_clear">삭제</button>
+                                </div>
+                                <span class="bar"></span>
+                                <div class="input">
+                                    <input type="number" class="input_text" />
+                                    <button type="button" class="input_clear">삭제</button>
+                                </div>
                             </div>
-                            <span class="bar"></span>
-                            <div class="input">
-                                <input type="number" class="input_text">
-                                <button type="button" class="input_clear">삭제</button>
+                        </li>
+                        <li>
+                            <span class="title">가입 전화번호</span>
+                            <div class="row part">
+                                <div class="select_item">
+                                    <label for="select">02</label>
+                                    <select id="select">
+                                        <option value="">02</option>
+                                        <option value="">031</option>
+                                        <option value="">010</option>
+                                    </select>
+                                </div>
+                                <span class="bar"></span>
+                                <div class="input">
+                                    <input type="number" class="input_text" />
+                                </div>
+                                <span class="bar"></span>
+                                <div class="input">
+                                    <input type="number" class="input_text" />
+                                </div>
                             </div>
-                            <span class="bar"></span>
-                            <div class="input">
-                                <input type="number" class="input_text">
-                                <button type="button" class="input_clear">삭제</button>
+                        </li>
+                        <li>
+                            <span class="title">희망일시</span>
+                            <div class="row part">
+                                <div class="select_item">
+                                    <label for="select">2021</label>
+                                    <select id="select">
+                                        <option value="">2020</option>
+                                        <option value="">2019</option>
+                                        <option value="">2018</option>
+                                    </select>
+                                </div>
+                                <span class="text">년</span>
+                                <div class="select_item date">
+                                    <label for="select">07</label>
+                                    <select id="select">
+                                        <option value="">08</option>
+                                        <option value="">09</option>
+                                        <option value="">10</option>
+                                    </select>
+                                </div>
+                                <span class="text">월</span>
+                                <div class="select_item date">
+                                    <label for="select">14</label>
+                                    <select id="select">
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                    </select>
+                                </div>
+                                <span class="text">일</span>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">가입 전화번호</span>
-                        <div class="row part">
-                            <div class="select_item">
-                                <label for="select">02</label>
-                                <select id="select">
-                                    <option value="">02</option>
-                                    <option value="">031</option>
-                                    <option value="">010</option>
-                                </select>
+                        </li>
+                        <li>
+                            <span class="title">희망시간</span>
+                            <div class="row part">
+                                <div class="select_item">
+                                    <label for="select">14</label>
+                                    <select id="select">
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                    </select>
+                                </div>
+                                <span class="text">시</span>
+                                <div class="select_item">
+                                    <label for="select">14</label>
+                                    <select id="select">
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                    </select>
+                                </div>
+                                <span class="text">분</span>
                             </div>
-                            <span class="bar"></span>
-                            <div class="input">
-                                <input type="number" class="input_text">
+                        </li>
+                        <li class="full">
+                            <span class="title">문의사항</span>
+                            <div class="row">
+                                <div class="input">
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        cols="30"
+                                        rows="10"
+                                        class="textarea"
+                                        placeholder="최대한 자세한 문의사항을 기입해주시면 감사하겠습니다."
+                                    ></textarea>
+                                </div>
                             </div>
-                            <span class="bar"></span>
-                            <div class="input">
-                                <input type="number" class="input_text">
+                        </li>
+                        <li>
+                            <span class="title">비밀번호</span>
+                            <div class="row">
+                                <div class="input">
+                                    <input type="password" class="input_text" placeholder="비밀번호를 입력해주세요." />
+                                    <button type="button" class="input_clear">삭제</button>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">희망일시</span>
-                        <div class="row part">
-                            <div class="select_item">
-                                <label for="select">2021</label>
-                                <select id="select">
-                                    <option value="">2020</option>
-                                    <option value="">2019</option>
-                                    <option value="">2018</option>
-                                </select>
+                        </li>
+                        <li class="full">
+                            <span class="title">개인정보 수집동의</span>
+                            <div class="row">
+                                <div class="agree_wrap"></div>
                             </div>
-                            <span class="text">년</span>
-                            <div class="select_item date">
-                                <label for="select">07</label>
-                                <select id="select">
-                                    <option value="">08</option>
-                                    <option value="">09</option>
-                                    <option value="">10</option>
-                                </select>
+                            <div class="checks">
+                                <input type="checkbox" id="agreeChk" class="checkbox" />
+                                <label for="agreeChk" class="check_label">동의함</label>
                             </div>
-                            <span class="text">월</span>
-                            <div class="select_item date">
-                                <label for="select">14</label>
-                                <select id="select">
-                                    <option value="">15</option>
-                                    <option value="">16</option>
-                                    <option value="">17</option>
-                                </select>
-                            </div>
-                            <span class="text">일</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">희망시간</span>
-                        <div class="row part">
-                            <div class="select_item">
-                                <label for="select">14</label>
-                                <select id="select">
-                                    <option value="">15</option>
-                                    <option value="">16</option>
-                                    <option value="">17</option>
-                                </select>
-                            </div>
-                            <span class="text">시</span>
-                            <div class="select_item">
-                                <label for="select">14</label>
-                                <select id="select">
-                                    <option value="">15</option>
-                                    <option value="">16</option>
-                                    <option value="">17</option>
-                                </select>
-                            </div>
-                            <span class="text">분</span>
-                        </div>
-                    </li>
-                    <li class="full">
-                        <span class="title">문의사항</span>
-                        <div class="row">
-                            <div class="input">
-                                <textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="최대한 자세한 문의사항을 기입해주시면 감사하겠습니다."></textarea>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="title">비밀번호</span>
-                        <div class="row">
-                            <div class="input">
-                                <input type="password" class="input_text" placeholder="비밀번호를 입력해주세요.">
-                                <button type="button" class="input_clear">삭제</button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="full">
-                        <span class="title">개인정보 수집동의</span>
-                        <div class="row">
-                            <div class="agree_wrap">
-    
-                            </div>
-                        </div>
-                        <div class="checks">
-                            <input type="checkbox" id="agreeChk" class="checkbox">
-                            <label for="agreeChk" class="check_label">동의함</label>
-                        </div>
-                    </li>
-                </ul>  
-            </div>
-            <input type="submit" value="문의내용 보내기" class="btn_submit">           
-        </section> 
-    </div>  
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/modernizr.min.js"></script> 
-    <script src="js/flowtype.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/ui-common.js"></script>  
-</body>
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" value="문의내용 보내기" class="btn_submit" />
+            </main>
+        </div>
+    </body>
 </html>

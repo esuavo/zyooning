@@ -1,69 +1,52 @@
 @charset "utf-8";
 
-/* font */
-/* @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 100;
-    src: url("../font/NotoSansKR-Light.woff2") format("woff2"),
-        url("../font/NotoSansKR-Light.woff") format("woff"),
-        url("../font/NotoSansKR-Light.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url("../font/NotoSansKR-Regular.woff2") format("woff2"),
-        url("../font/NotoSansKR-Regular.woff") format("woff"),
-        url("../font/NotoSansKR-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 700;
-    src: url("../font/NotoSansKR-Bold.woff2") format("woff2"),
-        url("../font/NotoSansKR-Bold.woff") format("woff"),
-        url("../font/NotoSansKR-Bold.otf") format("opentype");
-} */
-
-
+/* Noto Sans KR - Light (300) */
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 300;
-    src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
-        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
-        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+    font-display: swap; /* 폰트 로딩 중에도 글자가 보이게 함 */
+    src:
+        url('../font/NotoSansKR-Light.woff2') format('woff2'),
+        url('../font/NotoSansKR-Light.woff') format('woff'),
+        url('../font/NotoSansKR-Light.otf') format('opentype');
 }
+
+/* Noto Sans KR - Regular (400) */
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
-            url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
-            url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+    font-display: swap;
+    src:
+        url('../font/NotoSansKR-Regular.woff2') format('woff2'),
+        url('../font/NotoSansKR-Regular.woff') format('woff'),
+        url('../font/NotoSansKR-Regular.otf') format('opentype');
 }
 
+/* Noto Sans KR - Bold (700) */
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 700;
-    src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
-            url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
-            url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+    font-display: swap;
+    src:
+        url('../font/NotoSansKR-Bold.woff2') format('woff2'),
+        url('../font/NotoSansKR-Bold.woff') format('woff'),
+        url('../font/NotoSansKR-Bold.otf') format('opentype');
 }
 
 /* reset */
 * {
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-*:focus {outline:none;}
+*:focus {
+    outline: none;
+}
 
 html {
-    font-size:62.5%
+    font-size: 62.5%;
 }
 
 @media screen and (min-width: 0\0) {
@@ -79,14 +62,14 @@ html {
     html {
         font-size: 10px;
     }
-}    
+}
 
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    -webkit-text-size-adjust : none;
+    -webkit-text-size-adjust: none;
 }
 
 html,
@@ -150,72 +133,74 @@ button,
 textarea {
     margin: 0;
     padding: 0;
-    border: 0;    
+    border: 0;
     font-family: 'Noto Sans KR', 'Roboto', '돋움', dotum, sans-serif;
-    background: transparent;    
+    background: transparent;
     word-break: break-all;
-    line-height:1;
+    line-height: 1;
 }
 
 em {
-    font-style: normal
+    font-style: normal;
 }
 
 /* input 기본 스타일 초기화 */
 input,
-input[type=number]::-webkit-inner-spin-button,    
-input[type=number]::-webkit-out-spin-button {
-    -webkit-appearance : none;
-    -moz-appearance:none;
-    appearance:none;
-    border:0;
-    background:transparent;    
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-out-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
 }
 
 /* select 기본 스타일 초기화 */
 select {
     width: 100%;
-    height: auto;  /* 높이 초기화 */
-    line-height: normal;  /* line-height 초기화 */
-    font-family: inherit;  /* 폰트 상속 */
+    height: auto; /* 높이 초기화 */
+    line-height: normal; /* line-height 초기화 */
+    font-family: inherit; /* 폰트 상속 */
     border: 0;
-    opacity: 0;  /* 숨기기 */
-    filter:alpha(opacity=0);  /* IE8 숨기기 */
+    opacity: 0; /* 숨기기 */
+    filter: alpha(opacity=0); /* IE8 숨기기 */
     -webkit-appearance: none; /* 네이티브 외형 감추기 */
     -moz-appearance: none;
     appearance: none;
 }
 
-/* IE10 이상에서 input box에 추가된 지우기 버튼 제거 */    
-input::-ms-clear {display:none;} 
-    
-/* IE에서 Select box 화살표 제거 */
-select::-ms-expand { display:none; }
+/* IE10 이상에서 input box에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+    display: none;
+}
 
-    
+/* IE에서 Select box 화살표 제거 */
+select::-ms-expand {
+    display: none;
+}
+
 /*Firefox에서 input number 화살표 없애는 방법*/
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-/* input number의 외형을 텍스트필드로 바꿔줘야한다 */    
-input[type=number] {
-    -moz-appearance:textfield;
+/* input number의 외형을 텍스트필드로 바꿔줘야한다 */
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 a {
     font-style: normal;
     text-decoration: none;
-    /* color: #3d3d3d */
 }
 
 ul,
 dl,
 ol {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 li,
@@ -238,7 +223,7 @@ h6 {
 }
 
 table {
-    width: 100%
+    width: 100%;
 }
 
 th {
@@ -264,50 +249,50 @@ button {
 
 button::-moz-focus-inner {
     border: 0;
-    padding: 0
+    padding: 0;
 }
 
 img {
     border: none;
     vertical-align: top;
-    max-width: 100%;    
+    max-width: 100%;
 }
 
 fieldset {
     border: 0;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 input,
 button {
-    vertical-align: top
+    vertical-align: top;
 }
 
 button,
-input[type=button] {
+input[type='button'] {
     cursor: pointer;
     background: none;
-    border: none
+    border: none;
 }
 
 caption {
-    display: none
+    display: none;
 }
 
 .color {
-    color: #33b0bf
+    color: #33b0bf;
 }
 
-input[type=checkbox],
-input[type=radio] {
-    position: absolute; 
-    width: 1px; 
-    height: 1px; 
-    padding: 0; 
-    margin: -1px; 
-    overflow: hidden; 
-    clip:rect(0,0,0,0); 
+input[type='checkbox'],
+input[type='radio'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }
 
@@ -336,18 +321,37 @@ textarea:focus:-ms-input-placeholder {
 }
 
 strong {
-    font-weight: bold
+    font-weight: bold;
 }
 
-input::placeholder {color:#999;}
-input::-webkit-input-placeholder {color:#999;}
-input:-ms-input-placeholder {color:#999;}
-input:-moz-placeholder {color:#999;}
-input::-moz-placeholder {color:#999;}
+input::placeholder {
+    color: #999;
+}
+input::-webkit-input-placeholder {
+    color: #999;
+}
+input:-ms-input-placeholder {
+    color: #999;
+}
+input:-moz-placeholder {
+    color: #999;
+}
+input::-moz-placeholder {
+    color: #999;
+}
 
-textarea::placeholder {color:#999;}
-textarea::-webkit-input-placeholder {color:#999;}
-textarea:-ms-input-placeholder {color:#999;}
-textarea:-moz-placeholder {color:#999;}
-textarea::-moz-placeholder {color:#999;}
-
+textarea::placeholder {
+    color: #999;
+}
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
+textarea:-ms-input-placeholder {
+    color: #999;
+}
+textarea:-moz-placeholder {
+    color: #999;
+}
+textarea::-moz-placeholder {
+    color: #999;
+}
