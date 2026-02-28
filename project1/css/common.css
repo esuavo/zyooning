@@ -107,7 +107,7 @@ header {
 .footer li em,
 .footer p {
     font-size: 11px;
-    color: #999;
+    color: #767676; /*#999에서 #767676 수정*/
 }
 
 /* sns */
@@ -344,7 +344,7 @@ header {
 }
 .news_wrap .date {
     font-size: 12px;
-    color: #999;
+    color: #767676; /*#999에서 #767676 수정*/
     margin-top: 5px;
 }
 .no-touch .news_wrap a:hover .title {
@@ -526,7 +526,7 @@ header {
 .btn_round {
     display: block;
     background: #fff;
-    border: 1px solid #c8c8c8;
+    border: 1px solid #70747b; /*#c8c8c8에서 #70747b수정*/
     font-weight: bold;
     font-size: 15px;
     text-align: center;
@@ -577,7 +577,7 @@ header {
     font-size: 0;
 }
 .pagination a {
-    color: #c8c8c8;
+    color: #70747b; /*#c8c8c8에서 #70747b수정*/
 }
 .pagination a,
 .pagination strong {
@@ -745,7 +745,7 @@ header {
     top: 1px;
     left: 5px;
     font-size: 15px;
-    color: #999;
+    color: #767676; /*#999에서 #767676 수정*/
     padding: 14px 15px 13px 10px;
 }
 .select_item select {
@@ -890,7 +890,7 @@ header {
     height: 40px;
     border-radius: 20px;
     background: #eee;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.65); /*rgba(0, 0, 0, 0.4) 에서 rgba(0, 0, 0, 0.65)로 변경 */
     font-size: 18px;
     line-height: 40px;
     font-weight: bold;
@@ -1102,7 +1102,7 @@ header {
 }
 .slider-tab .btn_tab {
     font-size: 16px;
-    color: #c8c8c8;
+    color: #70747b; /*#c8c8c8에서 #70747b수정*/
     font-weight: bold;
     line-height: 24px;
     padding-bottom: 3px;
@@ -1151,7 +1151,7 @@ header {
     -webkit-box-orient: vertical;
     font-size: 18px;
     line-height: 1.6;
-    color: #999;
+    color: #767676; /*#999에서 #767676 수정*/
     text-align: left;
     float: none;
     margin-top: 10px;
@@ -1346,7 +1346,7 @@ header {
 }
 .data_list li a {
     display: block;
-    color: #999;
+    color: #767676; /*#999에서 #767676 수정*/
     font-weight: bold;
     font-size: 0;
 }
@@ -1361,7 +1361,7 @@ header {
     top: 35px;
     right: 0;
     margin: auto 0;
-    color: #c8c8c8;
+    color: #70747b; /*#c8c8c8에서 #70747b수정*/
     font-size: 26px;
 }
 .data_list li .number {
@@ -1571,7 +1571,7 @@ ul.form_list {
 }
 .search_list .none_data {
     padding: 45px 0 40px;
-    color: #999;
+    color: #767676; /*#999에서 #767676 수정*/
     font-size: 16px;
     line-height: 1.4;
     text-align: center;
@@ -1856,13 +1856,13 @@ ul.form_list {
     }
     .navigation li a {
         font-size: 2.2rem;
-        color: #c8c8c8;
+        color: #70747b; /*#c8c8c8에서 #70747b수정*/
         height: 10vh;
         line-height: 10vh;
         padding-left: 6rem;
     }
     .navigation li a.active {
-        color: #c8c8c8;
+        color: #70747b; /*#c8c8c8에서 #70747b수정*/
         border-bottom: 0;
     }
     .navigation_wrap {
@@ -2147,7 +2147,7 @@ ul.form_list {
     .btn_gray {
         width: 100%;
         height: 3.8rem;
-        background: #999;
+        background: #767676; /*#999에서 #767676 수정*/
         font-size: 1.2rem;
         line-height: 3.8rem;
     }
@@ -2695,7 +2695,7 @@ ul.form_list {
         top: auto;
         right: auto;
         font-size: 1.3rem;
-        color: #999;
+        color: #767676; /*#999에서 #767676 수정*/
         margin-top: 1rem;
     }
     .data_list li .number {
