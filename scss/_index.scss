@@ -157,6 +157,7 @@ body {
     &__job {
         color: var(--text-color2);
         transition: color var(--transition-speed);
+        font-weight: 500;
         @include responsive-font;
     }
 }

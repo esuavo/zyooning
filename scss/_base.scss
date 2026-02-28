@@ -204,3 +204,13 @@ a {
     outline: none;
     touch-action: manipulation;
 }
+
+// 텍스트 숨김 처리 (SEO용, 로고 등에 사용)
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}

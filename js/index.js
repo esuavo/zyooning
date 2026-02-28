@@ -13,20 +13,40 @@ var ui = {
         });
     },
     tabActive: function () {
-        const buttons = document.querySelectorAll(".tabs__button");
-        const contents = document.querySelectorAll(".tabs__contents");
+        const buttons = document.querySelectorAll('.tabs__button');
+        const contents = document.querySelectorAll('.tabs__contents');
 
         if (buttons.length === 0) return;
 
-        buttons.forEach((button, index) => {
-            button.addEventListener("click", () => {
-                // 1. 모든 버튼과 컨텐츠에서 활성화 클래스 제거
-                buttons.forEach(btn => btn.classList.remove("tabs__button--active"));
-                contents.forEach(content => content.classList.remove("tabs__contents--active"));
+        contents.forEach((content, idx) => {
+            if (idx === 0) {
+                // 첫 번째 탭 콘텐츠
+                content.classList.add('tabs__contents--active');
+                content.setAttribute('aria-hidden', 'false');
+            } else {
+                // 나머지 탭 콘텐츠들
+                content.classList.remove('tabs__contents--active');
+                content.setAttribute('aria-hidden', 'true');
+            }
+        });
 
-                // 2. 클릭된 버튼과 해당 순서의 컨텐츠에 클래스 추가
-                button.classList.add("tabs__button--active");
-                contents[index].classList.add("tabs__contents--active");
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // 1. 모든 버튼과 컨텐츠에서 상태 제거
+                buttons.forEach((btn) => {
+                    btn.classList.remove('tabs__button--active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                contents.forEach((content) => {
+                    content.classList.remove('tabs__contents--active');
+                    content.setAttribute('aria-hidden', 'true');
+                });
+
+                // 2. 선택된 요소 활성화
+                button.classList.add('tabs__button--active');
+                button.setAttribute('aria-selected', 'true');
+                contents[index].classList.add('tabs__contents--active');
+                contents[index].setAttribute('aria-hidden', 'false');
             });
         });
     },
@@ -37,11 +57,11 @@ var ui = {
         if (!btn) return;
 
         const updateBtnText = () => {
-            const isDark = html.classList.contains("dark-mode");
-            const newText = isDark ? "라이트테마로 변경하기" : "다크테마로 변경하기";
+            const isDark = html.classList.contains('dark-mode');
+            const newText = isDark ? '라이트테마로 변경하기' : '다크테마로 변경하기';
 
             btn.textContent = newText;
-            btn.setAttribute("aria-label", newText);
+            btn.setAttribute('aria-label', newText);
         };
 
         // 초기 설정
@@ -101,9 +121,9 @@ var ui = {
             }
         });
     }
-}
+};
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
     ui.init();
     ui.tabActive();
