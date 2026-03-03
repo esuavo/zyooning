@@ -1,5 +1,5 @@
 <template>
-    <section :class="['section', 'section--visual', { 'section--scrolled': isScrolled }]">
+    <section ref="visualSection" :class="['section', 'section--visual', { 'section--scrolled': isScrolled }]" :style="visualStyle">
         <div class="section__inner">
             <div class="section__contents">
                 <span class="section__label">WELCOME</span>
@@ -117,27 +117,56 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 
+const visualSection = ref(null);
 const isScrolled = ref(false);
+const fullContentHeight = ref(0); // 패딩까지 포함한 전체 높이
+
+const visualStyle = computed(() => {
+    if (window.innerWidth <= 1024) {
+        if (isScrolled.value) {
+            // 스크롤 시: 패딩 포함 계산된 높이로 줄어듦
+            return { height: `${fullContentHeight.value}px` };
+        } else {
+            // 처음: 꽉 참
+            return { height: '100vh' };
+        }
+    }
+    return {};
+});
+
+const updateHeight = () => {
+    if (visualSection.value) {
+        // 포인트: scrollHeight는 패딩을 포함한 내부 컨텐츠의 전체 높이를 알려줍니다.
+        // 임시로 높이를 auto로 풀어서 진짜 높이를 잰 뒤 다시 되돌리는 방식이 안전합니다.
+        const originalHeight = visualSection.value.style.height;
+        visualSection.value.style.height = 'auto';
+        fullContentHeight.value = visualSection.value.scrollHeight;
+        visualSection.value.style.height = originalHeight;
+    }
+};
 
 const handleScroll = () => {
-    // 화면 너비가 1024 이하일 때만 작동해!
     if (window.innerWidth <= 1024) {
-        isScrolled.value = window.scrollY > 50;
+        isScrolled.value = window.scrollY > 10;
     } else {
-        // 1024보다 크면 항상 처음 상태(100vh)를 유지하거나 기본값으로 고정
         isScrolled.value = false;
     }
 };
 
 onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    // 브라우저가 스크롤 위치를 잡을 시간을 0.1초 정도 준 뒤 실행
+    // 화면이 다 그려진 후 살짝 뒤에 높이를 재면 더 정확합니다 (nextTick 대용)
     setTimeout(() => {
+        updateHeight();
         handleScroll();
-    }, 100);
+    }, 50);
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', () => {
+        updateHeight();
+        handleScroll();
+    });
 });
 
 onUnmounted(() => {
@@ -253,16 +282,11 @@ onUnmounted(() => {
 @include tablet {
     .section {
         &--visual {
-            will-change: height;
-            height: 100vh;
-            transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1);
             padding-top: 1.7rem;
+            transition: height 0.6s ease;
             .section__contents {
                 max-width: 100%;
             }
-        }
-        &--scrolled {
-            height: auto;
         }
         &--feature-01 {
             margin-top: 2.2rem;
