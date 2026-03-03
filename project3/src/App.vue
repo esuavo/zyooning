@@ -35,7 +35,6 @@ import TheFooter from './components/TheFooter.vue';
 @include tablet {
     .container {
         padding-top: 7rem;
-        //padding: 7rem 0 3rem;
         &.home,
         &.portfolio {
             padding-bottom: 4rem;

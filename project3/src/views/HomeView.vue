@@ -1,5 +1,5 @@
 <template>
-    <section class="section section--visual">
+    <section :class="['section', 'section--visual', { 'section--scrolled': isScrolled }]">
         <div class="section__inner">
             <div class="section__contents">
                 <span class="section__label">WELCOME</span>
@@ -116,12 +116,33 @@
     </section>
 </template>
 
-<script>
-export default {
-    setup() {
-        return {};
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+    // 화면 너비가 1024 이하일 때만 작동해!
+    if (window.innerWidth <= 1024) {
+        isScrolled.value = window.scrollY > 50;
+    } else {
+        // 1024보다 크면 항상 처음 상태(100vh)를 유지하거나 기본값으로 고정
+        isScrolled.value = false;
     }
 };
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // 브라우저가 스크롤 위치를 잡을 시간을 0.1초 정도 준 뒤 실행
+    setTimeout(() => {
+        handleScroll();
+    }, 100);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -232,10 +253,16 @@ export default {
 @include tablet {
     .section {
         &--visual {
+            will-change: height;
+            height: 100vh;
+            transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1);
             padding-top: 1.7rem;
             .section__contents {
                 max-width: 100%;
             }
+        }
+        &--scrolled {
+            height: auto;
         }
         &--feature-01 {
             margin-top: 2.2rem;
