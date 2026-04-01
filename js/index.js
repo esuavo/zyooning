@@ -120,7 +120,53 @@ var ui = {
                 closeModal();
             }
         });
-    }
+    },
+    counter: function (el) {
+        const fullText = el.innerText;
+        const target = parseInt(fullText.replace(/[^0-9]/g, ''));
+        const hasPlus = fullText.includes('+');
+
+        // 일정한 속도를 원하시면 1500ms(1.5초) 정도가 적당합니다.
+        const duration = 1500;
+        const startTime = performance.now();
+
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // 핵심: 이징 공식(Math.pow 등)을 제거하고 'progress'만 사용
+            const currentCount = Math.floor(progress * target);
+
+            el.innerText = currentCount + (hasPlus ? '+' : '');
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                // 끝까지 도달했을 때 확실하게 값 고정
+                el.innerText = target + (hasPlus ? '+' : '');
+            }
+        };
+
+        requestAnimationFrame(animate);
+    },
+
+    init: function () {
+        const targets = document.querySelectorAll('.facts__num');
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        this.counter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 },
+        );
+
+        targets.forEach((el) => observer.observe(el));
+    },
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -129,4 +175,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ui.tabActive();
     ui.themeHandler();
     ui.modal();
+    ui.counter();
 });
