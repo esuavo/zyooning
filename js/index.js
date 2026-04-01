@@ -122,34 +122,32 @@ var ui = {
         });
     },
     counter: function (el) {
-        const fullText = el.innerText;
-        const target = parseInt(fullText.replace(/[^0-9]/g, ''));
-        const hasPlus = fullText.includes('+');
+        const target = parseInt(el.innerText.replace(/[^0-9]/g, ''));
+        const hasPlus = el.innerText.includes('+');
 
-        // 일정한 속도를 원하시면 1500ms(1.5초) 정도가 적당합니다.
-        const duration = 1500;
-        const startTime = performance.now();
+        const duration = 500;
+        // [중요] 20으로 줄이면 2초 동안 숫자가 20번만 바뀝니다.
+        // 40의 경우 2~3씩, 35의 경우 1~2씩 팍팍 건너뜁니다.
+        const totalFrames = 20;
+        let currentFrame = 0;
 
-        const animate = (currentTime) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
+        const animate = () => {
+            currentFrame++;
 
-            // 핵심: 이징 공식(Math.pow 등)을 제거하고 'progress'만 사용
+            // progress를 사용하되, Math.floor로 인해 step 단위로 계산됨
+            const progress = currentFrame / totalFrames;
             const currentCount = Math.floor(progress * target);
 
-            el.innerText = currentCount + (hasPlus ? '+' : '');
-
-            if (progress < 1) {
-                requestAnimationFrame(animate);
+            if (currentFrame <= totalFrames) {
+                el.innerText = currentCount + (hasPlus ? '+' : '');
+                setTimeout(animate, duration / totalFrames);
             } else {
-                // 끝까지 도달했을 때 확실하게 값 고정
                 el.innerText = target + (hasPlus ? '+' : '');
             }
         };
 
-        requestAnimationFrame(animate);
+        animate();
     },
-
     init: function () {
         const targets = document.querySelectorAll('.facts__num');
 
